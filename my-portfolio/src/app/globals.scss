@@ -28,7 +28,22 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
+  letter-spacing: 1px;
       --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -58,5 +73,19 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+#main {
+  background: #1A191D;
+
+  #firstPageContent-title {
+    // font-family: Arial Rounded MT Bold;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: Inter;
+    font-size: 10rem;
+    line-height: 1;
+    text-shadow: 1px 3px 11px rgba(0,0,0,.3);
+    letter-spacing: 5px;
   }
 }
