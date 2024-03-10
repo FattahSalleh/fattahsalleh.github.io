@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Fattah Salleh Portfolio",
+  title: "Fattah Salleh | Full Stack Developer",
   description: "Fattah Salleh's portfolio created in 2024 using Next JS",
   icons: [
     {
