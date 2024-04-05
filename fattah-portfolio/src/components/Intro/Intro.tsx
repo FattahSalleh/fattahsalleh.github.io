@@ -10,7 +10,7 @@ function Intro() {
 			>
 				FATTAH SALLEH
 			</div>
-			<div className="font-bold pt-16">FULL STACK DEVELOPER</div>
+			<div className="font-bold pt-8">FULL STACK DEVELOPER</div>
 		</div>
 	);
 }
