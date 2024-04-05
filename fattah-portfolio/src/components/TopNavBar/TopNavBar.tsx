@@ -1,6 +1,7 @@
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
+import { ButtonProps } from "../../common/types";
 
-function TopNavBar() {
+function TopNavBar({ buttons }: { buttons: ButtonProps[] }) {
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
 		if (section) {
@@ -17,36 +18,15 @@ function TopNavBar() {
 				<img src={fsIcon} alt="FS Icon" width={32} height={32} />
 			</div>
 			<div className="flex flex-row justify-between font-semibold items-center">
-				<button
-					onClick={() => scrollToSection("firstSection")}
-					className="mx-4"
-				>
-					hello world!
-				</button>
-				<button
-					onClick={() => scrollToSection("firstSection")}
-					className="mx-4"
-				>
-					expertise
-				</button>
-				<button
-					onClick={() => scrollToSection("firstSection")}
-					className="mx-4"
-				>
-					project
-				</button>
-				<button
-					onClick={() => scrollToSection("firstSection")}
-					className="mx-4"
-				>
-					experience
-				</button>
-				<button
-					onClick={() => scrollToSection("firstSection")}
-					className="mx-4"
-				>
-					contact
-				</button>
+				{buttons.map((button, index) => (
+					<button
+						className="mx-4"
+						key={index}
+						onClick={() => scrollToSection(button.sectionId)}
+					>
+						{button.label}
+					</button>
+				))}
 			</div>
 			<div className=""></div>
 		</nav>
