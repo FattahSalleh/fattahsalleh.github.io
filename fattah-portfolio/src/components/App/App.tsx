@@ -8,17 +8,19 @@ function App() {
 				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
 				id="main"
 			>
-					<TopNavBar />
-					<Intro />
+				<TopNavBar />
 				<section
-					className="z-10 max-w-full w-full text-base bg-lime-300 p-12"
+					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
+					id="firstSection"
+				>
+					<Intro />
+				</section>
+
+				<section
+					className="z-10 max-w-full w-full p-12"
 					id="secondSection"
 				>
-					Velit culpa aliqua minim velit adipisicing ullamco commodo
-					aliquip esse elit laborum non qui ullamco. Quis pariatur qui
-					tempor duis ipsum ad fugiat officia eu dolore ipsum. Magna
-					dolor magna enim et occaecat nostrud enim nostrud. Pariatur
-					eiusmod velit culpa elit labore ullamco.
+					
 				</section>
 			</main>
 		</div>
