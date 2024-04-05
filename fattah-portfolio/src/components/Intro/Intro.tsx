@@ -1,8 +1,8 @@
 function Intro() {
 	return (
-		<div
+		<section
 			className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
-			id="firstSectionContent"
+			id="firstSection"
 		>
 			<div
 				className="font-bold h-full text-9xl tracking-wider leading-none drop-shadow-md"
@@ -11,7 +11,7 @@ function Intro() {
 				FATTAH SALLEH
 			</div>
 			<div className="font-bold pt-8">FULL STACK DEVELOPER</div>
-		</div>
+		</section>
 	);
 }
 
