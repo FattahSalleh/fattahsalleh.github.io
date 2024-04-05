@@ -1,95 +1,46 @@
-React, TypeScript, TailwindCSS, MSW, Vitest, React Testing Library, ESLint, Prettier, GitHub Actions.
+# Getting Started with Create React App
 
-# Create React App Vite [![Typecheck](https://github.com/laststance/create-react-app-vite/actions/workflows/typecheck.yml/badge.svg)](https://github.com/laststance/vite-react-ts-alter/actions/workflows/typecheck.yml) [![Test](https://github.com/laststance/create-react-app-vite/actions/workflows/test.yml/badge.svg)](https://github.com/laststance/create-react-app-vite/actions/workflows/test.yml) [![Build](https://github.com/laststance/create-react-app-vite/actions/workflows/build.yml/badge.svg)](https://github.com/laststance/create-react-app-vite/actions/workflows/build.yml) [![Lint](https://github.com/laststance/create-react-app-vite/actions/workflows/lint.yml/badge.svg)](https://github.com/laststance/create-react-app-vite/actions/workflows/lint.yml)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> Simple CRA style Vite teimpate.  
-> Create plain and lightweight React+TS programming environment.  
-> And a easy migration base for create-react-app to Vite.
+## Available Scripts
 
-## [Try this Online!](https://codesandbox.io/p/github/laststance/create-react-app-vite/main?file=%2FREADME.md&workspace=%257B%2522activeFileId%2522%253A%2522clfgsr6q10016g2hjg3xq06lt%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522spaces%2522%253A%257B%2522clfgsra1u000x3b6mbdjl3ahb%2522%253A%257B%2522key%2522%253A%2522clfgsra1u000x3b6mbdjl3ahb%2522%252C%2522name%2522%253A%2522Default%2522%252C%2522devtools%2522%253A%255B%257B%2522key%2522%253A%2522clfgsra1u000y3b6meoz3zcev%2522%252C%2522type%2522%253A%2522PROJECT_SETUP%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522port%2522%253A5173%252C%2522key%2522%253A%2522clfgss4o700dz3b6mz869sru3%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522dev%2522%252C%2522key%2522%253A%2522clfgss3ug00ba3b6mpaataz0k%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D%257D%252C%2522currentSpace%2522%253A%2522clfgsra1u000x3b6mbdjl3ahb%2522%252C%2522spacesOrder%2522%253A%255B%2522clfgsra1u000x3b6mbdjl3ahb%2522%255D%252C%2522hideCodeEditor%2522%253Afalse%257D)
+In the project directory, you can run:
 
-This is a Vite template top of the official [Vite](https://vitejs.dev/) [react-ts](https://stackblitz.com/edit/vitejs-vite-is3dmk?file=index.html&terminal=dev) template(`npm init vite@latest myapp -- --template react-ts`) and some extended setup.  
-I'd like to keep CRA like experience as much as possible, So improving/adding feature Rull Request is really welcome!
+### `npm start`
 
-- Support CRA's [Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables/) like `REACT_APP_`.
-- [eslint-config-ts-prefixer](https://github.com/laststance/eslint-config-ts-prefixer). Specialized fixable(`--fix` option) rule sets. Zero extend any recommended for confortable DX.
-- [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [MSW](https://mswjs.io/)
-- [tailwindcss](https://tailwindcss.com/)
-- [Github Actions](https://github.com/features/actions)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-All npm package are keeping least release version powered by [Dependabot](https://github.com/dependabot).
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-# Installation
+### `npm test`
 
-```
-npx degit laststance/create-react-app-vite myapp
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### npm
+### `npm run build`
 
-```sh
-cd myapp
-pnpm install
-pnpm validate
-pnpm start
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-If you don't need TailwindCSS, run `pnpm remove:tailwind` after npm installed.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Commands
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```sh
-pnpm dev             # start development server
-pnpm start           # start development server
-pnpm validate        # run test,lint,build,typecheck concurrently
-pnpm test            # run jest
-pnpm lint            # run eslint
-pnpm lint:fix        # run eslint with --fix option
-pnpm typecheck       # run TypeScript compiler check
-pnpm build           # build production bundle to 'dist' directly
-pnpm prettier        # run prettier for json|yml|css|md|mdx files
-pnpm clean           # remove 'node_modules' 'yarn.lock' 'dist' completely
-pnpm serve           # launch server for production bundle in local
-pnpm remove:tailwind # remove TailwindCSS
-```
+### `npm run eject`
 
-# CRA to Vite migration guides
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-- [Migrate to Vite from Create React App (CRA)](https://www.robinwieruch.de/vite-create-react-app/)
-- [Migrating from Create React App (CRA) to Vite](https://cathalmacdonnacha.com/migrating-from-create-react-app-cra-to-vite)
-- [Migrating a Create React App (CRA) application to Vite](https://www.darraghoriordan.com/2021/05/16/migrating-from-create-react-app-to-vite)
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-# Background
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Simply put, CRA development has stopped as of 2023.
-This has sparked a discussion about replacing CRA with Vite for official documentation recommendations.
-[Replace Create React App recommendation with Vite](https://github.com/reactjs/react.dev/pull/5487)
-Dan Avramov offered some plans for the future of the CRA in his comments, but no direct answers were given.
-https://github.com/reactjs/react.dev/pull/5487#issuecomment-1409720741
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-The React community is still buzzing around Server Component after May 2023, but there is still a high demand for the React SinglePageAplication starter that the CRA has served in the past, and I was one of the people who needed it, I was one of the people who needed it, so I decided to create a template in Vite that could be used as much as possible like CRA.
+## Learn More
 
-# License
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-MIT
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="http://ryota-murakami.github.io/"><img src="https://avatars1.githubusercontent.com/u/5501268?s=400&u=7bf6b1580b95930980af2588ef0057f3e9ec1ff8&v=4?s=100" width="100px;" alt=""/><br /><sub><b>ryota-murakami</b></sub></a><br /><a href="https://github.com/laststance/create-react-app-vite/commits?author=ryota-murakami" title="Code">💻</a> <a href="https://github.com/laststance/create-react-app-vite/commits?author=ryota-murakami" title="Documentation">📖</a> <a href="https://github.com/laststance/create-react-app-vite/commits?author=ryota-murakami" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://hung.dev"><img src="https://avatars.githubusercontent.com/u/8603085?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hung Viet Nguyen</b></sub></a><br /><a href="https://github.com/laststance/create-react-app-vite/commits?author=nvh95" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+To learn React, check out the [React documentation](https://reactjs.org/).
