@@ -3,7 +3,7 @@ import fsIcon from '../../assets/images/fsicon/fs-icon.svg';
 function TopNavBar() {
 	return (
 		<div
-			className="max-h-24 w-full flex flex-row justify-between p-12"
+			className="max-h-24 w-full flex flex-row justify-between p-12 items-center"
 			id="topNavBar"
 		>
 			<div className="">
