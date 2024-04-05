@@ -1,3 +1,4 @@
+import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
 import "./App.css";
 
@@ -10,27 +11,14 @@ function App() {
 			>
 				<div
 					className="z-10 max-w-full w-full text-base bg-green-950"
-					id="firstPage"
+					id="firstSection"
 				>
 					<TopNavBar />
-					<div
-						className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
-						id="firstPageContent"
-					>
-						<div
-							className="font-bold h-full text-9xl tracking-wider leading-none drop-shadow-md"
-							id="firstPageContent-title"
-						>
-							FATTAH SALLEH
-						</div>
-						<div className="font-bold pt-16">
-							FULL STACK DEVELOPER
-						</div>
-					</div>
+					<Intro />
 				</div>
 				<div
 					className="z-10 max-w-full w-full text-base bg-lime-300 p-12"
-					id="secondPage"
+					id="secondSection"
 				>
 					Velit culpa aliqua minim velit adipisicing ullamco commodo
 					aliquip esse elit laborum non qui ullamco. Quis pariatur qui
