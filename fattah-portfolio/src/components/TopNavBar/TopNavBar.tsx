@@ -9,7 +9,7 @@ function TopNavBar() {
 	};
 
 	return (
-		<div
+		<nav
 			className="max-h-24 w-full flex flex-row justify-between p-12 items-center"
 			id="topNavBar"
 		>
@@ -49,7 +49,7 @@ function TopNavBar() {
 				</button>
 			</div>
 			<div className=""></div>
-		</div>
+		</nav>
 	);
 }
 
