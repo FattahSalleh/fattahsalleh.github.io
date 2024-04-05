@@ -15,3 +15,7 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+
+section {
+	transition: transform 0.3s ease-in-out;
+}

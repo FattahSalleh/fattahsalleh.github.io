@@ -1,35 +1,52 @@
-import fsIcon from '../../assets/images/fsicon/fs-icon.svg';
+import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 
 function TopNavBar() {
+	const scrollToSection = (id: string) => {
+		const section = document.getElementById(id);
+		if (section) {
+			section.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<div
 			className="max-h-24 w-full flex flex-row justify-between p-12 items-center"
 			id="topNavBar"
 		>
 			<div className="">
-				<img
-					src={fsIcon}
-					alt="FS Icon"
-					width={32}
-					height={32}
-				/>
+				<img src={fsIcon} alt="FS Icon" width={32} height={32} />
 			</div>
 			<div className="flex flex-row justify-between font-semibold items-center">
-				<a href="#" className="mx-4">
+				<button
+					onClick={() => scrollToSection("firstSection")}
+					className="mx-4"
+				>
 					hello world!
-				</a>
-				<a href="#" className="mx-4">
+				</button>
+				<button
+					onClick={() => scrollToSection("firstSection")}
+					className="mx-4"
+				>
 					expertise
-				</a>
-				<a href="#" className="mx-4">
+				</button>
+				<button
+					onClick={() => scrollToSection("firstSection")}
+					className="mx-4"
+				>
 					project
-				</a>
-				<a href="#" className="mx-4">
+				</button>
+				<button
+					onClick={() => scrollToSection("firstSection")}
+					className="mx-4"
+				>
 					experience
-				</a>
-				<a href="#" className="mx-4">
+				</button>
+				<button
+					onClick={() => scrollToSection("firstSection")}
+					className="mx-4"
+				>
 					contact
-				</a>
+				</button>
 			</div>
 			<div className=""></div>
 		</div>
