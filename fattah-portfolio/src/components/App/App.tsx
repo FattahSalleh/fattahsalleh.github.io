@@ -4,14 +4,13 @@ import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
 
 function App() {
-
-  const buttons: ButtonProps[] = [
+	const buttons: ButtonProps[] = [
 		{ label: "hello world!", sectionId: "firstSection" },
 		{ label: "expertise", sectionId: "firstSection" },
 		{ label: "project", sectionId: "firstSection" },
 		{ label: "experience", sectionId: "firstSection" },
 		{ label: "contact", sectionId: "firstSection" },
-  ];
+	];
 
 	return (
 		<div className="App">
@@ -24,7 +23,10 @@ function App() {
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
 					id="firstSection"
 				>
-					<Intro />
+					<Intro
+						name="Fattah Salleh"
+						subTitle="FULL STACK DEVELOPER &nbsp; & &nbsp; SOFTWARE ENGINEER"
+					/>
 				</section>
 
 				<section
@@ -32,10 +34,10 @@ function App() {
 					id="secondSection"
 				>
 					<div className="flex flex-col items-center">
-						<p className="font-bold h-full text-7xl drop-shadow-md">
+						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
 							My Expertise
-            </p>
-            <ExpertiseTable />
+						</p>
+						<ExpertiseTable />
 					</div>
 				</section>
 			</main>
