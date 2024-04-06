@@ -2,7 +2,7 @@ import { Expertise } from "../../common/types";
 
 function ExpertiseTableContent({ expertise }: { expertise: Expertise }) {
 	return (
-		<div className="flex flex-col border-2 p-8 rounded w-1/3 items-center justify-center">
+		<div className="flex flex-col border-2 p-8 mx-4 rounded w-1/3 items-center justify-center">
 			<div>
 				<div className="flex flex-row items-center justify-center">
 					<img

@@ -40,6 +40,27 @@ function App() {
 		],
 	};
 
+	const expertiseBE: Expertise = {
+		src: backendIcon,
+		alt: "Backend Icon",
+		title: "Backend",
+		desc: "Skilled in both Functional and Object-Oriented Programming (OOP), my expertise lies in crafting efficient solutions tailored to specific requirements, ensuring smooth functionality and practical outcomes.",
+		subItems: [
+			{
+				title: "Languages",
+				list: ["Python", "JavaScript (NodeJS)", "PHP", "SQL"],
+			},
+			{
+				title: "Frameworks",
+				list: ["Express JS", "Laravel"],
+			},
+			{
+				title: "Tools",
+				list: ["Postman API"],
+			},
+		],
+	};
+
 	return (
 		<div className="App">
 			<main
@@ -65,7 +86,10 @@ function App() {
 						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
 							My Expertise
 						</p>
-						<ExpertiseTable expertise={expertiseFE} />
+						<article className="flex flex-row justify-center">
+							<ExpertiseTable expertise={expertiseFE} />
+							<ExpertiseTable expertise={expertiseBE} />
+						</article>
 					</div>
 				</section>
 			</main>
