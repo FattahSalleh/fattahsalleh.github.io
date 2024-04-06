@@ -1,4 +1,4 @@
-import { ButtonProps } from "../../common/types";
+import { ButtonProps, MyDetails } from "../../common/types";
 import ExpertiseTable from "../ExpertiseTable/ExpertiseTable";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
@@ -12,6 +12,11 @@ function App() {
 		{ label: "contact", sectionId: "firstSection" },
 	];
 
+	const introDetails: MyDetails = {
+		name: "Fattah Salleh",
+		position: "FULL STACK DEVELOPER \xa0&\xa0 SOFTWARE ENGINEER",
+	};
+
 	return (
 		<div className="App">
 			<main
@@ -23,10 +28,7 @@ function App() {
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
 					id="firstSection"
 				>
-					<Intro
-						name="Fattah Salleh"
-						subTitle="FULL STACK DEVELOPER &nbsp; & &nbsp; SOFTWARE ENGINEER"
-					/>
+					<Intro name={introDetails.name} subTitle={introDetails.position} />
 				</section>
 
 				<section

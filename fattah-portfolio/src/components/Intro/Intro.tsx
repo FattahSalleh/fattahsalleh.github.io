@@ -7,7 +7,7 @@ function Intro({ name, subTitle }: { name: string; subTitle: string }) {
 			>
 				{name}
 			</div>
-			<div className="font-semibold pt-8 text-lg">{subTitle}</div>
+			<div className="font-semibold pt-8 text-lg tracking-widest">{subTitle}</div>
 		</>
 	);
 }
