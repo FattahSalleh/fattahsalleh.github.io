@@ -16,7 +16,8 @@ interface SubItems {
 export interface Expertise {
 	src: string;
 	alt: string;
-	title: string;
+    title: string;
+    titleColor: string;
 	desc: string;
     subItems: SubItems[];
 }
