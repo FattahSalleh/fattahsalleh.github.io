@@ -8,7 +8,7 @@ import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 function App() {
 	const buttons: ButtonProps[] = [
 		{ label: "hello world!", sectionId: "introSection" },
-		{ label: "expertise", sectionId: "expertiseSectionContainer" },
+		{ label: "expertise", sectionId: "expertiseSection" },
 		{ label: "project", sectionId: "projectSection" },
 		{ label: "experience", sectionId: "introSection" },
 		{ label: "contact", sectionId: "introSection" },
@@ -40,7 +40,7 @@ function App() {
 			},
 			{
 				title: "Tools",
-				list: ["VS Code, Android Studio", "Figma, Framer", "OpenText"],
+				list: ["VS Code, Android Studio", "Figma, Framer, OpenText"],
 			},
 		],
 	};
@@ -66,7 +66,7 @@ function App() {
 			},
 			{
 				title: "Libraries",
-				list: ["Axios", "Moment.js"],
+				list: ["Axios, Moment.js"],
 			},
 			{
 				title: "Tools",
@@ -93,14 +93,14 @@ function App() {
 				</section>
 
 				<section
-					className="z-10 max-w-full w-full p-12"
+					className="max-w-full w-full px-12 py-16"
 					id="expertiseSection"
 				>
 					<div
 						className="flex flex-col items-center"
 						id="expertiseSectionContainer"
 					>
-						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
+						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Expertise
 						</p>
 						<article className="flex flex-row justify-center">
@@ -111,13 +111,13 @@ function App() {
         </section>
         
 				<section
-					className="z-10 max-w-full w-full p-12"
+					className="max-w-full w-full p-12"
 					id="projectSection"
 				>
 					<div
 						className="flex flex-col items-center"
 					>
-						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
+						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
 						</p>
             <article className="flex flex-row justify-center">
