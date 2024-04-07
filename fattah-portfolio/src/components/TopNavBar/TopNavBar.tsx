@@ -11,7 +11,7 @@ function TopNavBar({ buttons }: { buttons: ButtonProps[] }) {
 
 	return (
 		<nav
-			className="max-h-24 w-full flex flex-row justify-between p-12 items-center"
+			className="max-h-24 w-full flex flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center bg-darkBg"
 			id="topNavBar"
 		>
 			<div className="">
