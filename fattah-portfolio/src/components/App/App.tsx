@@ -23,19 +23,35 @@ function App() {
 		src: frontendIcon,
 		alt: "Frontend Icon",
 		title: "Frontend",
+		titleColor: "#149ECA",
 		desc: "I have always loved seeing the things I created come to life. With an eye for design, I have always strived to craft the optimal experience for my clients that perfectly aligns with their needs.",
 		subItems: [
 			{
 				title: "Languages",
-				list: ["HTML & CSS", "JavaScript", "TypeScript"],
+				list: ["HTML", "CSS (SASS/SCSS)", "JavaScript", "TypeScript"],
+			},
+			{
+				title: "Libraries",
+				list: [
+					"React JS",
+					"Vue JS",
+					"jQuery",
+					"Pug",
+					"Chart JS",
+				],
 			},
 			{
 				title: "Frameworks",
-				list: ["React", "Vue"],
+				list: ["Tailwind CSS", "Bootstrap"],
 			},
 			{
 				title: "Tools",
-				list: ["OpenText CMS", "VSCode", "Figma / Framer"],
+				list: [
+					"Visual Studio Code",
+          "Figma / Framer",
+          "Android Studio",
+          "OpenText"
+				],
 			},
 		],
 	};
@@ -44,19 +60,30 @@ function App() {
 		src: backendIcon,
 		alt: "Backend Icon",
 		title: "Backend",
+		titleColor: "#83CD29",
 		desc: "Skilled in both Functional and Object-Oriented Programming (OOP), my expertise lies in crafting efficient solutions tailored to specific requirements, ensuring smooth functionality and practical outcomes.",
 		subItems: [
 			{
 				title: "Languages",
-				list: ["Python", "JavaScript (NodeJS)", "PHP", "SQL"],
+				list: [
+					"Python",
+					"JavaScript (NodeJS)",
+					"PHP",
+					"Java / Kotlin",
+					"SQL",
+				],
 			},
 			{
 				title: "Frameworks",
-				list: ["Express JS", "Laravel"],
+				list: ["Express JS", "Laravel", "Flask"],
+			},
+			{
+				title: "Libraries",
+				list: ["Axios", "Python Requests", "Moment JS"],
 			},
 			{
 				title: "Tools",
-				list: ["Postman API"],
+				list: ["Postman API", "Jira", "Git"],
 			},
 		],
 	};
