@@ -8,7 +8,7 @@ import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 function App() {
 	const buttons: ButtonProps[] = [
 		{ label: "hello world!", sectionId: "firstSection" },
-		{ label: "expertise", sectionId: "firstSection" },
+		{ label: "expertise", sectionId: "secondSectionContainer" },
 		{ label: "project", sectionId: "firstSection" },
 		{ label: "experience", sectionId: "firstSection" },
 		{ label: "contact", sectionId: "firstSection" },
@@ -96,7 +96,10 @@ function App() {
 					className="z-10 max-w-full w-full p-12"
 					id="secondSection"
 				>
-					<div className="flex flex-col items-center">
+					<div
+						className="flex flex-col items-center"
+						id="secondSectionContainer"
+					>
 						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
 							My Expertise
 						</p>
