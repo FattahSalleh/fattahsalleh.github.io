@@ -24,7 +24,7 @@ function App() {
 		alt: "Frontend Icon",
 		title: "Frontend",
 		titleColor: "#149ECA",
-		desc: "I have always loved seeing the things I created come to life. With an eye for design, I have always strived to craft the optimal experience for my clients that perfectly aligns with their needs.",
+		desc: "With over 4 years of development experience, I have always loved bringing designs to life.",
 		subItems: [
 			{
 				title: "Languages",
@@ -61,7 +61,7 @@ function App() {
 		alt: "Backend Icon",
 		title: "Backend",
 		titleColor: "#83CD29",
-		desc: "Skilled in both Functional and Object-Oriented Programming (OOP), my expertise lies in crafting efficient solutions tailored to specific requirements, ensuring smooth functionality and practical outcomes.",
+		desc: "As the architect behind the scenes, I engineer efficient solutions for seamless functionality.",
 		subItems: [
 			{
 				title: "Languages",
