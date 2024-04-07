@@ -9,7 +9,7 @@ function App() {
 	const buttons: ButtonProps[] = [
 		{ label: "hello world!", sectionId: "introSection" },
 		{ label: "expertise", sectionId: "expertiseSectionContainer" },
-		{ label: "project", sectionId: "introSection" },
+		{ label: "project", sectionId: "projectSection" },
 		{ label: "experience", sectionId: "introSection" },
 		{ label: "contact", sectionId: "introSection" },
 	];
@@ -106,6 +106,22 @@ function App() {
 						<article className="flex flex-row justify-center">
 							<ExpertiseTable expertise={expertiseFE} />
 							<ExpertiseTable expertise={expertiseBE} />
+						</article>
+					</div>
+        </section>
+        
+				<section
+					className="z-10 max-w-full w-full p-12"
+					id="projectSection"
+				>
+					<div
+						className="flex flex-col items-center"
+					>
+						<p className="font-bold h-full text-7xl drop-shadow-md mb-16">
+							My Projects
+						</p>
+            <article className="flex flex-row justify-center">
+              {/* TODO: To create and add project component */}
 						</article>
 					</div>
 				</section>
