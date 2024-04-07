@@ -28,30 +28,19 @@ function App() {
 		subItems: [
 			{
 				title: "Languages",
-				list: ["HTML", "CSS (SASS/SCSS)", "JavaScript", "TypeScript"],
-			},
-			{
-				title: "Libraries",
-				list: [
-					"React JS",
-					"Vue JS",
-					"jQuery",
-					"Pug",
-					"Chart JS",
-				],
+				list: ["HTML, CSS (SASS / SCSS)", "JavaScript, TypeScript"],
 			},
 			{
 				title: "Frameworks",
-				list: ["Tailwind CSS", "Bootstrap"],
+				list: ["Tailwind CSS, Bootstrap"],
+			},
+			{
+				title: "Libraries",
+				list: ["React.js, Vue.js", "jQuery, Pug"],
 			},
 			{
 				title: "Tools",
-				list: [
-					"Visual Studio Code",
-          "Figma / Framer",
-          "Android Studio",
-          "OpenText"
-				],
+				list: ["VS Code, Android Studio", "Figma, Framer", "OpenText"],
 			},
 		],
 	};
@@ -66,24 +55,22 @@ function App() {
 			{
 				title: "Languages",
 				list: [
-					"Python",
-					"JavaScript (NodeJS)",
-					"PHP",
-					"Java / Kotlin",
+					"JavaScript (Node.js)",
+					"Java, Kotlin, PHP, Python",
 					"SQL",
 				],
 			},
 			{
 				title: "Frameworks",
-				list: ["Express JS", "Laravel", "Flask"],
+				list: ["Express.js, Laravel, Flask"],
 			},
 			{
 				title: "Libraries",
-				list: ["Axios", "Python Requests", "Moment JS"],
+				list: ["Axios", "Moment.js"],
 			},
 			{
 				title: "Tools",
-				list: ["Postman API", "Jira", "Git"],
+				list: ["Postman API", "Jira, Git"],
 			},
 		],
 	};
