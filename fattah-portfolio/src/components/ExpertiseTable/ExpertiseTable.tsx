@@ -1,8 +1,8 @@
 import { Expertise } from "../../common/types";
 
-function ExpertiseTableContent({ expertise }: { expertise: Expertise }) {
+function ExpertiseTable({ expertise }: { expertise: Expertise }) {
 	return (
-		<div className="flex flex-col border-2 p-8 mx-4 rounded w-1/3 items-center justify-center">
+		<div className="flex flex-col border-2 p-8 mx-4 rounded w-1/3 items-center ">
 			<div>
 				<div className="flex flex-row items-center justify-center">
 					<img
@@ -13,6 +13,7 @@ function ExpertiseTableContent({ expertise }: { expertise: Expertise }) {
 					/>
 					<p className="ml-8 font-bold text-3xl">{expertise.title}</p>
 				</div>
+				<hr className="w-48 h-1 mx-auto border-0 rounded dark:bg-gray-700 relative -z-10 bottom-2.5 right-1" style={{ backgroundColor: expertise.titleColor }} />
 				<p className="mt-8">{expertise.desc}</p>
 			</div>
 			{expertise.subItems.map((subItem, index) => (
@@ -29,4 +30,4 @@ function ExpertiseTableContent({ expertise }: { expertise: Expertise }) {
 	);
 }
 
-export default ExpertiseTableContent;
+export default ExpertiseTable;
