@@ -7,11 +7,11 @@ import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 
 function App() {
 	const buttons: ButtonProps[] = [
-		{ label: "hello world!", sectionId: "firstSection" },
+		{ label: "hello world!", sectionId: "introSection" },
 		{ label: "expertise", sectionId: "secondSectionContainer" },
-		{ label: "project", sectionId: "firstSection" },
-		{ label: "experience", sectionId: "firstSection" },
-		{ label: "contact", sectionId: "firstSection" },
+		{ label: "project", sectionId: "introSection" },
+		{ label: "experience", sectionId: "introSection" },
+		{ label: "contact", sectionId: "introSection" },
 	];
 
 	const introDetails: MyDetails = {
@@ -84,7 +84,7 @@ function App() {
 				<TopNavBar buttons={buttons} />
 				<section
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
-					id="firstSection"
+					id="introSection"
 				>
 					<Intro
 						name={introDetails.name}
