@@ -19,3 +19,9 @@ code {
 section {
 	transition: transform 0.3s ease-in-out;
 }
+
+button:hover {
+	opacity: 50%;
+	transition: all;
+	transition-duration: 300ms;
+}
