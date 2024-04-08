@@ -47,7 +47,7 @@ function TopNavBar({ navBarButtons }: { navBarButtons: NavBarButtons[] }) {
 				/>
 			</div>
 			<div className="flex flex-row justify-between font-semibold items-center">
-				{buttons.map((button, index) => (
+				{navBarButtons.map((button, index) => (
 					<button
 						className="mx-4"
 						key={index}
