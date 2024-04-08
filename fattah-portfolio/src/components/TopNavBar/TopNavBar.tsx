@@ -16,7 +16,6 @@ function TopNavBar({ buttons }: { buttons: ButtonProps[] }) {
 		const handleScroll = () => {
 			const scrollPosition = window.scrollY;
 			// Change background and text color when scrolled down
-			console.log(scrollPosition);
 			setIsScrolled(scrollPosition > 0);
 		};
 
