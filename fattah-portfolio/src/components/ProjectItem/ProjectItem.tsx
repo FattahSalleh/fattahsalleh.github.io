@@ -6,7 +6,7 @@ function ProjectItem({ project }: { project: Projects }) {
 
 	return (
 		<div
-			className="flex flex-col border-2 rounded-lg w-full bg-primary text-start overflow-hidden"
+			className="flex flex-col border-2 rounded-lg w-full bg-darkGrayBg text-start overflow-hidden"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
@@ -27,7 +27,7 @@ function ProjectItem({ project }: { project: Projects }) {
 						{project.techStack.map((tech, index) => (
 							<li
 								key={index}
-								className="text-sm bg-blueLine opacity-85 mr-2 my-1 px-4 py-0.5 border rounded-2xl"
+								className="text-sm bg-secondary opacity-85 mr-2 my-1 px-4 py-0.5 border rounded-2xl"
 							>
 								{tech}
 							</li>

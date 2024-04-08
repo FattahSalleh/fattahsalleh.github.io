@@ -6,7 +6,7 @@ import { topNavBarButtons } from "../../data/topNavBarButtons";
 import { introDetails } from "../../data/introDetails";
 import { expertiseBE, expertiseFE } from "../../data/expertiseDetails";
 import ProjectItem from "../ProjectItem/ProjectItem";
-import { projectAllianceBS } from "../../data/projectDetails";
+import { projectAllianceBSS } from "../../data/projectDetails";
 
 function App() {
 	return (
@@ -57,18 +57,21 @@ function App() {
 					</div>
 				</section>
 
-				<section className="max-w-full w-full px-32 py-16" id="projectSection">
+				<section
+					className="max-w-full w-full px-32 py-16"
+					id="projectSection"
+				>
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
 						</p>
 						<div>Filter by ...</div>
 						<article className="grid grid-cols-3 justify-items-start gap-4">
-							<ProjectItem project={projectAllianceBS} />
-							<ProjectItem project={projectAllianceBS} />
-							<ProjectItem project={projectAllianceBS} />
-							<ProjectItem project={projectAllianceBS} />
-							<ProjectItem project={projectAllianceBS} />
+							<ProjectItem project={projectAllianceBSS} />
+							<ProjectItem project={projectAllianceBSS} />
+							<ProjectItem project={projectAllianceBSS} />
+							<ProjectItem project={projectAllianceBSS} />
+							<ProjectItem project={projectAllianceBSS} />
 						</article>
 					</div>
 				</section>
