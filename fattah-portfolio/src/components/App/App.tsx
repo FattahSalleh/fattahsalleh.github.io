@@ -1,4 +1,4 @@
-import { ButtonProps, Expertise, MyDetails } from "../../common/types";
+import { Expertise, MyDetails, NavBarButtons } from "../../common/types";
 import ExpertiseTable from "../ExpertiseTable/ExpertiseTable";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
@@ -7,7 +7,7 @@ import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 import AnimatedCursor from "react-animated-cursor";
 
 function App() {
-	const buttons: ButtonProps[] = [
+	const topNavBarButtons: NavBarButtons[] = [
 		{ label: "hello world!", sectionId: "introSection" },
 		{ label: "expertise", sectionId: "expertiseSection" },
 		{ label: "project", sectionId: "projectSection" },
@@ -95,7 +95,7 @@ function App() {
 				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
 				id="main"
 			>
-				<TopNavBar buttons={buttons} />
+				<TopNavBar navBarButtons={topNavBarButtons} />
 				<section
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
 					id="introSection"
@@ -130,6 +130,7 @@ function App() {
 							My Projects
 						</p>
 						<article className="flex flex-row justify-center">
+							Filter by ...
 							{/* TODO: To create and add project component */}
 						</article>
 					</div>

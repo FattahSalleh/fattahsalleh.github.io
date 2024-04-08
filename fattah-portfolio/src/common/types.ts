@@ -1,4 +1,4 @@
-export interface ButtonProps {
+export interface NavBarButtons {
     label: string;
     sectionId: string;
 }

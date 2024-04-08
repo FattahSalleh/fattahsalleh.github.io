@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
-import { ButtonProps } from "../../common/types";
+import { NavBarButtons } from "../../common/types";
 
-function TopNavBar({ buttons }: { buttons: ButtonProps[] }) {
+function TopNavBar({ navBarButtons }: { navBarButtons: NavBarButtons[] }) {
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	const scrollToSection = (id: string) => {
