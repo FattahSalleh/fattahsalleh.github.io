@@ -21,3 +21,12 @@ export interface Expertise {
 	desc: string;
     subItems: SubItems[];
 }
+
+export interface Projects {
+    src: string;
+    alt: string;
+    title: string;
+    desc: string;
+    techStack: string[];
+    url: string;
+}
