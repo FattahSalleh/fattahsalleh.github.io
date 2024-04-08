@@ -5,6 +5,7 @@ import AnimatedCursor from "react-animated-cursor";
 import { topNavBarButtons } from "../../data/topNavBarButtons";
 import { introDetails } from "../../data/introDetails";
 import { expertiseBE, expertiseFE } from "../../data/expertiseDetails";
+import ProjectItem from "../ProjectItem/ProjectItem";
 
 function App() {
 	return (
@@ -55,14 +56,18 @@ function App() {
 					</div>
 				</section>
 
-				<section className="max-w-full w-full p-12" id="projectSection">
+				<section className="max-w-full w-full px-48 py-12" id="projectSection">
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
 						</p>
-						<article className="flex flex-row justify-center">
-							Filter by ...
-							{/* TODO: To create and add project component */}
+						<div>Filter by ...</div>
+						<article className="grid grid-cols-3 justify-items-start gap-4">
+							<ProjectItem />
+							<ProjectItem />
+							<ProjectItem />
+							<ProjectItem />
+							<ProjectItem />
 						</article>
 					</div>
 				</section>
