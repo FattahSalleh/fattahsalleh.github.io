@@ -1,19 +1,13 @@
-import { Expertise, MyDetails, NavBarButtons } from "../../common/types";
+import { Expertise, MyDetails } from "../../common/types";
 import ExpertiseTable from "../ExpertiseTable/ExpertiseTable";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
 import frontendIcon from "../../assets/images/expertise/frontend-icon.svg";
 import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 import AnimatedCursor from "react-animated-cursor";
+import { topNavBarButtons } from "../../data/topNavBarButtons";
 
 function App() {
-	const topNavBarButtons: NavBarButtons[] = [
-		{ label: "hello world!", sectionId: "introSection" },
-		{ label: "expertise", sectionId: "expertiseSection" },
-		{ label: "project", sectionId: "projectSection" },
-		{ label: "experience", sectionId: "introSection" },
-		{ label: "contact", sectionId: "introSection" },
-	];
 
 	const introDetails: MyDetails = {
 		name: "Fattah Salleh",
