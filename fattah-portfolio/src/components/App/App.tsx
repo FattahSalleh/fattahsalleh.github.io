@@ -56,7 +56,7 @@ function App() {
 					</div>
 				</section>
 
-				<section className="max-w-full w-full px-48 py-12" id="projectSection">
+				<section className="max-w-full w-full px-48 py-16" id="projectSection">
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
