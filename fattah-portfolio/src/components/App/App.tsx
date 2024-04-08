@@ -4,6 +4,7 @@ import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNavBar/TopNavBar";
 import frontendIcon from "../../assets/images/expertise/frontend-icon.svg";
 import backendIcon from "../../assets/images/expertise/backend-icon.svg";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
 	const buttons: ButtonProps[] = [
@@ -77,6 +78,19 @@ function App() {
 
 	return (
 		<div className="App">
+			<AnimatedCursor
+				innerSize={8}
+				outerSize={35}
+				innerScale={1}
+				outerScale={2}
+				outerAlpha={0}
+				innerStyle={{
+					backgroundColor: "#50C878",
+				}}
+				outerStyle={{
+					border: "1px solid #2E4B35",
+				}}
+			/>
 			<main
 				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
 				id="main"
@@ -108,20 +122,15 @@ function App() {
 							<ExpertiseTable expertise={expertiseBE} />
 						</article>
 					</div>
-        </section>
-        
-				<section
-					className="max-w-full w-full p-12"
-					id="projectSection"
-				>
-					<div
-						className="flex flex-col items-center"
-					>
+				</section>
+
+				<section className="max-w-full w-full p-12" id="projectSection">
+					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
 						</p>
-            <article className="flex flex-row justify-center">
-              {/* TODO: To create and add project component */}
+						<article className="flex flex-row justify-center">
+							{/* TODO: To create and add project component */}
 						</article>
 					</div>
 				</section>
