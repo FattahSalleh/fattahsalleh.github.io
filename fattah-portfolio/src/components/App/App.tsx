@@ -6,13 +6,9 @@ import frontendIcon from "../../assets/images/expertise/frontend-icon.svg";
 import backendIcon from "../../assets/images/expertise/backend-icon.svg";
 import AnimatedCursor from "react-animated-cursor";
 import { topNavBarButtons } from "../../data/topNavBarButtons";
+import { introDetails } from "../../data/introDetails";
 
 function App() {
-
-	const introDetails: MyDetails = {
-		name: "Fattah Salleh",
-		position: "FULL STACK DEVELOPER \xa0&\xa0 SOFTWARE ENGINEER",
-	};
 
 	const expertiseFE: Expertise = {
 		src: frontendIcon,
