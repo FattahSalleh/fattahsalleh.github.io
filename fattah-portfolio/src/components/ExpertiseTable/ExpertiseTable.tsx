@@ -11,9 +11,9 @@ function ExpertiseTable({ expertise }: { expertise: Expertise }) {
 						width={32}
 						height={32}
 					/>
-					<p className="ml-4 font-bold text-3xl">{expertise.title}</p>
+					<p className="ml-4 font-bold text-3xl z-20">{expertise.title}</p>
 				</div>
-				<hr className="w-36 h-1 mx-auto border-0 rounded dark:bg-gray-700 relative -z-10 bottom-2.5 left-6" style={{ backgroundColor: expertise.titleColor }} />
+				<hr className="w-36 h-1 mx-auto border-0 rounded dark:bg-gray-700 relative z-10 bottom-2.5 left-6" style={{ backgroundColor: expertise.titleColor }} />
 				<p className="mt-8">{expertise.desc}</p>
 			</div>
 			{expertise.subItems.map((subItem, index) => (
