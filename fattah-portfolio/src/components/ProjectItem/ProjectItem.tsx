@@ -20,14 +20,23 @@ function ProjectItem({ project }: { project: Projects }) {
 				/>
 			</div>
 			<div className="h-full px-12 py-4 ">
-				<p className="font-bold text-lg">{project.title}</p>
+				<p className="font-bold text-lg text-wrap">
+					{/* className={`font-bold text-lg 
+                    ${
+						isHovered ? "text-wrap" : "truncate"
+                        } transition-all duration-1000 ease-in-out
+                    `} */}
+					{project.title}
+				</p>
 				{/* <small className="mt-4">{project.desc}</small> */}
 				<div className="font-medium my-1">
 					<ul className="flex flex-wrap flex-row">
 						{project.techStack.map((tech, index) => (
 							<li
 								key={index}
-								className="text-sm bg-secondary opacity-85 mr-2 my-1 px-4 py-0.5 border rounded-2xl"
+								className={`text-sm bg-secondary mr-2 my-1 px-4 py-0.5 border rounded-2xl transition-all duration-300 ${
+									isHovered ? "opacity-100" : "opacity-85 "
+								}`}
 							>
 								{tech}
 							</li>
