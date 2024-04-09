@@ -6,7 +6,7 @@ import { topNavBarButtons } from "../../data/topNavBarButtons";
 import { introDetails } from "../../data/introDetails";
 import { expertiseBE, expertiseFE } from "../../data/expertiseDetails";
 import ProjectItem from "../ProjectItem/ProjectItem";
-import { projectAllianceBSS } from "../../data/projectDetails";
+import { projects } from "../../data/projectDetails";
 
 function App() {
 	return (
@@ -68,11 +68,9 @@ function App() {
 						</p>
 						<div>Filter by ...</div>
 						<article className="grid grid-cols-3 justify-items-start gap-4">
-							<ProjectItem project={projectAllianceBSS} />
-							<ProjectItem project={projectAllianceBSS} />
-							<ProjectItem project={projectAllianceBSS} />
-							<ProjectItem project={projectAllianceBSS} />
-							<ProjectItem project={projectAllianceBSS} />
+							{projects.map((project, index) => (
+								<ProjectItem key={index} project={project} />
+							))}
 						</article>
 					</div>
 				</section>
