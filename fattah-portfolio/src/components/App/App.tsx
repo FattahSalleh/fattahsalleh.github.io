@@ -19,6 +19,7 @@ function App() {
 				outerAlpha={0}
 				innerStyle={{
 					backgroundColor: "#50C878",
+					boxShadow: "0px 0px 10000px 20px #50C878",
 				}}
 				outerStyle={{
 					border: "1px solid #2E4B35",
