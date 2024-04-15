@@ -6,20 +6,20 @@ function ProjectItem({ project }: { project: Projects }) {
 
 	return (
 		<div
-			className="flex flex-col border-2 rounded-lg w-full bg-darkGrayBg text-start overflow-hidden"
+			className="flex flex-col border-2 rounded-lg w-full min-h-auto bg-darkGrayBg text-start overflow-hidden"
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
-			<div className="min-w-full w-full h-3/4 bg-lightBg">
+			<div className="min-w-full w-full h-4/6 bg-lightBg flex justify-center overflow-hidden">
 				<img
 					src={project.src}
 					alt={project.alt}
-					className={`transform transition-transform duration-500 ${
+					className={`transform transition-transform duration-500 object-center h-96 object-scale-down ${
 						isHovered ? "scale-110" : "scale-100"
 					}`}
 				/>
 			</div>
-			<div className="h-full px-12 py-4 ">
+			<div className="h-1/6 px-12 py-4">
 				<p className="font-bold text-lg text-wrap">
 					{/* className={`font-bold text-lg 
                     ${
