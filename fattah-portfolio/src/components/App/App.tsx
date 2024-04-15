@@ -67,7 +67,7 @@ function App() {
 							My Projects
 						</p>
 						<div>Filter by ...</div>
-						<article className="grid grid-cols-3 justify-items-start gap-4">
+						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
 							{projects.map((project, index) => (
 								<ProjectItem key={index} project={project} />
 							))}
