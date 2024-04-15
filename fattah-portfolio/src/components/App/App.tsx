@@ -74,6 +74,40 @@ function App() {
 						</article>
 					</div>
 				</section>
+
+				<section
+					className="max-w-full w-full px-32 py-16"
+					id="experienceSection"
+				>
+					<div className="flex flex-col items-center">
+						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+							Experience
+						</p>
+						<div>Filter by ...</div>
+						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
+							{projects.map((project, index) => (
+								<ProjectItem key={index} project={project} />
+							))}
+						</article>
+					</div>
+				</section>
+
+				<section
+					className="max-w-full w-full px-32 py-16"
+					id="contactSection"
+				>
+					<div className="flex flex-col items-center">
+						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+							Contact
+						</p>
+						<div>Contact me.</div>
+						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
+							{projects.map((project, index) => (
+								<ProjectItem key={index} project={project} />
+							))}
+						</article>
+					</div>
+				</section>
 			</main>
 		</div>
 	);
