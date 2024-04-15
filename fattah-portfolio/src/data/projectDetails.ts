@@ -1,6 +1,7 @@
 import { Projects } from "../common/types";
 import allianceBizsmart from "../assets/images/project/alliance_bizsmart.png";
-import ocbcDuitNowQR from "../assets/images/project/ocbc_duitnowqr.png";
+import ocbcDuitNowQR from "../assets/images/project/ocbcduitnowqr-all-lg.png";
+import tmGlobal from "../assets/images/project/tm-global-logo.svg";
 
 export const projects: Projects[] = [
 	{
@@ -12,7 +13,7 @@ export const projects: Projects[] = [
 		url: "https://bizsmartsolution.alliancebank.com.my/banking/",
 	},
 	{
-		src: allianceBizsmart,
+		src: tmGlobal,
 		alt: "Telekom Malaysia Global",
 		title: "Telekom Malaysia Global",
 		desc: "Enhance your business with catered solutions domestically and internationally.",
