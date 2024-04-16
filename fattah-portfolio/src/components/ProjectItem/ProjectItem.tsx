@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Projects } from "../../common/types";
 
 function ProjectItem({ project }: { project: Projects }) {
-	const [isHovered, setIsHovered] = useState(false);
+	const [isHovered, setIsHovered] = useState<boolean>(false);
 
 	return (
 		<div

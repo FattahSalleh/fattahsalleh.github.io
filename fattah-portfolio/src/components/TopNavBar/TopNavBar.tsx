@@ -3,7 +3,7 @@ import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 import { NavBarButtons } from "../../common/types";
 
 function TopNavBar({ navBarButtons }: { navBarButtons: NavBarButtons[] }) {
-	const [isScrolled, setIsScrolled] = useState(false);
+	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
