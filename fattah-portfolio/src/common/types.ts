@@ -30,3 +30,14 @@ export interface Projects {
     techStack: string[];
     url: string;
 }
+
+export interface Experience {
+    position: string;
+    company: string;
+    timeRange: string;
+    responsibility: string[];
+    techStack: string[];
+    url: string;
+    src?: string;
+    alt?: string;
+}
