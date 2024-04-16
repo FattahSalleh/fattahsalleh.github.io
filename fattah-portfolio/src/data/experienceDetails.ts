@@ -2,7 +2,7 @@ import { Experience } from "../common/types";
 
 export const experience: Experience[] = [
 	{
-		position: "Web Developer (UI/UX Designer / Frontend Developer)",
+		position: "UI/UX Designer & Frontend Developer",
 		company: "Katsana Fleet Services",
 		timeRange: "November 2023 - Current",
 		responsibility: [
@@ -50,7 +50,7 @@ export const experience: Experience[] = [
 		location: "Selangor, Malaysia",
 	},
 	{
-		position: "Technical Support Executive - New Zealand Department",
+		position: "Technical Support Exec. - NZ Department",
 		company: "Fuji Xerox / FujiFilm",
 		timeRange: "July 2020 - February 2021",
 		responsibility: [
