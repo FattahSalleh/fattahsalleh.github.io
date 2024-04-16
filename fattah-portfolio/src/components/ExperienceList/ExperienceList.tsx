@@ -33,9 +33,13 @@ function ExperienceList({
 			</div>
 			{isOpen && (
 				<div className="px-4 py-4 bg-darkGrayBg rounded-lg transition-all duration-500 mt-2">
-					<div className="mb-2 flex flex-row text-lightGray font-mono">
+					<div className="mb-2 flex flex-row text-lightGray font-mono text-sm items-center">
 						<span>
-							<img src={locationIcon} alt="Location Icon" className="w-auto h-6 mr-2" />
+							<img
+								src={locationIcon}
+								alt="Location Icon"
+								className="w-auto h-4 mr-2"
+							/>
 						</span>
 						<span>{experience.location}</span>
 					</div>
