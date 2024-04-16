@@ -9,8 +9,15 @@ import ProjectItem from "../ProjectItem/ProjectItem";
 import { projects } from "../../data/projectDetails";
 import ExperienceList from "../ExperienceList/ExperienceList";
 import { experience } from "../../data/experienceDetails";
+import { useState } from "react";
 
 function App() {
+	const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+	const toggleAccordion = (index: number) => {
+		setOpenIndex(openIndex === index ? null : index);
+	};
+
 	return (
 		<div className="App">
 			<AnimatedCursor
@@ -89,6 +96,8 @@ function App() {
 							<ExperienceList
 								key={index}
 								experience={experience}
+								isOpen={openIndex === index}
+								toggleAccordion={() => toggleAccordion(index)}
 							/>
 						))}
 					</div>
