@@ -12,6 +12,7 @@ export const experience: Experience[] = [
 		],
 		techStack: ["Tech1", "Tech2"],
 		url: "",
+		location: "Kuala Lumpur, Malaysia",
 	},
 	{
 		position: "Digital Developer",
@@ -25,6 +26,7 @@ export const experience: Experience[] = [
 		],
 		techStack: ["Tech1", "Tech2"],
 		url: "",
+		location: "Selangor, Malaysia",
 	},
 	{
 		position: "Technical Support Executive - New Zealand Department",
@@ -35,6 +37,7 @@ export const experience: Experience[] = [
 		],
 		techStack: ["Tech1", "Tech2"],
 		url: "",
+		location: "Selangor, Malaysia",
 	},
 	{
 		position: "Internship",
@@ -45,5 +48,6 @@ export const experience: Experience[] = [
 		],
 		techStack: ["Tech1", "Tech2"],
 		url: "",
+		location: "Putrajaya, Malaysia",
 	},
 ];

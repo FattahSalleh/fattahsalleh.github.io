@@ -34,6 +34,7 @@ export interface Projects {
 export interface Experience {
     position: string;
     company: string;
+    location: string;
     timeRange: string;
     responsibility: string[];
     techStack: string[];

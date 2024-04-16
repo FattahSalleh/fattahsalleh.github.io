@@ -12,6 +12,7 @@ function ExperienceList({ experience }: { experience: Experience }) {
 			<div>
 				{experience.position} @ {experience.company}
 			</div>
+			<div>{experience.location}</div>
 			<div>{experience.timeRange}</div>
 			<div>
 				<ul>
