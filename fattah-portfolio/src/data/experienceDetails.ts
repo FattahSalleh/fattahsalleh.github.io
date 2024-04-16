@@ -1,4 +1,8 @@
 import { Experience } from "../common/types";
+import trinergyLogo from "../assets/images/experience/trinergy-wbg.png";
+import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
+import katsanaLogo from "../assets/images/experience/katsana.svg";
+import tmalLogo from "../assets/images/experience/TMAlphaLab.png";
 
 export const experience: Experience[] = [
 	{
@@ -21,6 +25,8 @@ export const experience: Experience[] = [
 		],
 		url: "https://www.katsana.com/",
 		location: "Kuala Lumpur, Malaysia",
+		src: katsanaLogo,
+		alt: "Katsana Logo",
 	},
 	{
 		position: "Digital Developer",
@@ -48,6 +54,8 @@ export const experience: Experience[] = [
 		],
 		url: "https://www.trinergydigital.com/",
 		location: "Selangor, Malaysia",
+		src: trinergyLogo,
+		alt: "Trinergy Logo",
 	},
 	{
 		position: "Technical Support Exec. - NZ Department",
@@ -59,6 +67,8 @@ export const experience: Experience[] = [
 		techStack: ["Computer Network", "Communication"],
 		url: "https://www.fujifilm.com/fbmy/en/contact-us",
 		location: "Selangor, Malaysia",
+		src: fujifilmLogo,
+		alt: "FujiFilm Logo",
 	},
 	{
 		position: "Internship",
@@ -70,5 +80,7 @@ export const experience: Experience[] = [
 		techStack: ["HTML", "CSS", "JavaScript", "ColdFusion"],
 		url: "https://www.youtube.com/watch?v=Jp-EX1dRSB8&ab_channel=FATTAHSALLEHUDDIN",
 		location: "Putrajaya, Malaysia",
+		src: tmalLogo,
+		alt: "Telekom Malaysia Alpha Lab Logo",
 	},
 ];

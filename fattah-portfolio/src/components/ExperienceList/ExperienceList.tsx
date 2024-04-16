@@ -21,7 +21,7 @@ function ExperienceList({
 				onClick={toggleAccordion}
 			>
 				<div className="flex justify-between items-center">
-					<span>{experience.position} </span>
+					<span>{experience.position}&nbsp;</span>
 					<span className="text-greenLine">
 						@ {experience.company}
 					</span>
@@ -43,14 +43,22 @@ function ExperienceList({
 						</span>
 						<span>{experience.location}</span>
 					</div>
-					<ul className="list-disc pl-4 mb-4">
-						{experience.responsibility.map((resp, index) => (
-							<li key={index} className="">
-								{resp}
-							</li>
-						))}
-					</ul>
-					<div className="font-medium my-1">
+					<div className="flex flex-row items-center">
+						<div className="w-3/4">
+							<ul className="list-disc pl-4 mb-4">
+								{experience.responsibility.map(
+									(resp, index) => (
+										<li key={index} className="">
+											{resp}
+										</li>
+									)
+								)}
+							</ul>
+						</div>
+						<div className="w-1/4 justify-center flex"><img src={experience.src} alt={experience.alt} className="h-auto w-44" /></div>
+					</div>
+
+					<div className="font-medium my-1 w-3/4">
 						<ul className="flex flex-wrap flex-row">
 							{experience.techStack.map((exp, index) => (
 								<li
