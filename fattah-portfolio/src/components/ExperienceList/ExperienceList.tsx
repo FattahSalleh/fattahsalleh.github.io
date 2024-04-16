@@ -1,4 +1,5 @@
 import { Experience } from "../../common/types";
+import locationIcon from "../../assets/images/experience/location.svg";
 
 function ExperienceList({
 	experience,
@@ -12,9 +13,9 @@ function ExperienceList({
 	return (
 		<div className="w-3/4 rounded-lg shadow-md mb-4 ">
 			<div
-				className={`px-4 py-4 cursor-pointer flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
+				className={`px-8 py-4 cursor-pointer flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
 					isOpen
-						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)]"
+						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] !important"
 						: " "
 				}transition-all duration-500`}
 				onClick={toggleAccordion}
@@ -32,7 +33,12 @@ function ExperienceList({
 			</div>
 			{isOpen && (
 				<div className="px-4 py-4 bg-darkGrayBg rounded-lg transition-all duration-500 mt-2">
-					<div className=" mb-2">{experience.location}</div>
+					<div className="mb-2 flex flex-row text-lightGray font-mono">
+						<span>
+							<img src={locationIcon} alt="Location Icon" className="w-auto h-6 mr-2" />
+						</span>
+						<span>{experience.location}</span>
+					</div>
 					<ul className="list-disc pl-4 mb-4">
 						{experience.responsibility.map((resp, index) => (
 							<li key={index} className="">
