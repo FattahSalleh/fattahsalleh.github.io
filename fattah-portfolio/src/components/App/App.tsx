@@ -75,7 +75,6 @@ function App() {
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							My Projects
 						</p>
-						<div>Filter by ...</div>
 						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
 							{projects.map((project, index) => (
 								<ProjectItem key={index} project={project} />
