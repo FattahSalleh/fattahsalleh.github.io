@@ -4,7 +4,7 @@ export const experience: Experience[] = [
 	{
 		position: "UI/UX Designer & Frontend Developer",
 		company: "Katsana Fleet Services",
-		timeRange: "November 2023 - Current",
+		timeRange: "Nov 2023 - Current",
 		responsibility: [
 			"Designed cohesive websites, tablet, and mobile mock-ups using Figma, while also presenting design concepts and proposals to management for approval and implementation.",
 			"Led UI/UX enhancements for both existing and new products, guiding the process from conceptualization to high-fidelity web designs and prototypes.",
@@ -25,7 +25,7 @@ export const experience: Experience[] = [
 	{
 		position: "Digital Developer",
 		company: "Trinergy Digital",
-		timeRange: "March 2021 - October 2023",
+		timeRange: "Mar 2021 - Oct 2023",
 		responsibility: [
 			"Contributed to over 6 projects using various libraries and frameworks such as jQuery, Pug, Vue, React, NodeJS and Bootstrap, ensuring the creation of responsive, error-free and intuitive websites experiences tailored to the specific needs of banking clients.",
 			"Pioneered the implementation of OpenText CMS, leading a team of developers using Agile methodology to revamp corporate websites while maintaining existing functionality.",
@@ -52,7 +52,7 @@ export const experience: Experience[] = [
 	{
 		position: "Technical Support Exec. - NZ Department",
 		company: "Fuji Xerox / FujiFilm",
-		timeRange: "July 2020 - February 2021",
+		timeRange: "July 2020 - Feb 2021",
 		responsibility: [
 			"Provided technical support to customers from New Zealand, troubleshooting hardware, software and network issues, resulting in a 95% customer satisfaction rating.",
 		],
@@ -63,7 +63,7 @@ export const experience: Experience[] = [
 	{
 		position: "Internship",
 		company: "Telekom Malaysia Alpha Lab",
-		timeRange: "April 2019 - June 2019",
+		timeRange: "Apr 2019 - June 2019",
 		responsibility: [
 			"Researched and implemented front-end enhancements for the company’s web portal via ColdFusion, making the portal more user friendly and accessible.",
 		],
