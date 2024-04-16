@@ -7,6 +7,8 @@ import { introDetails } from "../../data/introDetails";
 import { expertiseBE, expertiseFE } from "../../data/expertiseDetails";
 import ProjectItem from "../ProjectItem/ProjectItem";
 import { projects } from "../../data/projectDetails";
+import ExperienceList from "../ExperienceList/ExperienceList";
+import { experience } from "../../data/experienceDetails";
 
 function App() {
 	return (
@@ -83,12 +85,12 @@ function App() {
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
 							Experience
 						</p>
-						<div>Filter by ...</div>
-						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
-							{projects.map((project, index) => (
-								<ProjectItem key={index} project={project} />
-							))}
-						</article>
+						{experience.map((experience, index) => (
+							<ExperienceList
+								key={index}
+								experience={experience}
+							/>
+						))}
 					</div>
 				</section>
 
@@ -101,11 +103,6 @@ function App() {
 							Contact
 						</p>
 						<div>Contact me.</div>
-						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
-							{projects.map((project, index) => (
-								<ProjectItem key={index} project={project} />
-							))}
-						</article>
 					</div>
 				</section>
 			</main>
