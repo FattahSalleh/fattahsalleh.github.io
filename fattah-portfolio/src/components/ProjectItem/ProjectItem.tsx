@@ -34,7 +34,7 @@ function ProjectItem({ project }: { project: Projects }) {
 						{project.techStack.map((tech, index) => (
 							<li
 								key={index}
-								className={`text-sm bg-secondary mr-2 my-1 px-4 py-0.5 border rounded-2xl transition-all duration-300 ${
+								className={`text-sm text-secondary bg-primary mr-2 my-1 px-4 py-1 rounded-2xl transition-all duration-300 ${
 									isHovered ? "opacity-100" : "opacity-85 "
 								}`}
 							>

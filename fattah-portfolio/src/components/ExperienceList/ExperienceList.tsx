@@ -55,7 +55,7 @@ function ExperienceList({
 							{experience.techStack.map((exp, index) => (
 								<li
 									key={index}
-									className={`text-sm text-lightText bg-secondary mr-2 my-1 px-4 py-0.5 border rounded-2xl transition-all duration-300`}
+									className={`text-sm text-secondary bg-primary mr-2 my-1 px-4 py-1 rounded-2xl transition-all duration-300`}
 								>
 									{exp}
 								</li>
