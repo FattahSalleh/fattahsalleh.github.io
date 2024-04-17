@@ -26,9 +26,11 @@ function ExperienceList({
 
 	useEffect(() => {
 		if (contentRef.current) {
-			contentRef.current.style.height = isOpen
-				? `${contentRef.current.scrollHeight}px`
-				: "0px";
+			if (isOpen) {
+				contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+			} else {
+				contentRef.current.style.height = "0px";
+			}
 		}
 	}, [isOpen]);
 
