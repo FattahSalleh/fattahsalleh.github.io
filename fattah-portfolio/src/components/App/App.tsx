@@ -18,6 +18,8 @@ function App() {
 		setOpenIndex(openIndex === index ? null : index);
 	};
 
+	// TODO: add sticky contacts, appear after 2nd section, disappear at last?
+
 	return (
 		<div className="App">
 			<AnimatedCursor
@@ -73,7 +75,7 @@ function App() {
 				>
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							My Projects
+							Projects Done
 						</p>
 						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
 							{projects.map((project, index) => (
