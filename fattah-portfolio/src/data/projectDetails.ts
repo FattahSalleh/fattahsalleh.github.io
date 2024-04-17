@@ -7,7 +7,7 @@ export const projects: Projects[] = [
 	{
 		src: allianceBizsmart,
 		alt: "Alliance Bank BizSmart Solution",
-		title: "Alliance Bank BizSmart Solution",
+		title: "Alliance BizSmart Solution",
 		desc: "The Alliance BizSmart® is your daily business banking solution at your fingertips.",
 		techStack: ["jQuery", "Bootstrap", "Axios"],
 		url: "https://bizsmartsolution.alliancebank.com.my/banking/",

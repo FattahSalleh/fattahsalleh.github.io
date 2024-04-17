@@ -10,7 +10,7 @@ function ProjectItem({ project }: { project: Projects }) {
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
-			<div className="min-w-full w-full h-4/6 bg-lightBg flex justify-center overflow-hidden">
+			<div className="min-w-full w-full max-h-4/6 bg-lightBg flex justify-center overflow-hidden">
 				<img
 					src={project.src}
 					alt={project.alt}
@@ -19,18 +19,20 @@ function ProjectItem({ project }: { project: Projects }) {
 					}`}
 				/>
 			</div>
-			<div className="h-1/6 px-12 py-4">
-				<p className="font-bold text-lg text-wrap">
+			<div className="flex-grow px-12 py-4 flex flex-col justify-between">
+				<div>
 					{/* className={`font-bold text-lg 
                     ${
 						isHovered ? "text-wrap" : "truncate"
                         } transition-all duration-1000 ease-in-out
                     `} */}
-					{project.title}
-				</p>
-				{/* <small className="mt-4">{project.desc}</small> */}
-				<div className="font-medium my-1">
-					<ul className="flex flex-wrap flex-row">
+					<p className="font-bold text-lg">{project.title}</p>
+					<small className="mt-4 pt-4 font-mono">
+						{project.desc}
+					</small>
+				</div>
+				<div className="font-medium mt-auto">
+					<ul className="flex flex-wrap flex-row justify-start">
 						{project.techStack.map((tech, index) => (
 							<li
 								key={index}
