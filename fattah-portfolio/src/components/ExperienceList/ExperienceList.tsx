@@ -2,6 +2,7 @@ import { Experience } from "../../common/types";
 import locationIcon from "../../assets/images/experience/location.svg";
 import plusIcon from "../../assets/images/general/plus.svg";
 import minusIcon from "../../assets/images/general/minus.svg";
+import { useEffect, useRef, useState } from "react";
 
 function ExperienceList({
 	experience,
@@ -12,14 +13,33 @@ function ExperienceList({
 	isOpen: boolean;
 	toggleAccordion: () => void;
 }) {
+	const [contentLoaded, setContentLoaded] = useState<boolean>(false);
+	const contentRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setContentLoaded(true);
+		}, 500);
+
+		return () => clearTimeout(timeout);
+	}, []);
+
+	useEffect(() => {
+		if (contentRef.current) {
+			contentRef.current.style.height = isOpen
+				? `${contentRef.current.scrollHeight}px`
+				: "0px";
+		}
+	}, [isOpen]);
+
 	return (
 		<div className="w-3/4 rounded-lg shadow-md mb-4 ">
 			<div
 				className={`px-8 py-4 cursor-pointer flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
 					isOpen
 						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] !important"
-						: " "
-				}transition-all duration-500`}
+						: ""
+				} transition-all duration-500`}
 				onClick={toggleAccordion}
 			>
 				<div className="flex justify-between items-center">
@@ -40,12 +60,11 @@ function ExperienceList({
 				</div>
 			</div>
 			<div
-				className={`${
-					isOpen ? "max-h-full opacity-100" : "max-h-0 opacity-0"
-				} transition-all duration-500 ease-in-out overflow-hidden`}
+				ref={contentRef}
+				className="overflow-hidden transition-height duration-500 ease-in-out"
 			>
-				{isOpen && (
-					<div className="px-4 py-4 bg-darkGrayBg rounded-lg transition-all duration-500 mt-2">
+				{contentLoaded && (
+					<div className={`px-4 py-4 bg-darkGrayBg rounded-lg mt-2`}>
 						<div className="mb-2 flex flex-row text-lightGray font-mono text-sm items-center">
 							<span>
 								<img
