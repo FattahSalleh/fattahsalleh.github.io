@@ -2,7 +2,7 @@ import { Experience } from "../common/types";
 import trinergyLogo from "../assets/images/experience/trinergy-wbg.png";
 import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
 import katsanaLogo from "../assets/images/experience/katsana.svg";
-import tmalLogo from "../assets/images/experience/TMAlphaLab.png";
+import tmalLogo from "../assets/images/experience/TMAlphaLab.svg";
 
 export const experience: Experience[] = [
 	{
