@@ -1,5 +1,7 @@
 import { Experience } from "../../common/types";
 import locationIcon from "../../assets/images/experience/location.svg";
+import plusIcon from "../../assets/images/general/plus.svg";
+import minusIcon from "../../assets/images/general/minus.svg";
 
 function ExperienceList({
 	experience,
@@ -28,7 +30,7 @@ function ExperienceList({
 				</div>
 				<div className="flex justify-between items-center">
 					<div className="mr-8">{experience.timeRange}</div>
-					<div className="text-base">{isOpen ? "-" : "+"}</div>
+					<div className="text-base h-auto w-4">{isOpen ? <img src={minusIcon} alt="Minus Icon" /> : <img src={plusIcon} alt="Plus Icon" /> }</div>
 				</div>
 			</div>
 			{isOpen && (
