@@ -1,13 +1,13 @@
 import { Projects } from "../common/types";
 import allianceBizsmart from "../assets/images/project/alliance_bizsmart.png";
 import ocbcDuitNowQR from "../assets/images/project/ocbcduitnowqr-all-lg.png";
-import tmGlobal from "../assets/images/project/tm-global-logo.svg";
+import tmGlobal from "../assets/images/project/tmglobal-logo.png";
 
 export const projects: Projects[] = [
 	{
 		src: allianceBizsmart,
 		alt: "Alliance Bank BizSmart Solution",
-		title: "Alliance BizSmart Solution",
+		title: "Alliance Bank BizSmart Solution",
 		desc: "The Alliance BizSmart® is your daily business banking solution at your fingertips.",
 		techStack: ["jQuery", "Bootstrap", "Axios"],
 		url: "https://bizsmartsolution.alliancebank.com.my/banking/",
