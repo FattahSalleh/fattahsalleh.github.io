@@ -10,7 +10,7 @@ function ProjectItem({ project }: { project: Projects }) {
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
-			<div className="min-w-full w-full h-fit bg-lightBg flex justify-center overflow-hidden">
+			<div className="min-w-full w-full h-64 bg-lightBg flex justify-center overflow-hidden">
 				<img
 					src={project.src}
 					alt={project.alt}
@@ -19,13 +19,11 @@ function ProjectItem({ project }: { project: Projects }) {
 					}`}
 				/>
 			</div>
-			<div className="h-auto flex-grow px-12 py-4 flex flex-col justify-between">
+			<div className="h-auto auto flex-grow px-8 py-4 flex flex-col justify-between">
 				<div
-					className={`font-bold text-lg 
-                    ${
-						isHovered ? "text-wrap" : "truncate"
-					} transition-all duration-1000 ease-in-out
-                    `}
+					className={
+						"font-bold text-lg text-wrap transition-all duration-1000 ease-in-out"
+					}
 				>
 					{project.title}
 					{/* <p className="font-bold text-lg">{project.title}</p> */}
