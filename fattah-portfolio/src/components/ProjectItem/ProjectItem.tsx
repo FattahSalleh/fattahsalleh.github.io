@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Projects } from "../../common/types";
+import popupIcon from "../../assets/images/general/popup.svg";
 
 function ProjectItem({ project }: { project: Projects }) {
 	const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -19,13 +20,32 @@ function ProjectItem({ project }: { project: Projects }) {
 					}`}
 				/>
 			</div>
-			<div className="h-auto auto flex-grow px-8 py-4 flex flex-col justify-between">
+			<div
+				className={`h-auto auto flex-grow px-5 py-5 flex flex-col justify-between ${
+					isHovered ? "text-blueLine" : "text-lightGray"
+				}`}
+			>
 				<div
 					className={
-						"font-bold text-lg text-wrap transition-all duration-1000 ease-in-out"
+						"font-semibold text-lg text-wrap transition-all duration-1000 ease-in-out"
 					}
 				>
 					{project.title}
+				</div>
+				<div className="text-sm">
+					<span
+						className={`flex flex-row flex-wrap items-center transition-all duration-500 ease-in-out ${
+							isHovered ? "translate-x-1 text-blueLine" : ""
+						}`}
+					>
+						Show project
+						{/* <img
+							src={popupIcon}
+							alt="Popup Icon"
+							className={`w-auto h-3 ml-2 transition-all duration-500
+							${isHovered ? "scale-150" : ""}`}
+						/> */}
+					</span>
 				</div>
 				{/* <div className="font-medium mt-4">
 					<ul className="flex flex-row justify-start overflow-x-auto whitespace-nowrap scroll-auto">
