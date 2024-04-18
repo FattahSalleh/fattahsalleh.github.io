@@ -7,7 +7,9 @@ function ProjectItem({ project }: { project: Projects }) {
 
 	return (
 		<div
-			className="flex flex-col border-2 rounded-lg w-full min-h-auto bg-darkGrayBg text-start overflow-hidden"
+			className={`flex flex-col border-2 rounded-lg w-full min-h-auto bg-darkGrayBg text-start overflow-hidden transition-all duration-500 ${
+				isHovered ? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)]" : ""
+			}`}
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
 		>
@@ -22,29 +24,31 @@ function ProjectItem({ project }: { project: Projects }) {
 			</div>
 			<div
 				className={`h-auto auto flex-grow px-5 py-5 flex flex-col justify-between ${
-					isHovered ? "text-blueLine" : "text-lightGray"
+					isHovered ? "text-greenLine" : "text-lightGray"
 				}`}
 			>
 				<div
 					className={
-						"font-semibold text-lg text-wrap transition-all duration-1000 ease-in-out"
+						"font-semibold text-lg text-wrap transition-all duration-300 ease-in-out"
 					}
 				>
 					{project.title}
 				</div>
 				<div className="text-sm">
 					<span
-						className={`flex flex-row flex-wrap items-center transition-all duration-500 ease-in-out ${
-							isHovered ? "translate-x-1 text-blueLine" : ""
+						className={`flex flex-row flex-wrap items-center transition-all duration-300 ease-in-out ${
+							isHovered ? "translate-x-2 text-greenLine" : ""
 						}`}
 					>
 						Show project
-						{/* <img
-							src={popupIcon}
-							alt="Popup Icon"
-							className={`w-auto h-3 ml-2 transition-all duration-500
-							${isHovered ? "scale-150" : ""}`}
-						/> */}
+						{isHovered && (
+							<img
+								src={popupIcon}
+								alt="Popup Icon"
+								className={`w-auto h-3 ml-2 transition-all duration-1000 ease-in-out transform
+							${isHovered ? "scale-150 translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}
+							/>
+						)}
 					</span>
 				</div>
 				{/* <div className="font-medium mt-4">
