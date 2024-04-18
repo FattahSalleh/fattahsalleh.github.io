@@ -14,7 +14,7 @@ function ProjectItem({ project }: { project: Projects }) {
 				<img
 					src={project.src}
 					alt={project.alt}
-					className={`transform transition-transform duration-500 w-full h-full object-cover ${
+					className={`transform transition-transform duration-500 w-full h-full object-scale-down ${
 						isHovered ? "scale-110" : "scale-100"
 					}`}
 				/>
@@ -26,13 +26,9 @@ function ProjectItem({ project }: { project: Projects }) {
 					}
 				>
 					{project.title}
-					{/* <p className="font-bold text-lg">{project.title}</p> */}
-					{/* <small className="mt-4 pt-4 font-mono">
-						{project.desc}
-					</small> */}
 				</div>
-				<div className="font-medium mt-auto">
-					<ul className="flex flex-wrap flex-row justify-start">
+				{/* <div className="font-medium mt-4">
+					<ul className="flex flex-row justify-start overflow-x-auto whitespace-nowrap scroll-auto">
 						{project.techStack.map((tech, index) => (
 							<li
 								key={index}
@@ -44,7 +40,7 @@ function ProjectItem({ project }: { project: Projects }) {
 							</li>
 						))}
 					</ul>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
