@@ -12,7 +12,7 @@ export default function DisclaimerSection({
 				target="_blank"
 				rel="noreferrer"
 			>
-				<div className="text-xs text-center font-mono">
+				<div className="text-xs text-center font-mono hover:scale-110 hover:text-greenTurquoise transition-all duration-300">
 					Designed and built by Fattah Salleh
 				</div>
 			</a>
