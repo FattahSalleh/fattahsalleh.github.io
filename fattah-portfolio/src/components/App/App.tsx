@@ -11,7 +11,6 @@ import ExperienceList from "../ExperienceList/ExperienceList";
 import { experience } from "../../data/experienceData";
 import { useState } from "react";
 import ContactOverlay from "../Contact/ContactOverlay";
-import Disclaimer from "../Disclaimer/DisclaimerSection";
 import { disclaimerData } from "../../data/disclaimerData";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 
