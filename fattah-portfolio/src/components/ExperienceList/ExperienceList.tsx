@@ -33,7 +33,7 @@ function ExperienceList({
 			}
 		}
 	}, [isOpen]);
-
+// TODO: ADD <a> to img logo
 	return (
 		<div className="w-3/4 rounded-lg shadow-md mb-4 ">
 			<div
@@ -46,7 +46,7 @@ function ExperienceList({
 			>
 				<div className="flex justify-between items-center">
 					<span>{experience.position}&nbsp;</span>
-					<span className="text-greenLine">
+					<span className="text-lightGreen">
 						@ {experience.company}
 					</span>
 				</div>

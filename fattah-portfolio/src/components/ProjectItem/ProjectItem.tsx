@@ -29,7 +29,7 @@ function ProjectItem({ project }: { project: Projects }) {
 				</div>
 				<div
 					className={`h-auto auto flex-grow px-5 py-5 flex flex-col justify-between ${
-						isHovered ? "text-greenLine" : "text-lightGray"
+						isHovered ? "text-lightGreen" : "text-lightGray"
 					}`}
 				>
 					<div
@@ -42,7 +42,7 @@ function ProjectItem({ project }: { project: Projects }) {
 					<div className="text-sm">
 						<span
 							className={`flex flex-row flex-wrap items-center transition-all duration-300 ease-in-out ${
-								isHovered ? "translate-x-2 text-greenLine" : ""
+								isHovered ? "translate-x-2 text-lightGreen" : ""
 							}`}
 						>
 							Show project
