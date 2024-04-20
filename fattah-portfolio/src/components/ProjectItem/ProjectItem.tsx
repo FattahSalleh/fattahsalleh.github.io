@@ -5,12 +5,12 @@ import popupIcon from "../../assets/images/general/popup.svg";
 function ProjectItem({ project }: { project: Projects }) {
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 
-	// LAZY LOAD THIS
+	// TODO: LAZY LOAD THIS
 
 	return (
 		<a href={project.url} target="_blank" rel="noreferrer">
 			<div
-				className={`flex flex-col border-2 rounded-lg w-full min-h-auto bg-darkGrayBg text-start overflow-hidden transition-all duration-500 ${
+				className={`flex flex-col border-0 rounded-lg w-full min-h-auto bg-darkGrayBg text-start overflow-hidden transition-all duration-500 ${
 					isHovered
 						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)]"
 						: ""
@@ -28,22 +28,18 @@ function ProjectItem({ project }: { project: Projects }) {
 					/>
 				</div>
 				<div
-					className={`h-auto auto flex-grow px-5 py-5 flex flex-col justify-between ${
-						isHovered ? "text-lightGreen" : "text-lightGray"
+					className={`h-auto auto flex-grow px-5 py-5 flex flex-col justify-between transition-all duration-300 ease-in-out ${
+						isHovered
+							? "text-lightGreen translate-x-2"
+							: "text-lightGray"
 					}`}
 				>
-					<div
-						className={
-							"font-semibold text-lg text-wrap transition-all duration-300 ease-in-out"
-						}
-					>
+					<div className={`font-semibold text-lg text-wrap`}>
 						{project.title}
 					</div>
 					<div className="text-sm">
 						<span
-							className={`flex flex-row flex-wrap items-center transition-all duration-300 ease-in-out ${
-								isHovered ? "translate-x-2 text-lightGreen" : ""
-							}`}
+							className={`flex flex-row flex-wrap items-center`}
 						>
 							Show project
 							{isHovered && (
