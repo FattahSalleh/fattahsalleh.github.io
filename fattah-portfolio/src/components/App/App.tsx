@@ -10,6 +10,8 @@ import { projects } from "../../data/projectDetails";
 import ExperienceList from "../ExperienceList/ExperienceList";
 import { experience } from "../../data/experienceDetails";
 import { useState } from "react";
+import Footer from "../Footer/Footer";
+import ContactOverlay from "../Contact/ContactOverlay";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -18,7 +20,6 @@ function App() {
 		setOpenIndex(openIndex === index ? null : index);
 	};
 
-	// TODO: add sticky contacts, appear after 2nd section, disappear at last?
 
 	return (
 		<div className="App">
@@ -40,6 +41,8 @@ function App() {
 				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
 				id="main"
 			>
+				<ContactOverlay />
+				
 				<TopNavBar navBarButtons={topNavBarButtons} />
 				<section
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
@@ -110,10 +113,13 @@ function App() {
 				>
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							Contact
+							-
 						</p>
-						<div>Contact me.</div>
 					</div>
+				</section>
+
+				<section>
+					<Footer />
 				</section>
 			</main>
 		</div>
