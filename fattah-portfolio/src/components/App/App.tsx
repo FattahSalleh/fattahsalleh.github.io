@@ -10,8 +10,10 @@ import { projects } from "../../data/projectData";
 import ExperienceList from "../ExperienceList/ExperienceList";
 import { experience } from "../../data/experienceData";
 import { useState } from "react";
-import Footer from "../Footer/Footer";
 import ContactOverlay from "../Contact/ContactOverlay";
+import Disclaimer from "../Disclaimer/DisclaimerSection";
+import { disclaimerData } from "../../data/disclaimerData";
+import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -119,7 +121,7 @@ function App() {
 				</section>
 
 				<section>
-					<Footer />
+					<DisclaimerSection disclaimerData={disclaimerData} />
 				</section>
 			</main>
 		</div>
