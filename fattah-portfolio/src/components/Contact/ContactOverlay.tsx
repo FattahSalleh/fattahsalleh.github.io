@@ -22,7 +22,7 @@ export default function ContactOverlay() {
 
 			<div className="h-auto w-fit fixed bottom-0 right-12 left-auto z-10 flex flex-column flex-no-wrap justify-between items-center">
 				<ul>
-					<div className="text-lightText my-8">
+					<div className="text-lightText my-8 text-xs [writing-mode:vertical-rl]">
 						<a href={mailtoUrl} target="_blank" rel="noreferrer">
 							<p>{emailContact ? emailContact.url : ""}</p>
 						</a>
