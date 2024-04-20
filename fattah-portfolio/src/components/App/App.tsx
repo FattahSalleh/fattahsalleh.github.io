@@ -20,7 +20,6 @@ function App() {
 		setOpenIndex(openIndex === index ? null : index);
 	};
 
-
 	return (
 		<div className="App">
 			<AnimatedCursor
@@ -37,12 +36,13 @@ function App() {
 					border: "1px solid #2E4B35",
 				}}
 			/>
+
+			<ContactOverlay />
+
 			<main
 				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
 				id="main"
 			>
-				<ContactOverlay />
-				
 				<TopNavBar navBarButtons={topNavBarButtons} />
 				<section
 					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
