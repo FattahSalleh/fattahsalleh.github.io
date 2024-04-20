@@ -23,7 +23,7 @@ export default function DisclaimerSection({
 							className="mt-4 mb-12 mx-4 hover:scale-150 transition-transform duration-300"
 							key={index}
 						>
-							<a href={tech.src} target="_blank" rel="noreferrer">
+							<a href={tech.url} target="_blank" rel="noreferrer">
 								<img
 									src={tech.src}
 									alt={tech.alt}
