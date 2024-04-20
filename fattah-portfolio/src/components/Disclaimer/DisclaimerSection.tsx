@@ -11,10 +11,9 @@ export default function DisclaimerSection({
 				href="https://github.com/FattahSalleh/fattahsalleh.github.io"
 				target="_blank"
 				rel="noreferrer"
+				className="text-xs text-center font-mono hover:scale-110 hover:text-greenTurquoise transition-all duration-300"
 			>
-				<div className="text-xs text-center font-mono hover:scale-110 hover:text-greenTurquoise transition-all duration-300">
-					Designed and built by Fattah Salleh
-				</div>
+				Designed and built by Fattah Salleh
 			</a>
 			<div className="h-auto w-auto flex flex-row flex-no-wrap items-center justify-center">
 				<ul className="flex flex-row flex-no-wrap">
