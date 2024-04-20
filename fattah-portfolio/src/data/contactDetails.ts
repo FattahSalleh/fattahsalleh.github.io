@@ -18,7 +18,7 @@ export const contactData: Contact[] = [
 	},
 	{
 		name: "Email",
-		url: "fattah.sallehuddin@gmail.com",
+		url: "mailto:fattah.sallehuddin@gmail.com",
 		src: email,
 		alt: "Email Icon",
 	},
