@@ -12,28 +12,26 @@ export default function DisclaimerSection({
 				target="_blank"
 				rel="noreferrer"
 			>
-				<div className="text-xs text-center">
+				<div className="text-xs text-center font-mono">
 					Designed and built by Fattah Salleh
 				</div>
 			</a>
 			<div className="h-auto w-auto flex flex-row flex-no-wrap items-center justify-center">
-				<ul>
-					<li className="mt-4 mb-12 hover:scale-150 transition-transform duration-300">
-						{disclaimerData.map((tech, index) => (
-							<a
-								href={tech.src}
-								target="_blank"
-								rel="noreferrer"
-								key={index}
-							>
+				<ul className="flex flex-row flex-no-wrap">
+					{disclaimerData.map((tech, index) => (
+						<li
+							className="mt-4 mb-12 mx-4 hover:scale-150 transition-transform duration-300"
+							key={index}
+						>
+							<a href={tech.src} target="_blank" rel="noreferrer">
 								<img
 									src={tech.src}
 									alt={tech.alt}
 									className="w-6 h-auto"
 								/>
 							</a>
-						))}
-					</li>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>
