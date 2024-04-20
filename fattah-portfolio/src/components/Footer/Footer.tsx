@@ -1,3 +1,9 @@
+import Disclaimer from "./Disclaimer";
+
 export default function Footer() {
-	return <div></div>;
+	return (
+		<div>
+			<Disclaimer />
+		</div>
+	);
 }
