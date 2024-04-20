@@ -13,6 +13,7 @@ import { useState } from "react";
 import ContactOverlay from "../Contact/ContactOverlay";
 import { disclaimerData } from "../../data/disclaimerData";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
+import ContactSection from "../Contact/ContactSection";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -114,12 +115,13 @@ function App() {
 				>
 					<div className="flex flex-col items-center">
 						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							-
+							Get In Touch
 						</p>
+						<ContactSection />
 					</div>
 				</section>
 
-				<section>
+				<section className="mt-24" id="disclaimerSection">
 					<DisclaimerSection disclaimerData={disclaimerData} />
 				</section>
 			</main>
