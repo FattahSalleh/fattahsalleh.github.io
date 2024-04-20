@@ -42,3 +42,10 @@ export interface Experience {
     src?: string;
     alt?: string;
 }
+
+export interface Contact {
+    name: string;
+    url: string;
+    src: string;
+    alt: string;
+}
