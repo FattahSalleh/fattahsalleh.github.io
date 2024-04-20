@@ -1,4 +1,4 @@
-import { contactData } from "../../data/contactDetails";
+import { contactData } from "../../data/contactData";
 import ContactOption from "./ContactOption";
 
 export default function ContactOverlay() {
