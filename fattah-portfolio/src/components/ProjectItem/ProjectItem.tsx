@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Projects } from "../../common/types";
-import popupIcon from "../../assets/images/general/popup.svg";
+import newtabLine from "../../assets/images/general/newtab-line.svg";
+import newtabLineGreen from "../../assets/images/general/newtab-line_green.svg";
 
 function ProjectItem({ project }: { project: Projects }) {
 	const [isHovered, setIsHovered] = useState<boolean>(false);
-
-	// TODO: LAZY LOAD THIS
 
 	return (
 		<a href={project.url} target="_blank" rel="noreferrer">
@@ -42,34 +41,18 @@ function ProjectItem({ project }: { project: Projects }) {
 							className={`flex flex-row flex-wrap items-center`}
 						>
 							Show project
-							{isHovered && (
-								<img
-									src={popupIcon}
-									alt="Popup Icon"
-									className={`w-auto h-3 ml-2 transition-all duration-1000 ease-in-out transform
-							${
-								isHovered
-									? "scale-150 translate-x-0 opacity-100"
-									: "translate-x-full opacity-0"
-							}`}
-								/>
-							)}
+							<img
+								src={isHovered ? newtabLineGreen : newtabLine}
+								alt="Popup Icon"
+								className={`w-auto h-3 ml-2 transition-all duration-500 ease-in-out transform
+                                ${
+									isHovered
+										? "scale-125 translate-x-1"
+										: "translate-x-0"
+								}`}
+							/>
 						</span>
 					</div>
-					{/* <div className="font-medium mt-4">
-					<ul className="flex flex-row justify-start overflow-x-auto whitespace-nowrap scroll-auto">
-						{project.techStack.map((tech, index) => (
-							<li
-								key={index}
-								className={`text-sm text-secondary bg-primary mr-2 my-1 px-4 py-1 rounded-2xl transition-all duration-300 ${
-									isHovered ? "opacity-100" : "opacity-85 "
-								}`}
-							>
-								{tech}
-							</li>
-						))}
-					</ul>
-				</div> */}
 				</div>
 			</div>
 		</a>
