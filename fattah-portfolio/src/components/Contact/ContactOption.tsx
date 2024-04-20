@@ -5,7 +5,7 @@ export default function ContactOption({ contact }: { contact: Contact }) {
 	const emailUrl = contact.name === "Email" ? true : false;
 
 	return (
-		<li className="my-8">
+		<li className="my-8 hover:scale-150 transition-transform duration-300">
 			<a href={emailUrl ? "mailto:" + contact.url : contact.url} target="_blank" rel="noreferrer">
 				<img
 					src={contact.src}
