@@ -33,7 +33,6 @@ function ExperienceList({
 			}
 		}
 	}, [isOpen]);
-// TODO: ADD <a> to img logo
 	return (
 		<div className="w-3/4 rounded-lg shadow-md mb-4 ">
 			<div
@@ -89,12 +88,18 @@ function ExperienceList({
 									)}
 								</ul>
 							</div>
-							<div className="w-1/4 justify-center flex">
-								<img
-									src={experience.src}
-									alt={experience.alt}
-									className="h-auto w-44"
-								/>
+							<div className="w-1/4 justify-center flex hover:scale-110 transition-transform duration-300">
+								<a
+									href={experience.url}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										src={experience.src}
+										alt={experience.alt}
+										className="h-auto w-44"
+									/>
+								</a>
 							</div>
 						</div>
 
