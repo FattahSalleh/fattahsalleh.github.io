@@ -14,7 +14,7 @@ export default function ContactSection() {
 				collaborations.
 			</p>
 			<a
-				href="#_"
+				href="mailto:fattah.sallehuddin@gmail.com"
 				className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-darkText transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-lightGray group mt-16"
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
