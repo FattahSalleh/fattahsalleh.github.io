@@ -36,7 +36,7 @@ export const experience: Experience[] = [
 			"Contributed to over 6 projects using various libraries and frameworks such as jQuery, Pug, Vue, React, NodeJS and Bootstrap, ensuring the creation of responsive, error-free and intuitive websites experiences tailored to the specific needs of banking clients.",
 			"Pioneered the implementation of OpenText CMS, leading a team of developers using Agile methodology to revamp corporate websites while maintaining existing functionality.",
 			"Trained customers and team members on website maintenance and updates while creating comprehensive documentation, increasing maintainability and reduction in support requests.",
-			"Built an Online Banking DuitNow QR native mobile application using Kotlin in Android Studio",
+			"Built an Online Banking DuitNow QR native mobile application using Kotlin in Android Studio.",
 		],
 		techStack: [
 			"jQuery",
