@@ -6,9 +6,9 @@ export default function DisclaimerSection({
 	disclaimerData: Disclaimer[];
 }) {
 	return (
-		<div className="w-fit">
+		<div className="w-fit text-center">
 			<a
-				href="https://github.com/FattahSalleh/fattahsalleh.github.io"
+				href="https://github.com/FattahSalleh/fattahsalleh.github.io/tree/main/fattah-portfolio"
 				target="_blank"
 				rel="noreferrer"
 				className="text-xs text-center font-mono hover:scale-110 hover:text-greenTurquoise transition-all duration-300"
