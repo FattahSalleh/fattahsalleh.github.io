@@ -14,6 +14,7 @@ import ContactOverlay from "../Contact/ContactOverlay";
 import { disclaimerData } from "../../data/disclaimerData";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -125,6 +126,7 @@ function App() {
 					<DisclaimerSection disclaimerData={disclaimerData} />
 				</section>
 			</main>
+			<SpeedInsights />
 		</div>
 	);
 }
