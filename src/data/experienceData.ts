@@ -1,6 +1,6 @@
 import { Experience } from "../common/types";
 import trinergyLogo from "../assets/images/experience/trinergy-wbg.png";
-import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
+// import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
 import katsanaLogo from "../assets/images/experience/katsana.svg";
 import tmalLogo from "../assets/images/experience/TMAlphaLab.svg";
 
@@ -57,19 +57,19 @@ export const experience: Experience[] = [
 		src: trinergyLogo,
 		alt: "Trinergy Logo",
 	},
-	{
-		position: "Technical Support Exec. - NZ Department",
-		company: "Fuji Xerox / FujiFilm",
-		timeRange: "July 2020 - Feb 2021",
-		responsibility: [
-			"Provided technical support to customers from New Zealand, troubleshooting hardware, software and network issues, resulting in a 95% customer satisfaction rating.",
-		],
-		techStack: ["Computer Network", "Communication"],
-		url: "https://www.fujifilm.com/fbmy/en/contact-us",
-		location: "Selangor, Malaysia",
-		src: fujifilmLogo,
-		alt: "FujiFilm Logo",
-	},
+	// {
+	// 	position: "Technical Support Exec. - NZ Department",
+	// 	company: "Fuji Xerox / FujiFilm",
+	// 	timeRange: "July 2020 - Feb 2021",
+	// 	responsibility: [
+	// 		"Provided technical support to customers from New Zealand, troubleshooting hardware, software and network issues, resulting in a 95% customer satisfaction rating.",
+	// 	],
+	// 	techStack: ["Computer Network", "Communication"],
+	// 	url: "https://www.fujifilm.com/fbmy/en/contact-us",
+	// 	location: "Selangor, Malaysia",
+	// 	src: fujifilmLogo,
+	// 	alt: "FujiFilm Logo",
+	// },
 	{
 		position: "Internship",
 		company: "Telekom Malaysia Alpha Lab",
