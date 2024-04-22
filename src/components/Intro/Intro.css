@@ -1,0 +1,31 @@
+#introName {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(40) forwards; 
+}
+
+#introSubTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fadeIn 1s ease forwards; 
+  animation-delay: 1s;
+  opacity: 0; 
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
