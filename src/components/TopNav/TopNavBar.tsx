@@ -111,6 +111,13 @@ export default function TopNavBar() {
 					</button>
 				</div>
 
+				{/* TODO: Remove this notice when responsive view is done. */}
+				<p className="absolute top-36 text-xs p-4 text-lightBlue">
+					*Please be informed that the responsive view (mobile &
+					tablet) is still in development. For the best experience,
+					please open this portfolio on desktop.
+				</p>
+
 				{isOverlayOpen && (
 					<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg flex flex-col justify-center items-center z-20">
 						<button
