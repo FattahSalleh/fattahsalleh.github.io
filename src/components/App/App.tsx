@@ -1,19 +1,19 @@
-import ExpertiseTable from "../ExpertiseTable/ExpertiseTable";
-import Intro from "../Intro/Intro";
-import TopNavBar from "../TopNavBar/TopNavBar";
-import AnimatedCursor from "react-animated-cursor";
-import { topNavBarButtons } from "../../data/topNavBarData";
-import { introDetails } from "../../data/introData";
-import { expertiseBE, expertiseFE } from "../../data/expertiseData";
-import ProjectItem from "../ProjectItem/ProjectItem";
-import { projects } from "../../data/projectData";
-import ExperienceList from "../ExperienceList/ExperienceList";
-import { experience } from "../../data/experienceData";
 import { useState } from "react";
+import AnimatedCursor from "react-animated-cursor";
+import ExpertiseTable from "../Expertise/ExpertiseTable";
+import Intro from "../Intro/Intro";
+import TopNavBar from "../TopNav/TopNavBar";
+import ProjectItem from "../Project/ProjectItem";
+import ExperienceList from "../Experience/ExperienceList";
 import ContactOverlay from "../Contact/ContactOverlay";
-import { disclaimerData } from "../../data/disclaimerData";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
+import { experience } from "../../data/experienceData";
+import { disclaimerData } from "../../data/disclaimerData";
+import { topNavBarButtons } from "../../data/topNavBarData";
+import { introDetails } from "../../data/introData";
+import { projects } from "../../data/projectData";
+import { expertiseBE, expertiseFE } from "../../data/expertiseData";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
@@ -43,15 +43,8 @@ function App() {
 			<ContactOverlay />
 
 			<TopNavBar navBarButtons={topNavBarButtons} />
-			<section
-				className="w-full min-h-screen flex flex-col items-center justify-center pb-8 md:pb-24"
-				id="introSection"
-			>
-				<Intro
-					name={introDetails.name}
-					subTitle={introDetails.position}
-				/>
-			</section>
+
+			<Intro name={introDetails.name} subTitle={introDetails.position} />
 
 			<section
 				className="max-w-full w-full px-12 py-16"
