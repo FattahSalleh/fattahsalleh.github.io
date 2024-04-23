@@ -10,7 +10,7 @@ export default function ContactOverlay() {
 	const mailtoUrl = "mailto:" + emailContact?.url;
 
 	return (
-		<div>
+		<div className="hidden md:block">
 			<div className="h-auto w-fit fixed bottom-0 left-12 right-auto z-10 flex flex-column flex-no-wrap justify-between items-center">
 				<ul>
 					{contactData.map((contact, index) => (
