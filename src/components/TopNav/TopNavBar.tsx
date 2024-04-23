@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 import { topNavBarButtons } from "../../data/topNavBarData";
+import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
 
 
 function TopNavBar() {
@@ -59,7 +60,11 @@ function TopNavBar() {
 					</button>
 				))}
 			</div>
-			<div className=""></div>
+			<div className="">
+				<a href={resume} target="_blank" rel="noreferrer">
+					Resume
+				</a>
+			</div>
 		</nav>
 	);
 }
