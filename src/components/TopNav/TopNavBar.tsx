@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 import burgerMenu from "../../assets/images/general/burger-menu.svg";
-import { topNavBarButtons } from "../../data/topNavBarData";
+import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
+import { topNavBarButtons } from "../../data/topNavBarData";
 
 export default function TopNavBar() {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -116,7 +117,12 @@ export default function TopNavBar() {
 							className="absolute top-6 right-6 text-white text-2xl"
 							onClick={toggleOverlay}
 						>
-							X
+							<img
+								src={closeIcon}
+								alt="Close Icon"
+								width={32}
+								height={32}
+							/>
 						</button>
 						<div className="flex flex-col justify-center items-center text-white">
 							{topNavBarButtons.map((button, index) => (
