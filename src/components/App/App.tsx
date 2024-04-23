@@ -1,26 +1,18 @@
-import { useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNav/TopNavBar";
-import ExperienceList from "../Experience/ExperienceList";
 import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
-import { experience } from "../../data/experienceData";
 import { disclaimerData } from "../../data/disclaimerData";
 import { topNavBarButtons } from "../../data/topNavBarData";
 import { introDetails } from "../../data/introData";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import ExpertiseSection from "../Expertise/ExperiseSection";
 import ProjectSection from "../Project/ProjectSection";
+import ExperiseSection from "../Experience/ExperienceSection";
 
 function App() {
-	const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-	const toggleAccordion = (index: number) => {
-		setOpenIndex(openIndex === index ? null : index);
-	};
-
 	return (
 		<div className="App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText">
 			<AnimatedCursor
@@ -48,24 +40,7 @@ function App() {
 
 			<ProjectSection />
 
-			<section
-				className="max-w-full w-full px-32 py-16"
-				id="experienceSection"
-			>
-				<div className="flex flex-col items-center">
-					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-						Experience
-					</p>
-					{experience.map((experience, index) => (
-						<ExperienceList
-							key={index}
-							experience={experience}
-							isOpen={openIndex === index}
-							toggleAccordion={() => toggleAccordion(index)}
-						/>
-					))}
-				</div>
-			</section>
+			<ExperiseSection />
 
 			<section
 				className="max-w-full w-full px-32 py-16"
