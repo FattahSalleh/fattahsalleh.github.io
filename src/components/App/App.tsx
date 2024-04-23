@@ -42,17 +42,7 @@ function App() {
 
 			<ExperiseSection />
 
-			<section
-				className="max-w-full w-full px-32 py-16"
-				id="contactSection"
-			>
-				<div className="flex flex-col items-center">
-					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-						Get In Touch
-					</p>
-					<ContactSection />
-				</div>
-			</section>
+			<ContactSection />
 
 			<section className="mt-24" id="disclaimerSection">
 				<DisclaimerSection disclaimerData={disclaimerData} />
