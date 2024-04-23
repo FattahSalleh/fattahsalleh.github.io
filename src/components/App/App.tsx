@@ -44,9 +44,8 @@ function App() {
 
 			<ContactSection />
 
-			<section className="mt-24" id="disclaimerSection">
-				<DisclaimerSection disclaimerData={disclaimerData} />
-			</section>
+			<DisclaimerSection disclaimerData={disclaimerData} />
+			
 			<SpeedInsights />
 		</div>
 	);
