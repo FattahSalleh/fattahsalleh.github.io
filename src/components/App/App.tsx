@@ -1,6 +1,5 @@
 import { useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
-import ExpertiseTable from "../Expertise/ExpertiseTable";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNav/TopNavBar";
 import ProjectItem from "../Project/ProjectItem";
@@ -13,8 +12,8 @@ import { disclaimerData } from "../../data/disclaimerData";
 import { topNavBarButtons } from "../../data/topNavBarData";
 import { introDetails } from "../../data/introData";
 import { projects } from "../../data/projectData";
-import { expertiseBE, expertiseFE } from "../../data/expertiseData";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import ExpertiseSection from "../Expertise/ExperiseSection";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -46,23 +45,7 @@ function App() {
 
 			<Intro name={introDetails.name} subTitle={introDetails.position} />
 
-			<section
-				className="max-w-full w-full px-12 py-16"
-				id="expertiseSection"
-			>
-				<div
-					className="flex flex-col items-center"
-					id="expertiseSectionContainer"
-				>
-					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-						My Expertise
-					</p>
-					<article className="flex flex-row justify-center">
-						<ExpertiseTable expertise={expertiseFE} />
-						<ExpertiseTable expertise={expertiseBE} />
-					</article>
-				</div>
-			</section>
+			<ExpertiseSection />
 
 			<section
 				className="max-w-full w-full px-32 py-16"
