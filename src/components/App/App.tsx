@@ -24,7 +24,7 @@ function App() {
 	};
 
 	return (
-		<div className="App">
+		<div className="App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText">
 			<AnimatedCursor
 				innerSize={8}
 				outerSize={35}
@@ -42,90 +42,85 @@ function App() {
 
 			<ContactOverlay />
 
-			<main
-				className="flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText"
-				id="main"
+			<TopNavBar navBarButtons={topNavBarButtons} />
+			<section
+				className="w-full min-h-screen flex flex-col items-center justify-center pb-8 md:pb-24"
+				id="introSection"
 			>
-				<TopNavBar navBarButtons={topNavBarButtons} />
-				<section
-					className="w-full min-h-screen flex flex-col items-center justify-center pb-24"
-					id="introSection"
-				>
-					<Intro
-						name={introDetails.name}
-						subTitle={introDetails.position}
-					/>
-				</section>
+				<Intro
+					name={introDetails.name}
+					subTitle={introDetails.position}
+				/>
+			</section>
 
-				<section
-					className="max-w-full w-full px-12 py-16"
-					id="expertiseSection"
+			<section
+				className="max-w-full w-full px-12 py-16"
+				id="expertiseSection"
+			>
+				<div
+					className="flex flex-col items-center"
+					id="expertiseSectionContainer"
 				>
-					<div
-						className="flex flex-col items-center"
-						id="expertiseSectionContainer"
-					>
-						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							My Expertise
-						</p>
-						<article className="flex flex-row justify-center">
-							<ExpertiseTable expertise={expertiseFE} />
-							<ExpertiseTable expertise={expertiseBE} />
-						</article>
-					</div>
-				</section>
+					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+						My Expertise
+					</p>
+					<article className="flex flex-row justify-center">
+						<ExpertiseTable expertise={expertiseFE} />
+						<ExpertiseTable expertise={expertiseBE} />
+					</article>
+				</div>
+			</section>
 
-				<section
-					className="max-w-full w-full px-32 py-16"
-					id="projectSection"
-				>
-					<div className="flex flex-col items-center">
-						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							Projects Done
-						</p>
-						<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
-							{projects.map((project, index) => (
-								<ProjectItem key={index} project={project} />
-							))}
-						</article>
-					</div>
-				</section>
-
-				<section
-					className="max-w-full w-full px-32 py-16"
-					id="experienceSection"
-				>
-					<div className="flex flex-col items-center">
-						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							Experience
-						</p>
-						{experience.map((experience, index) => (
-							<ExperienceList
-								key={index}
-								experience={experience}
-								isOpen={openIndex === index}
-								toggleAccordion={() => toggleAccordion(index)}
-							/>
+			<section
+				className="max-w-full w-full px-32 py-16"
+				id="projectSection"
+			>
+				<div className="flex flex-col items-center">
+					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+						Projects Done
+					</p>
+					<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
+						{projects.map((project, index) => (
+							<ProjectItem key={index} project={project} />
 						))}
-					</div>
-				</section>
+					</article>
+				</div>
+			</section>
 
-				<section
-					className="max-w-full w-full px-32 py-16"
-					id="contactSection"
-				>
-					<div className="flex flex-col items-center">
-						<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-							Get In Touch
-						</p>
-						<ContactSection />
-					</div>
-				</section>
+			<section
+				className="max-w-full w-full px-32 py-16"
+				id="experienceSection"
+			>
+				<div className="flex flex-col items-center">
+					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+						Experience
+					</p>
+					{experience.map((experience, index) => (
+						<ExperienceList
+							key={index}
+							experience={experience}
+							isOpen={openIndex === index}
+							toggleAccordion={() => toggleAccordion(index)}
+						/>
+					))}
+				</div>
+			</section>
 
-				<section className="mt-24" id="disclaimerSection">
-					<DisclaimerSection disclaimerData={disclaimerData} />
-				</section>
-			</main>
+			<section
+				className="max-w-full w-full px-32 py-16"
+				id="contactSection"
+			>
+				<div className="flex flex-col items-center">
+					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+						Get In Touch
+					</p>
+					<ContactSection />
+				</div>
+			</section>
+
+			<section className="mt-24" id="disclaimerSection">
+				<DisclaimerSection disclaimerData={disclaimerData} />
+			</section>
 			<SpeedInsights />
 		</div>
 	);
