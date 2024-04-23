@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
+import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import { topNavBarButtons } from "../../data/topNavBarData";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
 
@@ -79,18 +80,27 @@ export default function TopNavBar() {
 
 			{/* Mobile */}
 			<nav
-				className={`md:max-h-24 w-full md:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center`}
+				className={`md:max-h-24 w-full md:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-6 md:px-12 py-4 items-center`}
 				id="topNavBar"
 			>
 				<div
-					className={`${
+					className={`w-full flex flex-row justify-between items-center ${
 						isScrolled ? "-translate-y-full" : ""
 					} transition-all duration-1000`}
 				>
+					<img
+						src={fsIcon}
+						alt="FS Icon"
+						width={32}
+						height={32}
+						className={`transition-all duration-1000 ${
+							isScrolled ? "opacity-0" : "opacity-100"
+						}`}
+					/>
 					<button onClick={toggleOverlay}>
 						<img
-							src={fsIcon}
-							alt="FS Icon"
+							src={burgerMenu}
+							alt="Burger Menu Icon"
 							width={32}
 							height={32}
 							className={`transition-all duration-1000 ${
