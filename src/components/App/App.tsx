@@ -11,7 +11,7 @@ import ExperiseSection from "../Experience/ExperienceSection";
 
 function App() {
 	return (
-		<div className="App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText">
+		<div className="App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip">
 			<AnimatedCursor
 				innerSize={8}
 				outerSize={35}
