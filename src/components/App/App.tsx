@@ -2,7 +2,6 @@ import { useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNav/TopNavBar";
-import ProjectItem from "../Project/ProjectItem";
 import ExperienceList from "../Experience/ExperienceList";
 import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
@@ -11,9 +10,9 @@ import { experience } from "../../data/experienceData";
 import { disclaimerData } from "../../data/disclaimerData";
 import { topNavBarButtons } from "../../data/topNavBarData";
 import { introDetails } from "../../data/introData";
-import { projects } from "../../data/projectData";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import ExpertiseSection from "../Expertise/ExperiseSection";
+import ProjectSection from "../Project/ProjectSection";
 
 function App() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -47,21 +46,7 @@ function App() {
 
 			<ExpertiseSection />
 
-			<section
-				className="max-w-full w-full px-32 py-16"
-				id="projectSection"
-			>
-				<div className="flex flex-col items-center">
-					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
-						Projects Done
-					</p>
-					<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-3">
-						{projects.map((project, index) => (
-							<ProjectItem key={index} project={project} />
-						))}
-					</article>
-				</div>
-			</section>
+			<ProjectSection />
 
 			<section
 				className="max-w-full w-full px-32 py-16"
