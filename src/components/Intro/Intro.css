@@ -1,12 +1,8 @@
 #introName {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 1s steps(40) forwards; 
+  animation: typing 1s steps(50) forwards; 
 }
 
 #introSubTitle {
-  overflow: hidden;
-  white-space: nowrap;
   animation: fadeIn 1s ease forwards; 
   animation-delay: 1s;
   opacity: 0; 
