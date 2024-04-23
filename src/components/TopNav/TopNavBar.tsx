@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
-import { NavBarButtons } from "../../common/types";
+import { topNavBarButtons } from "../../data/topNavBarData";
 
-function TopNavBar({ navBarButtons }: { navBarButtons: NavBarButtons[] }) {
+
+function TopNavBar() {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
 	const scrollToSection = (id: string) => {
@@ -48,7 +49,7 @@ function TopNavBar({ navBarButtons }: { navBarButtons: NavBarButtons[] }) {
 				/>
 			</div>
 			<div className="flex flex-row justify-between font-semibold items-center">
-				{navBarButtons.map((button, index) => (
+				{topNavBarButtons.map((button, index) => (
 					<button
 						className="mx-4"
 						key={index}

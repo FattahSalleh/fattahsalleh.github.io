@@ -1,10 +1,6 @@
-import { Disclaimer } from "../../common/types";
+import { disclaimerData } from "../../data/disclaimerData";
 
-export default function DisclaimerSection({
-	disclaimerData,
-}: {
-	disclaimerData: Disclaimer[];
-}) {
+export default function DisclaimerSection() {
 	return (
 		<section className="mt-24" id="disclaimerSection">
 			<div className="w-full text-center">

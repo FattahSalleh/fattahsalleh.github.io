@@ -4,9 +4,6 @@ import TopNavBar from "../TopNav/TopNavBar";
 import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
-import { disclaimerData } from "../../data/disclaimerData";
-import { topNavBarButtons } from "../../data/topNavBarData";
-import { introDetails } from "../../data/introData";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import ExpertiseSection from "../Expertise/ExperiseSection";
 import ProjectSection from "../Project/ProjectSection";
@@ -32,9 +29,9 @@ function App() {
 
 			<ContactOverlay />
 
-			<TopNavBar navBarButtons={topNavBarButtons} />
+			<TopNavBar />
 
-			<Intro name={introDetails.name} subTitle={introDetails.position} />
+			<Intro />
 
 			<ExpertiseSection />
 
@@ -44,8 +41,8 @@ function App() {
 
 			<ContactSection />
 
-			<DisclaimerSection disclaimerData={disclaimerData} />
-			
+			<DisclaimerSection />
+
 			<SpeedInsights />
 		</div>
 	);
