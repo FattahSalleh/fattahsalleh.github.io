@@ -108,7 +108,7 @@ export default function TopNavBar({
 			{/* Mobile Overlay */}
 			<div
 				ref={overlayRef}
-				className={`fixed top-0 right-0  w-9/12 h-full bg-black bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
+				className={`fixed top-0 right-0  w-8/12 h-full bg-black bg-opacity-90 bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
 					isOverlayOpen
 						? "opacity-100 translate-x-0"
 						: "opacity-0 translate-x-full"
