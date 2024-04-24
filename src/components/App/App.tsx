@@ -1,4 +1,3 @@
-import AnimatedCursor from "react-animated-cursor";
 import Intro from "../Intro/Intro";
 import TopNavBar from "../TopNav/TopNavBar";
 import ContactOverlay from "../Contact/ContactOverlay";
@@ -9,6 +8,7 @@ import ExpertiseSection from "../Expertise/ExperiseSection";
 import ProjectSection from "../Project/ProjectSection";
 import ExperiseSection from "../Experience/ExperienceSection";
 import { useState } from "react";
+import Cursor from "../Cursor/Cursor";
 
 function App() {
 	// TODO: Add btn to go top of page in mobile view
@@ -19,20 +19,7 @@ function App() {
 		<div
 			className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
 		>
-			<AnimatedCursor
-				innerSize={8}
-				outerSize={35}
-				innerScale={1}
-				outerScale={2}
-				outerAlpha={0}
-				innerStyle={{
-					backgroundColor: "#50C878",
-					boxShadow: "0px 0px 10000px 20px #50C878",
-				}}
-				outerStyle={{
-					border: "1px solid #2E4B35",
-				}}
-			/>
+			<Cursor />
 
 			<ContactOverlay />
 
