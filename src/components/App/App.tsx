@@ -9,6 +9,7 @@ import ProjectSection from "../Project/ProjectSection";
 import ExperiseSection from "../Experience/ExperienceSection";
 import { useState } from "react";
 import Cursor from "../Cursor/Cursor";
+import ScrollToTop from "../Navigation/ScrollToTop";
 
 function App() {
 	// TODO: Add btn to go top of page in mobile view
@@ -21,7 +22,7 @@ function App() {
 		>
 			<Cursor />
 
-
+			<ScrollToTop />
 
 			<ContactOverlay />
 
