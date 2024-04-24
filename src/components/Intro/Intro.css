@@ -30,7 +30,7 @@
 /* Animation for Icon */
 
 .field {
-	position: fixed;
+	position: absolute;
 	bottom: 10%;
 	left: 0%;
 	display: flex;
