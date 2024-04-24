@@ -1,27 +1,101 @@
+/* Animation for Text */
 #introName {
-  animation: typing 1s steps(50) forwards; 
+	animation: typing 1s steps(50) forwards;
 }
 
 #introSubTitle {
-  animation: fadeIn 1s ease forwards; 
-  animation-delay: 1s;
-  opacity: 0; 
+	animation: fadeIn 1s ease forwards;
+	animation-delay: 1s;
+	opacity: 0;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Animation for Icon */
+
+.field {
+	position: fixed;
+	bottom: 10%;
+	left: 0%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.mouseArrow {
+	width: 35px;
+	height: 60px;
+	border: 1.5px solid #fefefe;
+	border-radius: 60px;
+	position: relative;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-top: 10px solid #50C878;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		opacity: 1;
+		animation: wheel 1.5s infinite;
+		-webkit-animation: wheel 1.5s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 40px;
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
 }
