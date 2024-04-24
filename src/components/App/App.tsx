@@ -8,10 +8,19 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import ExpertiseSection from "../Expertise/ExperiseSection";
 import ProjectSection from "../Project/ProjectSection";
 import ExperiseSection from "../Experience/ExperienceSection";
+import { useEffect, useState } from "react";
 
 function App() {
+	// TODO: Add btn to go top of page in mobile view
+
+	const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
+
+	useEffect(() => {}, [isOverlayOpen]);
+
 	return (
-		<div className="App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip">
+		<div
+			className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
+		>
 			<AnimatedCursor
 				innerSize={8}
 				outerSize={35}
@@ -29,19 +38,24 @@ function App() {
 
 			<ContactOverlay />
 
-			<TopNavBar />
+			<TopNavBar
+				isOverlayOpen={isOverlayOpen}
+				setIsOverlayOpen={setIsOverlayOpen}
+			/>
 
-			<Intro />
+			<div className={`${isOverlayOpen ? "blur" : ""}`}>
+				<Intro />
 
-			<ExpertiseSection />
+				<ExpertiseSection />
 
-			<ProjectSection />
+				<ProjectSection />
 
-			<ExperiseSection />
+				<ExperiseSection />
 
-			<ContactSection />
+				<ContactSection />
 
-			<DisclaimerSection />
+				<DisclaimerSection />
+			</div>
 
 			<SpeedInsights />
 		</div>

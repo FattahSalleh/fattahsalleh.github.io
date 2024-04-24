@@ -5,9 +5,16 @@ import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
 import { topNavBarButtons } from "../../data/topNavBarData";
 
-export default function TopNavBar() {
+interface TopNavBarProps {
+	isOverlayOpen: boolean;
+	setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function TopNavBar({
+	isOverlayOpen,
+	setIsOverlayOpen,
+}: TopNavBarProps) {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
-	const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
 
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
@@ -41,7 +48,7 @@ export default function TopNavBar() {
 		<>
 			{/* Desktop */}
 			<nav
-				className={`md:max-h-24 w-full md:flex flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center transition-all duration-1000 
+				className={`md:max-h-24 w-full md:flex flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center transition-all duration-500 
 			hidden 
             ${
 				isScrolled
@@ -56,7 +63,7 @@ export default function TopNavBar() {
 						alt="FS Icon"
 						width={32}
 						height={32}
-						className={`transition-all duration-1000 ${
+						className={`transition-all duration-500 ${
 							isScrolled ? "opacity-0" : "opacity-100"
 						}`}
 					/>
@@ -87,14 +94,14 @@ export default function TopNavBar() {
 				<div
 					className={`w-full flex flex-row justify-between items-center ${
 						isScrolled ? "-translate-y-full" : ""
-					} transition-all duration-1000`}
+					} transition-all duration-500`}
 				>
 					<img
 						src={fsIcon}
 						alt="FS Icon"
 						width={32}
 						height={32}
-						className={`transition-all duration-1000 ${
+						className={`transition-all duration-500 ${
 							isScrolled ? "opacity-0" : "opacity-100"
 						}`}
 					/>
@@ -104,7 +111,7 @@ export default function TopNavBar() {
 							alt="Burger Menu Icon"
 							width={32}
 							height={32}
-							className={`transition-all duration-1000 ${
+							className={`transition-all duration-500 ${
 								isScrolled ? "opacity-0" : "opacity-100"
 							}`}
 						/>
@@ -119,9 +126,15 @@ export default function TopNavBar() {
 				</p>
 
 				{isOverlayOpen && (
-					<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg flex flex-col justify-center items-center z-20">
+					<div
+						className={`fixed top-0 right-0 h-full bg-black bg-opacity-100 bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
+							isOverlayOpen
+								? "opacity-100 translate-x-0 w-9/12"
+								: "opacity-0 translate-x-full"
+						}`}
+					>
 						<button
-							className="absolute top-6 right-6 text-white text-2xl"
+							className="absolute top-6 right-6 text-lightText text-2xl"
 							onClick={toggleOverlay}
 						>
 							<img
@@ -131,7 +144,7 @@ export default function TopNavBar() {
 								height={32}
 							/>
 						</button>
-						<div className="flex flex-col justify-center items-center text-white">
+						<div className="flex flex-col justify-center items-center text-lightText font-semibold">
 							{topNavBarButtons.map((button, index) => (
 								<button
 									className="my-4"
@@ -143,7 +156,7 @@ export default function TopNavBar() {
 									{button.label}
 								</button>
 							))}
-							<div className="border rounded py-2 px-4 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
+							<div className="border rounded py-2 px-4 mt-16 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
 								<a
 									href={resume}
 									target="_blank"
