@@ -13,6 +13,7 @@
 	from {
 		width: 0;
 	}
+
 	to {
 		width: 100%;
 	}
@@ -22,21 +23,21 @@
 	from {
 		opacity: 0;
 	}
+
 	to {
 		opacity: 1;
 	}
 }
 
 /* Animation for Icon */
-
 .field {
 	position: absolute;
 	bottom: 10%;
-	left: 0%;
+	left: 50%;
+	transform: translateX(-50%);
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	width: 100%;
+	justify-content: center;
 }
 
 .mouseArrow {
@@ -45,57 +46,50 @@
 	border: 1.5px solid #fefefe;
 	border-radius: 60px;
 	position: relative;
-	animation: down 1.5s infinite;
-	-webkit-animation: down 1.5s infinite;
-	&::before {
-		content: "";
-		position: absolute;
-		top: 15px;
-		left: 50%;
-		transform: translateX(-50%);
-		border-top: 10px solid #50C878;
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-		opacity: 1;
-		animation: wheel 1.5s infinite;
-		-webkit-animation: wheel 1.5s infinite;
-	}
+	animation: down 2s infinite;
+}
+
+.mouseArrow::before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 10px solid #50C878;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	opacity: 1;
+	animation: wheel 2s infinite;
 }
 
 @keyframes wheel {
-	to {
+	0% {
 		opacity: 0;
-		top: 40px;
+		top: 15px;
+		/* Starting position */
 	}
-}
 
-@-webkit-keyframes wheel {
-	to {
+	50% {
+		opacity: 1;
+		/* Fade in */
+	}
+
+	100% {
 		opacity: 0;
+		/* Fade out */
 		top: 40px;
+		/* Ending position */
 	}
 }
 
 @keyframes down {
-	0% {
-		transform: translate(0);
-	}
-	20% {
-		transform: translateY(15px);
-	}
-	40% {
-		transform: translate(0);
-	}
-}
 
-@-webkit-keyframes down {
-	0% {
-		transform: translate(0);
+	0%,
+	100% {
+		transform: translateY(0);
 	}
-	20% {
+
+	50% {
 		transform: translateY(15px);
-	}
-	40% {
-		transform: translate(0);
 	}
 }
