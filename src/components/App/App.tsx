@@ -12,7 +12,6 @@ import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
 
 function App() {
-	// TODO: Add btn to go top of page in mobile view
 
 	const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
 
