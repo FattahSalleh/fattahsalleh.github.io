@@ -19,3 +19,6 @@ module.exports = {
 	},
 	plugins: [],
 };
+
+// Green Shadow:
+// shadow - [0_0px_30px_5px_rgba(80, 200, 120, 1.0)]
