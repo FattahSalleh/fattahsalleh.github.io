@@ -4,11 +4,7 @@ import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
 import { topNavBarButtons } from "../../data/topNavBarData";
-
-interface TopNavBarProps {
-	isOverlayOpen: boolean;
-	setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { TopNavBarProps } from "../../common/types";
 
 export default function TopNavBar({
 	isOverlayOpen,
