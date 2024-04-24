@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
@@ -15,6 +15,7 @@ export default function TopNavBar({
 	setIsOverlayOpen,
 }: TopNavBarProps) {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
+	const overlayRef = useRef<HTMLDivElement>(null);
 
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
@@ -28,9 +29,9 @@ export default function TopNavBar({
 		setIsOverlayOpen(!isOverlayOpen);
 	};
 
-	const closeOverlay = () => {
+	const closeOverlay = useCallback(() => {
 		setIsOverlayOpen(false);
-	};
+	}, [setIsOverlayOpen]);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -43,6 +44,24 @@ export default function TopNavBar({
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+
+	useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
+        closeOverlay();
+      }
+    };
+
+    if (isOverlayOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOverlayOpen, closeOverlay]);
 
 	return (
 		<>
@@ -88,6 +107,7 @@ export default function TopNavBar({
 
 			{/* Mobile Overlay */}
 			<div
+				ref={overlayRef}
 				className={`fixed top-0 right-0  w-9/12 h-full bg-black bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
 					isOverlayOpen
 						? "opacity-100 translate-x-0"

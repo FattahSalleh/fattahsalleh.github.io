@@ -8,14 +8,12 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import ExpertiseSection from "../Expertise/ExperiseSection";
 import ProjectSection from "../Project/ProjectSection";
 import ExperiseSection from "../Experience/ExperienceSection";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
 	// TODO: Add btn to go top of page in mobile view
 
 	const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
-
-	useEffect(() => {}, [isOverlayOpen]);
 
 	return (
 		<div
