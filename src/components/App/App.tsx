@@ -1,5 +1,5 @@
 import Intro from "../Intro/Intro";
-import TopNavBar from "../TopNav/TopNavBar";
+import TopNavBar from "../Navigation/TopNavBar";
 import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
@@ -20,6 +20,8 @@ function App() {
 			className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
 		>
 			<Cursor />
+
+
 
 			<ContactOverlay />
 
