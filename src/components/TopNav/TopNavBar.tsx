@@ -86,10 +86,49 @@ export default function TopNavBar({
 				</div>
 			</nav>
 
+			{/* Mobile Overlay */}
+			<div
+				className={`fixed top-0 right-0  w-9/12 h-full bg-black bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
+					isOverlayOpen
+						? "opacity-100 translate-x-0"
+						: "opacity-0 translate-x-full"
+				}`}
+			>
+				<button
+					className="absolute top-6 right-6 text-lightText text-2xl"
+					onClick={toggleOverlay}
+				>
+					<img
+						src={closeIcon}
+						alt="Close Icon"
+						width={36}
+						height={36}
+					/>
+				</button>
+				<div className="flex flex-col justify-center items-center text-lightText font-semibold">
+					{topNavBarButtons.map((button, index) => (
+						<button
+							className="my-4"
+							key={index}
+							onClick={() => {
+								scrollToSection(button.sectionId);
+							}}
+						>
+							{button.label}
+						</button>
+					))}
+					<div className="border rounded py-2 px-4 mt-16 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
+						<a href={resume} target="_blank" rel="noreferrer">
+							Resume
+						</a>
+					</div>
+				</div>
+			</div>
+
 			{/* Mobile */}
 			<nav
 				className={`md:max-h-24 w-full md:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-6 md:px-12 py-4 items-center`}
-				id="topNavBar"
+				id="topNavBarMobile"
 			>
 				<div
 					className={`w-full flex flex-row justify-between items-center ${
@@ -124,50 +163,6 @@ export default function TopNavBar({
 					tablet) is still in development. For the best experience,
 					please open this portfolio on desktop.
 				</p>
-
-				{isOverlayOpen && (
-					<div
-						className={`fixed top-0 right-0 h-full bg-black bg-opacity-100 bg-darkGrayBg flex flex-col justify-center items-center z-20 transition-all duration-500 ${
-							isOverlayOpen
-								? "opacity-100 translate-x-0 w-9/12"
-								: "opacity-0 translate-x-full"
-						}`}
-					>
-						<button
-							className="absolute top-6 right-6 text-lightText text-2xl"
-							onClick={toggleOverlay}
-						>
-							<img
-								src={closeIcon}
-								alt="Close Icon"
-								width={32}
-								height={32}
-							/>
-						</button>
-						<div className="flex flex-col justify-center items-center text-lightText font-semibold">
-							{topNavBarButtons.map((button, index) => (
-								<button
-									className="my-4"
-									key={index}
-									onClick={() => {
-										scrollToSection(button.sectionId);
-									}}
-								>
-									{button.label}
-								</button>
-							))}
-							<div className="border rounded py-2 px-4 mt-16 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
-								<a
-									href={resume}
-									target="_blank"
-									rel="noreferrer"
-								>
-									Resume
-								</a>
-							</div>
-						</div>
-					</div>
-				)}
 			</nav>
 		</>
 	);
