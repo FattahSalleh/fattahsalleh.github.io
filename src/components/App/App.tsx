@@ -1,5 +1,5 @@
 import Intro from "../Intro/Intro";
-import TopNavBar from "../Navigation/TopNavBar";
+import NavBar from "../Navigation/NavBar";
 import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
@@ -25,7 +25,7 @@ function App() {
 
 			<ContactOverlay />
 
-			<TopNavBar
+			<NavBar
 				isOverlayOpen={isOverlayOpen}
 				setIsOverlayOpen={setIsOverlayOpen}
 			/>

@@ -3,13 +3,13 @@ import fsIcon from "../../assets/images/fsicon/fs-icon.svg";
 import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
-import { topNavBarButtons } from "../../data/topNavBarData";
-import { TopNavBarProps } from "../../common/types";
+import { navBarButtons } from "../../data/navBarData";
+import { NavBarProps } from "../../common/types";
 
-export default function TopNavBar({
+export default function NavBar({
 	isOverlayOpen,
 	setIsOverlayOpen,
-}: TopNavBarProps) {
+}: NavBarProps) {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 	const overlayRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +70,7 @@ export default function TopNavBar({
 					? "bg-darkBg text-secondary opacity-95"
 					: "text-lightText"
 			}`}
-				id="topNavBar"
+				id="navBar"
 			>
 				<div>
 					<img
@@ -84,7 +84,7 @@ export default function TopNavBar({
 					/>
 				</div>
 				<div className="flex flex-row justify-between font-semibold items-center">
-					{topNavBarButtons.map((button, index) => (
+					{navBarButtons.map((button, index) => (
 						<button
 							className="mx-4"
 							key={index}
@@ -122,7 +122,7 @@ export default function TopNavBar({
 					/>
 				</button>
 				<div className="flex flex-col justify-center items-center text-lightText font-semibold">
-					{topNavBarButtons.map((button, index) => (
+					{navBarButtons.map((button, index) => (
 						<button
 							className="my-4"
 							key={index}
@@ -144,7 +144,7 @@ export default function TopNavBar({
 			{/* Mobile */}
 			<nav
 				className={`md:max-h-24 w-full md:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-6 md:px-12 py-4 items-center`}
-				id="topNavBarMobile"
+				id="navBarMobile"
 			>
 				<div
 					className={`w-full flex flex-row justify-between items-center ${

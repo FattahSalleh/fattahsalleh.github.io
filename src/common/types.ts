@@ -57,7 +57,7 @@ export interface Disclaimer {
 	alt: string;
 }
 
-export interface TopNavBarProps {
+export interface NavBarProps {
 	isOverlayOpen: boolean;
 	setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
