@@ -94,7 +94,7 @@ export default function TopNavBar({
 						</button>
 					))}
 				</div>
-				<div className="border rounded py-2 px-4 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
+				<div className="border border-greenTurquoise text-greenTurquoise rounded py-2 px-4 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
 					<a href={resume} target="_blank" rel="noreferrer">
 						Resume
 					</a>
