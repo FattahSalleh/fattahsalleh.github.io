@@ -24,7 +24,7 @@ export default function ScrollToTop() {
 
 	return (
 		<div
-			className={`block md:hidden fixed bottom-5 right-5 z-50 transition-opacity duration-500 ${
+			className={`block lg:hidden fixed bottom-5 right-5 z-50 transition-opacity duration-500 ${
 				isVisible ? "opacity-100" : "opacity-0"
 			}`}
 		>

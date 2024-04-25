@@ -63,7 +63,7 @@ export default function NavBar({
 		<>
 			{/* Desktop */}
 			<nav
-				className={`md:max-h-24 w-full md:flex flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center transition-all duration-500 
+				className={`lg:max-h-24 w-full lg:flex flex-no-wrap fixed top-0 z-10 flex-row justify-between px-12 py-4 items-center transition-all duration-500 
 			hidden 
             ${
 				isScrolled
@@ -143,7 +143,7 @@ export default function NavBar({
 
 			{/* Mobile */}
 			<nav
-				className={`md:max-h-24 w-full md:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-6 md:px-12 py-4 items-center`}
+				className={`lg:max-h-24 w-full lg:hidden flex-no-wrap fixed top-0 z-10 flex-row justify-between px-6 lg:px-12 py-4 items-center`}
 				id="navBarMobile"
 			>
 				<div

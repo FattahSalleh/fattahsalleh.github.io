@@ -10,7 +10,7 @@ function ProjectItem({ project }: { project: Projects }) {
 		<div className="w-full">
 			<a href={project.url} target="_blank" rel="noreferrer">
 				<div
-					className={`flex flex-col border-0 rounded-lg w-full max-h-72 md:max-h-max min-h-auto bg-darkGrayBg text-start overflow-hidden transition-all duration-500 ${
+					className={`flex flex-col border-0 rounded-lg w-full max-h-72 lg:max-h-max min-h-auto bg-darkGrayBg text-start overflow-hidden transition-all duration-500 ${
 						isHovered
 							? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)]"
 							: ""
@@ -18,7 +18,7 @@ function ProjectItem({ project }: { project: Projects }) {
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
-					<div className="min-w-full w-full h-auto md:h-48 bg-lightBg flex justify-center overflow-hidden">
+					<div className="min-w-full w-full h-auto lg:h-48 bg-lightBg flex justify-center overflow-hidden">
 						<img
 							src={project.src}
 							alt={project.alt}

@@ -17,14 +17,14 @@ export default function ContactSection() {
 	return (
 		<>
 			<section
-				className="max-w-full w-full px-4 md:px-24 py-18 md:py-16"
+				className="max-w-full w-full px-4 lg:px-24 py-18 lg:py-16"
 				id="contactSection"
 			>
 				<div className="flex flex-col items-center">
-					<p className="font-bold h-full text-4xl md:text-6xl drop-shadow-md mb-12">
+					<p className="font-bold h-full text-4xl lg:text-6xl drop-shadow-md mb-12">
 						Get In Touch
 					</p>
-					<p className="w-full md:w-4/6 text-center">
+					<p className="w-full lg:w-4/6 text-center">
 						I'm actively seeking new opportunities! Whether you have
 						an exciting prospect or simply want to connect, feel
 						free to reach out. My inbox is always open and I'm eager
@@ -47,7 +47,7 @@ export default function ContactSection() {
 							{isHovered ? "One more click!" : "Come say hello"}
 						</span>
 					</a>{" "}
-					<div className="block md:hidden">
+					<div className="block lg:hidden">
 						<div className="h-auto w-full flex flex-row justify-center items-center">
 							<ul className="flex flex-row flex-nowrap">
 								{contactData.map((contact, index) => (
