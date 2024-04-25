@@ -1,14 +1,23 @@
 import hello from "../../assets/images/disclaimer/hello.svg";
 import wave from "../../assets/images/disclaimer/wave.svg";
 import { useState } from "react";
+import { contactData } from "../../data/contactData";
+import ContactOption from "./ContactOption";
 
 export default function ContactSection() {
 	const [isHovered, setIsHovered] = useState(false);
 
+	// Find the contactData of name 'Email'
+	const emailContact = contactData.find(
+		(contact) => contact.name === "Email"
+	);
+
+	const mailtoUrl = "mailto:" + emailContact?.url;
+
 	return (
 		<>
 			<section
-				className="max-w-full w-full px-4 md:px-24 py-16"
+				className="max-w-full w-full px-4 md:px-24 py-24 md:py-16"
 				id="contactSection"
 			>
 				<div className="flex flex-col items-center">
@@ -38,6 +47,27 @@ export default function ContactSection() {
 							{isHovered ? "One more click!" : "Come say hello"}
 						</span>
 					</a>{" "}
+					<div className="block md:hidden">
+						<div className="h-auto w-full flex flex-row justify-center items-center">
+							<ul className="flex flex-row flex-nowrap">
+								{contactData.map((contact, index) => (
+									<ContactOption
+										contact={contact}
+										key={index}
+									/>
+								))}
+							</ul>
+						</div>
+						<div className="h-auto w-full flex flex-row justify-center items-center">
+							<a
+								href={mailtoUrl}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<p>{emailContact ? emailContact.url : ""}</p>
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 		</>
