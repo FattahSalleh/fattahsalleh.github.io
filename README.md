@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+![Alt text](public/fs-icon.svg?raw=true "FS-ICON")
+
+# https://fattahsalleh.vercel.app/
+
+My personal portfolio built with React.js, TypeScript and Tailwind CSS, hosted with Vercel!
+
+___
+
+Hello visitors, thank you for taking the time to come and visit the repo of my latest portfolio website! I created this portfolio mainly to freshen up my skills using the latest React.js functional components and practicing using TypeScript. It is also developed to showcase what I have learned, contributed and done as a developer throughout the years. Although its not much currently, I am planning to expend this website further in the future with more personal projects, so stay tuned!
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,41 +16,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install` to install the necessary dependencies
+### `npm start` to start the local server for development
+### `npm run build` to start building for production
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What I used:
+### [Figma](https://www.figma.com/) to draw the initial design
+### [Visual Studio Code](https://code.visualstudio.com/) to code on
+### [Tailwind CSS](https://tailwindcss.com/) to style faster
+### [React.js](https://react.dev/) bread and butter of the website
+### [TypeScript](https://www.typescriptlang.org/) for type specification in JS
+### [Vercel](https://vercel.com/) for hosting my website
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## References used from these awesome developers:
+- https://brittanychiang.com/
+- https://tamalsen.dev/
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you would like to react out to me, feel free to check out my contact information in the portfolio/resume!
