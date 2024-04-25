@@ -68,7 +68,7 @@ export default function TopNavBar({
             ${
 				isScrolled
 					? "bg-darkBg text-secondary opacity-95"
-					: "bg-darkBg text-lightText"
+					: "text-lightText"
 			}`}
 				id="topNavBar"
 			>
