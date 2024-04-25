@@ -8,7 +8,7 @@ export default function ContactSection() {
 	return (
 		<>
 			<section
-				className="max-w-full w-full px-4 md:px-24 md:px-32 py-16"
+				className="max-w-full w-full px-4 md:px-24 py-16"
 				id="contactSection"
 			>
 				<div className="flex flex-col items-center">
