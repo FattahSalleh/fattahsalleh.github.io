@@ -8,14 +8,14 @@ export default function ContactSection() {
 	return (
 		<>
 			<section
-				className="max-w-full w-full px-24 md:px-32 py-16"
+				className="max-w-full w-full px-4 md:px-24 md:px-32 py-16"
 				id="contactSection"
 			>
 				<div className="flex flex-col items-center">
-					<p className="font-bold h-full text-6xl drop-shadow-md mb-12">
+					<p className="font-bold h-full text-4xl md:text-6xl drop-shadow-md mb-12">
 						Get In Touch
 					</p>
-					<p className="w-4/6 text-center">
+					<p className="w-full md:w-4/6 text-center">
 						I'm actively seeking new opportunities! Whether you have
 						an exciting prospect or simply want to connect, feel
 						free to reach out. My inbox is always open and I'm eager
