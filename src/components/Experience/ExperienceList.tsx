@@ -34,9 +34,9 @@ function ExperienceList({
 		}
 	}, [isOpen]);
 	return (
-		<div className="w-3/4 rounded-lg shadow-md mb-4 ">
+		<div className="w-full md:w-3/4 rounded-lg shadow-md mb-4">
 			<div
-				className={`px-8 py-4 cursor-pointer flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
+				className={`px-8 py-4 cursor-pointer text-sm md:text-base flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
 					isOpen
 						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] !important"
 						: ""
@@ -50,8 +50,10 @@ function ExperienceList({
 					</span>
 				</div>
 				<div className="flex justify-between items-center">
-					<div className="mr-8">{experience.timeRange}</div>
-					<div className="text-base h-auto w-4">
+					<div className="mr-8 hidden md:flex">
+						{experience.timeRange}
+					</div>
+					<div className="h-auto w-4">
 						{isOpen ? (
 							<img src={minusIcon} alt="Minus Icon" />
 						) : (

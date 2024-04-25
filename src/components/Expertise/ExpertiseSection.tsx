@@ -4,7 +4,7 @@ import ExpertiseTable from "./ExpertiseTable";
 export default function ExpertiseSection() {
 	return (
 		<section
-			className="max-w-full w-full px-12 py-16"
+			className="max-w-full w-full px-4 py-16"
 			id="expertiseSection"
 		>
 			<div
