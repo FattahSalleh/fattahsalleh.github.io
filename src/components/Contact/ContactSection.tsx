@@ -17,7 +17,7 @@ export default function ContactSection() {
 	return (
 		<>
 			<section
-				className="max-w-full w-full px-4 md:px-24 py-24 md:py-16"
+				className="max-w-full w-full px-4 md:px-24 py-18 md:py-16"
 				id="contactSection"
 			>
 				<div className="flex flex-col items-center">

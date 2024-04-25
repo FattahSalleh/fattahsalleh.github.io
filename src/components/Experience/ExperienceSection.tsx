@@ -10,7 +10,7 @@ export default function ExperiseSection() {
 	};
 	return (
 		<section
-			className="max-w-full w-full px-4 md:px-32 py-16"
+			className="max-w-full w-full px-4 md:px-32 py-12 md:py-16"
 			id="experienceSection"
 		>
 			<div className="flex flex-col items-center">
