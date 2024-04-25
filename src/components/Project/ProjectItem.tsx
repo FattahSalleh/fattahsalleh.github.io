@@ -3,12 +3,6 @@ import { Projects } from "../../common/types";
 import newtabLine from "../../assets/images/general/newtab-line.svg";
 import newtabLineGreen from "../../assets/images/general/newtab-line_green.svg";
 
-// TODO: Adjust Project Item img Assets & Lazy Load
-// Host to Vercel
-// Add more styling to My Expertise
-// Background on first page
-// Mobile / Tablet view
-
 function ProjectItem({ project }: { project: Projects }) {
 	const [isHovered, setIsHovered] = useState<boolean>(false);
 
