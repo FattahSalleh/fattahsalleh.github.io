@@ -4,7 +4,7 @@ import { introDetails } from "../../data/introData";
 function Intro() {
 	return (
 		<section
-			className="w-full h-[calc(100dvh)] lg:min-h-screen flex flex-col items-center justify-center pb-8 lg:pb-24 text-center"
+			className="w-full h-[calc(100dvh)] lg:min-h-screen flex flex-col items-center justify-center text-center"
 			id="introSection"
 		>
 			<div className="text-center">
