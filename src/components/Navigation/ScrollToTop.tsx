@@ -29,7 +29,7 @@ export default function ScrollToTop() {
 			}`}
 		>
 			<button
-				className="bg-lightBg text-secondary rounded-full p-3 focus:outline-none shadow-[0_0px_1px_1px_rgba(80,200,120,1.0)]"
+				className="bg-secondary text-primary rounded-full p-3 focus:outline-none shadow-[0_0px_1px_1px_rgba(80,200,120,1.0)]"
 				onClick={scrollToTop}
 			>
 				<svg
