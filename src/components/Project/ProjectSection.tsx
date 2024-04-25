@@ -11,7 +11,7 @@ export default function ProjectSection() {
 				<p className="font-bold h-full text-4xl lg:text-6xl drop-shadow-md mb-12">
 					Projects Done
 				</p>
-				<article className="grid grid-cols-1 justify-items-start gap-4 lg:grid-cols-3">
+				<article className="grid grid-cols-1 justify-items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{projects.map((project, index) => (
 						<ProjectItem key={index} project={project} />
 					))}

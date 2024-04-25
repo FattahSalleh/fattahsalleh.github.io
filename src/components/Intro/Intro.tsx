@@ -10,13 +10,13 @@ function Intro() {
 			<div className="text-center">
 				<div
 					id="introName"
-					className="font-bold text-4xl lg:text-9xl tracking-wider leading-none drop-shadow-md uppercase overflow-hidden whitespace-nowrap"
+					className="font-bold text-4xl md:text-6xl lg:text-8xl tracking-wider leading-none drop-shadow-md uppercase overflow-hidden whitespace-nowrap"
 				>
 					{introDetails.name}
 				</div>
 				<div
 					id="introSubTitle"
-					className="font-semibold pt-4 lg:pt-8 text-xs lg:text-lg tracking-widest overflow-hidden whitespace-nowrap"
+					className="font-semibold pt-4 lg:pt-8 text-xs md:text-base lg:text-lg tracking-widest overflow-hidden whitespace-nowrap"
 				>
 					{introDetails.position}
 				</div>

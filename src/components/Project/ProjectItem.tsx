@@ -18,7 +18,7 @@ function ProjectItem({ project }: { project: Projects }) {
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
-					<div className="min-w-full w-full h-auto lg:h-48 bg-lightBg flex justify-center overflow-hidden">
+					<div className="min-w-full w-full h-auto md:h-56 lg:h-48 bg-lightBg flex justify-center overflow-hidden">
 						<img
 							src={project.src}
 							alt={project.alt}
@@ -34,7 +34,7 @@ function ProjectItem({ project }: { project: Projects }) {
 								: "text-lightGray"
 						}`}
 					>
-						<div className={`font-semibold text-lg text-wrap`}>
+						<div className={`font-semibold text-lg text-wrap md:max-lg:text-base md:max-lg:text-nowrap`}>
 							{project.title}
 						</div>
 						<div className="text-sm">
