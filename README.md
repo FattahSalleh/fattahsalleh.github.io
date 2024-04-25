@@ -1,4 +1,6 @@
-![Alt text](public/fs-icon.svg?raw=true "FS-ICON")
+<div style="text-align:center;">
+    <img src="public/fs-icon.svg?raw=true" alt="FS Icon" title="FS-ICON" width="100" height="100">
+</div>
 
 # https://fattahsalleh.vercel.app/
 
