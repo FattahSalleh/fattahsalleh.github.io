@@ -46,7 +46,7 @@
 	border: 1.5px solid #fefefe;
 	border-radius: 60px;
 	position: relative;
-	animation: down 2s infinite;
+	animation: down 3s infinite;
 }
 
 .mouseArrow::before {
@@ -55,11 +55,11 @@
 	top: 15px;
 	left: 50%;
 	transform: translateX(-50%);
-	border-top: 10px solid #50C878;
+	border-top: 10px solid #50c878;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	opacity: 1;
-	animation: wheel 2s infinite;
+	animation: wheel 3s infinite;
 }
 
 @keyframes wheel {
@@ -83,13 +83,17 @@
 }
 
 @keyframes down {
-
 	0%,
 	100% {
 		transform: translateY(0);
 	}
 
+	60% {
+		box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
+	}
+
 	50% {
 		transform: translateY(15px);
+		box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
 	}
 }
