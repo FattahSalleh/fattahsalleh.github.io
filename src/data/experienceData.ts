@@ -6,7 +6,7 @@ import tmalLogo from "../assets/images/experience/TMAlphaLab.svg";
 
 export const experience: Experience[] = [
 	{
-		position: "UI/UX Designer & Frontend Developer",
+		position: "Web Developer",
 		company: "Katsana Fleet Services",
 		timeRange: "Nov 2023 - Current",
 		responsibility: [
