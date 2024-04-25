@@ -89,8 +89,21 @@ function ExperienceList({
 							</span>
 							<span>{experience.timeRange}</span>
 						</div>
+						<div className="w-full justify-center md:hidden flex hover:scale-110 transition-transform duration-300">
+							<a
+								href={experience.url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src={experience.src}
+									alt={experience.alt}
+									className="h-auto w-32 py-4"
+								/>
+							</a>
+						</div>
 						<div className="flex flex-row items-center">
-							<div className="w-3/4">
+							<div className="w-full md:w-3/4">
 								<ul className="list-disc pl-4 mb-4 text-xs md:text-sm">
 									{experience.responsibility.map(
 										(resp, index) => (
@@ -101,7 +114,7 @@ function ExperienceList({
 									)}
 								</ul>
 							</div>
-							<div className="w-1/4 justify-center flex hover:scale-110 transition-transform duration-300">
+							<div className="w-1/4 justify-center hidden md:flex hover:scale-110 transition-transform duration-300">
 								<a
 									href={experience.url}
 									target="_blank"
@@ -116,7 +129,7 @@ function ExperienceList({
 							</div>
 						</div>
 
-						<div className="font-medium my-1 w-3/4">
+						<div className="font-medium my-1 w-full md:w-3/4">
 							<ul className="flex flex-wrap flex-row text-xs md:text-sm">
 								{experience.techStack.map((exp, index) => (
 									<li
