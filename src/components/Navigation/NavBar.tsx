@@ -121,7 +121,7 @@ export default function NavBar({
 						height={36}
 					/>
 				</button>
-				<div className="flex flex-col justify-center items-center text-lightText font-semibold md:max-lg:text-2xl">
+				<div className="flex flex-col justify-center items-start text-lightText font-semibold md:max-lg:text-2xl">
 					{navBarButtons.map((button, index) => (
 						<button
 							className="my-4"
