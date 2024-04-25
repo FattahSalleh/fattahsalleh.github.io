@@ -111,7 +111,7 @@ export default function NavBar({
 				}`}
 			>
 				<button
-					className="absolute top-6 right-6 text-lightText text-2xl"
+					className="absolute top-6 right-6 text-lightText"
 					onClick={toggleOverlay}
 				>
 					<img
@@ -121,7 +121,7 @@ export default function NavBar({
 						height={36}
 					/>
 				</button>
-				<div className="flex flex-col justify-center items-center text-lightText font-semibold">
+				<div className="flex flex-col justify-center items-center text-lightText font-semibold md:max-lg:text-2xl">
 					{navBarButtons.map((button, index) => (
 						<button
 							className="my-4"
