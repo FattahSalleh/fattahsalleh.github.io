@@ -4,7 +4,7 @@ import ContactOverlay from "../Contact/ContactOverlay";
 import DisclaimerSection from "../Disclaimer/DisclaimerSection";
 import ContactSection from "../Contact/ContactSection";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import ExpertiseSection from "../Expertise/ExperiseSection";
+import ExpertiseSection from "../Expertise/ExpertiseSection";
 import ProjectSection from "../Project/ProjectSection";
 import ExperiseSection from "../Experience/ExperienceSection";
 import { useState } from "react";
