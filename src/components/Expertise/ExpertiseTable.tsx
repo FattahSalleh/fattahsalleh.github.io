@@ -8,18 +8,22 @@ function ExpertiseTable({ expertise }: { expertise: Expertise }) {
 					<img
 						src={expertise.src}
 						alt={expertise.alt}
-						width={32}
-						height={32}
+						className="w-6 h-6 md:w-8 md:h-8"
 					/>
-					<p className="ml-4 font-bold text-3xl z-10">{expertise.title}</p>
+					<p className="ml-4 font-bold text-2xl md:text-3xl z-10">
+						{expertise.title}
+					</p>
 				</div>
-				<hr className="w-36 h-1 mx-auto border-0 rounded dark:bg-gray-700 relative z-5 bottom-2.5 left-6" style={{ backgroundColor: expertise.titleColor }} />
-				<p className="mt-8">{expertise.desc}</p>
+				<hr
+					className="w-28 md:w-36 h-1 mx-auto border-0 rounded dark:bg-gray-700 relative z-5 bottom-2.5 left-5 md:left-6"
+					style={{ backgroundColor: expertise.titleColor }}
+				/>
+				<p className="mt-8 text-center">{expertise.desc}</p>
 			</div>
 			{expertise.subItems.map((subItem, index) => (
 				<div key={index} className="mt-8 text-center">
 					<p className="font-bold">{subItem.title}:</p>
-					<ul>
+					<ul className="text-sm md:text-base">
 						{subItem.list.map((item, idx) => (
 							<li key={idx}>{item}</li>
 						))}
