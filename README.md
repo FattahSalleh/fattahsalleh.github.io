@@ -1,4 +1,4 @@
-<div style="text-align:center;">
+<div style="align:center;">
     <img src="public/fs-icon.svg?raw=true" alt="FS Icon" title="FS-ICON" width="100" height="100">
 </div>
 
