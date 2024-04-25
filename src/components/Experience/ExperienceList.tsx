@@ -1,5 +1,6 @@
 import { Experience } from "../../common/types";
 import locationIcon from "../../assets/images/experience/location.svg";
+import time from "../../assets/images/experience/time.svg";
 import plusIcon from "../../assets/images/general/plus.svg";
 import minusIcon from "../../assets/images/general/minus.svg";
 import { useEffect, useRef, useState } from "react";
@@ -36,7 +37,7 @@ function ExperienceList({
 	return (
 		<div className="w-full md:w-3/4 rounded-lg shadow-md mb-4">
 			<div
-				className={`px-8 py-4 cursor-pointer text-sm md:text-base flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
+				className={`px-4 md:px-8 py-4 cursor-pointer text-sm md:text-base flex justify-between items-center font-medium hover:shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] rounded-lg bg-primary ${
 					isOpen
 						? "shadow-[0_0px_30px_5px_rgba(80,200,120,1.0)] !important"
 						: ""
@@ -50,7 +51,7 @@ function ExperienceList({
 					</span>
 				</div>
 				<div className="flex justify-between items-center">
-					<div className="mr-8 hidden md:flex">
+					<div className="md:mr-8 hidden md:flex">
 						{experience.timeRange}
 					</div>
 					<div className="h-auto w-4">
@@ -68,7 +69,7 @@ function ExperienceList({
 			>
 				{contentLoaded && (
 					<div className={`px-4 py-4 bg-darkGrayBg rounded-lg mt-2`}>
-						<div className="mb-2 flex flex-row text-lightGray font-mono text-sm items-center">
+						<div className="mb-2 flex flex-row text-lightGray font-mono text-xs md:text-sm items-center">
 							<span>
 								<img
 									src={locationIcon}
@@ -78,9 +79,19 @@ function ExperienceList({
 							</span>
 							<span>{experience.location}</span>
 						</div>
+						<div className="mb-2 flex md:hidden flex-row text-lightGray font-mono text-xs md:text-sm items-center">
+							<span>
+								<img
+									src={time}
+									alt="Time Icon"
+									className="w-auto h-4 mr-2"
+								/>
+							</span>
+							<span>{experience.timeRange}</span>
+						</div>
 						<div className="flex flex-row items-center">
 							<div className="w-3/4">
-								<ul className="list-disc pl-4 mb-4">
+								<ul className="list-disc pl-4 mb-4 text-xs md:text-sm">
 									{experience.responsibility.map(
 										(resp, index) => (
 											<li key={index} className="">
@@ -106,11 +117,11 @@ function ExperienceList({
 						</div>
 
 						<div className="font-medium my-1 w-3/4">
-							<ul className="flex flex-wrap flex-row">
+							<ul className="flex flex-wrap flex-row text-xs md:text-sm">
 								{experience.techStack.map((exp, index) => (
 									<li
 										key={index}
-										className={`text-sm text-greenTurquoise bg-primary mr-2 my-1 px-4 py-1 rounded-2xl transition-all duration-300`}
+										className={`text-greenTurquoise bg-primary mr-2 my-1 px-4 py-1 rounded-2xl transition-all duration-300`}
 									>
 										{exp}
 									</li>
