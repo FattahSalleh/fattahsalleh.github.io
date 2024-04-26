@@ -1,0 +1,15 @@
+@keyframes animateShadow {
+    0%, 100% {
+        box-shadow: 5px 5px 10px 5px var(--expertise-color);
+    }
+    25% {
+        box-shadow: 0px 5px 20px 5px var(--expertise-color);
+    }
+    65% {
+        box-shadow: 0px -5px 10px 5px var(--expertise-color);
+    }
+}
+
+.border-shadow-animation {
+    animation: animateShadow 5s infinite;
+}

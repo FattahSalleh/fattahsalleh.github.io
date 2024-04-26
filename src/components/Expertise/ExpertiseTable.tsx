@@ -1,8 +1,16 @@
 import { Expertise } from "../../common/types";
+import "./Expertise.css";
 
 function ExpertiseTable({ expertise }: { expertise: Expertise }) {
 	return (
-		<div className="flex flex-col border-2 p-8 mx-4 rounded flex-wrap max-w-full lg:w-1/3 items-center my-2 lg:my-0 ">
+		<div
+			className={`flex flex-col border-0 p-8 mx-4 rounded flex-wrap max-w-full lg:w-1/3 items-center my-2 lg:my-0 border-shadow-animation`}
+			style={
+				{
+					"--expertise-color": expertise.titleColor,
+				} as React.CSSProperties
+			}
+		>
 			<div>
 				<div className="flex flex-row items-center justify-center">
 					<img

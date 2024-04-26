@@ -32,7 +32,7 @@ export const expertiseBE: Expertise = {
 	src: backendIcon,
 	alt: "Backend Icon",
 	title: "Backend",
-	titleColor: "#83CD29",
+	titleColor: "#50C878",
 	desc: "As the architect behind the scenes, I engineer efficient solutions for seamless functionality.",
 	subItems: [
 		{
