@@ -86,7 +86,7 @@ export default function NavBar({
 				<div className="flex flex-row justify-between font-semibold items-center">
 					{navBarButtons.map((button, index) => (
 						<button
-							className="mx-4"
+							className="mx-4 hover:scale-110 transition-all duration-300"
 							key={index}
 							onClick={() => scrollToSection(button.sectionId)}
 						>
@@ -94,7 +94,7 @@ export default function NavBar({
 						</button>
 					))}
 				</div>
-				<div className="border border-greenTurquoise text-greenTurquoise rounded py-2 px-4 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
+				<div className="border border-greenTurquoise text-greenTurquoise rounded py-2 px-4 hover:scale-110 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all duration-300">
 					<a href={resume} target="_blank" rel="noreferrer">
 						Resume
 					</a>
@@ -133,7 +133,7 @@ export default function NavBar({
 							{button.label}
 						</button>
 					))}
-					<div className="border rounded border-greenTurquoise text-greenTurquoise py-2 px-4 mt-16 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all">
+					<div className="border rounded border-greenTurquoise text-greenTurquoise py-2 px-4 mt-16 hover:shadow-[0_0px_10px_5px_rgba(80,200,120,1.0)] hover:border-greenTurquoise transition-all duration-300">
 						<a href={resume} target="_blank" rel="noreferrer">
 							Resume
 						</a>
