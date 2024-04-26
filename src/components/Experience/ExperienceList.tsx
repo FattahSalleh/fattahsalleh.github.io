@@ -107,7 +107,7 @@ function ExperienceList({
 								<ul className="list-disc pl-4 mb-4 text-xs lg:text-sm">
 									{experience.responsibility.map(
 										(resp, index) => (
-											<li key={index} className="">
+											<li key={index}>
 												{resp}
 											</li>
 										)
