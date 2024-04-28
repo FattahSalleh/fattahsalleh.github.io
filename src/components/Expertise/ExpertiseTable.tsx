@@ -17,6 +17,7 @@ function ExpertiseTable({ expertise }: { expertise: Expertise }) {
 						src={expertise.src}
 						alt={expertise.alt}
 						className="w-6 h-6 lg:w-8 lg:h-8"
+						loading="lazy"
 					/>
 					<p className="ml-4 font-bold text-2xl lg:text-3xl z-10">
 						{expertise.title}

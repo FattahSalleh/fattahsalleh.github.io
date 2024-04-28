@@ -42,22 +42,25 @@ export default function NavBar({
 	}, []);
 
 	useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (overlayRef.current && !overlayRef.current.contains(event.target as Node)) {
-        closeOverlay();
-      }
-    };
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				overlayRef.current &&
+				!overlayRef.current.contains(event.target as Node)
+			) {
+				closeOverlay();
+			}
+		};
 
-    if (isOverlayOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
+		if (isOverlayOpen) {
+			document.addEventListener("mousedown", handleClickOutside);
+		} else {
+			document.removeEventListener("mousedown", handleClickOutside);
+		}
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOverlayOpen, closeOverlay]);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [isOverlayOpen, closeOverlay]);
 
 	return (
 		<>
@@ -81,6 +84,7 @@ export default function NavBar({
 						className={`transition-all duration-500 ${
 							isScrolled ? "opacity-0" : "opacity-100"
 						}`}
+						loading="lazy"
 					/>
 				</div>
 				<div className="flex flex-row justify-between font-semibold items-center">
@@ -119,6 +123,7 @@ export default function NavBar({
 						alt="Close Icon"
 						width={36}
 						height={36}
+						loading="lazy"
 					/>
 				</button>
 				<div className="flex flex-col justify-center items-start text-lightText font-semibold md:max-lg:text-2xl">
@@ -159,6 +164,7 @@ export default function NavBar({
 						className={`transition-all duration-500 ${
 							isScrolled ? "opacity-0" : "opacity-100"
 						}`}
+						loading="lazy"
 					/>
 					<button onClick={toggleOverlay}>
 						<img
@@ -169,6 +175,7 @@ export default function NavBar({
 							className={`transition-all duration-500 ${
 								isScrolled ? "opacity-0" : "opacity-100"
 							}`}
+							loading="lazy"
 						/>
 					</button>
 				</div>

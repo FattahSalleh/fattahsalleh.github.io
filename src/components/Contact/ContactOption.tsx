@@ -11,6 +11,7 @@ export default function ContactOption({ contact }: { contact: Contact }) {
 					src={contact.src}
 					alt={contact.alt}
 					className="w-6 h-auto"
+					loading="lazy"
 				/>
 			</a>
 		</li>

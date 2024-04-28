@@ -25,6 +25,7 @@ function ProjectItem({ project }: { project: Projects }) {
 							className={`transform transition-transform duration-500 w-full h-full object-scale-down ${
 								isHovered ? "scale-110" : "scale-100"
 							}`}
+							loading="lazy"
 						/>
 					</div>
 					<div
@@ -34,7 +35,9 @@ function ProjectItem({ project }: { project: Projects }) {
 								: "text-lightGray"
 						}`}
 					>
-						<div className={`font-semibold text-lg text-wrap md:max-lg:text-base md:max-lg:text-nowrap`}>
+						<div
+							className={`font-semibold text-lg text-wrap md:max-lg:text-base md:max-lg:text-nowrap`}
+						>
 							{project.title}
 						</div>
 						<div className="text-sm">
@@ -43,14 +46,13 @@ function ProjectItem({ project }: { project: Projects }) {
 							>
 								Show project
 								<img
-									src={isHovered ? newtabLineGreen : newtabLine}
+									src={
+										isHovered ? newtabLineGreen : newtabLine
+									}
 									alt="Popup Icon"
 									className={`w-auto h-3 ml-2 transition-all duration-500 ease-in-out transform
-									${
-										isHovered
-											? "scale-125 translate-x-1"
-											: "translate-x-0"
-									}`}
+									${isHovered ? "scale-125 translate-x-1" : "translate-x-0"}`}
+									loading="lazy"
 								/>
 							</span>
 						</div>

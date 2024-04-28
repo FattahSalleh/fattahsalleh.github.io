@@ -28,6 +28,7 @@ export default function DisclaimerSection() {
 										src={tech.src}
 										alt={tech.alt}
 										className="w-6 h-auto"
+										loading="lazy"
 									/>
 								</a>
 							</li>

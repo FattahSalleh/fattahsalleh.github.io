@@ -56,9 +56,17 @@ function ExperienceList({
 					</div>
 					<div className="h-auto w-4">
 						{isOpen ? (
-							<img src={minusIcon} alt="Minus Icon" />
+							<img
+								src={minusIcon}
+								alt="Minus Icon"
+								loading="lazy"
+							/>
 						) : (
-							<img src={plusIcon} alt="Plus Icon" />
+							<img
+								src={plusIcon}
+								alt="Plus Icon"
+								loading="lazy"
+							/>
 						)}
 					</div>
 				</div>
@@ -75,6 +83,7 @@ function ExperienceList({
 									src={locationIcon}
 									alt="Location Icon"
 									className="w-auto h-4 mr-2"
+									loading="lazy"
 								/>
 							</span>
 							<span>{experience.location}</span>
@@ -85,6 +94,7 @@ function ExperienceList({
 									src={time}
 									alt="Time Icon"
 									className="w-auto h-4 mr-2"
+									loading="lazy"
 								/>
 							</span>
 							<span>{experience.timeRange}</span>
@@ -99,6 +109,7 @@ function ExperienceList({
 									src={experience.src}
 									alt={experience.alt}
 									className="h-auto w-32 py-4"
+									loading="lazy"
 								/>
 							</a>
 						</div>
@@ -107,9 +118,7 @@ function ExperienceList({
 								<ul className="list-disc pl-4 mb-4 text-xs lg:text-sm">
 									{experience.responsibility.map(
 										(resp, index) => (
-											<li key={index}>
-												{resp}
-											</li>
+											<li key={index}>{resp}</li>
 										)
 									)}
 								</ul>
@@ -124,6 +133,7 @@ function ExperienceList({
 										src={experience.src}
 										alt={experience.alt}
 										className="h-auto w-44"
+										loading="lazy"
 									/>
 								</a>
 							</div>
