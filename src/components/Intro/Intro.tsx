@@ -2,6 +2,20 @@ import "./Intro.css";
 import { introDetails } from "../../data/introData";
 
 function Intro() {
+	const handleSmoothScroll = (
+		event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+	) => {
+		event.preventDefault();
+
+		const target = document.querySelector<HTMLDivElement>(
+			event.currentTarget.getAttribute("href")!
+		);
+
+		if (target) {
+			target.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<section
 			className="w-full h-[calc(100dvh)] lg:min-h-screen flex flex-col items-center justify-center text-center"
@@ -21,7 +35,9 @@ function Intro() {
 					{introDetails.position}
 				</div>
 				<div className="field">
-					<div className="mouseArrow"></div>
+					<a href="#expertiseSection" onClick={handleSmoothScroll}>
+						<div className="mouseArrow"></div>
+					</a>
 				</div>
 			</div>
 		</section>
