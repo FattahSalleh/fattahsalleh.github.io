@@ -1,25 +1,45 @@
 {
-  "short_name": "Fattah Salleh | Full Stack Developer & Software Engineer",
-  "name": "Fattah Salleh's portfolio updated in 2024 using React.js with TS & Tailwind CSS!",
-  "icons": [
-    {
-      "src": "fs-icon.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
-    },
-    {
-      "src": "fs-icon.svg",
-      "type": "image/svg+xml",
-      "sizes": "192x192"
-    },
-    {
-      "src": "fs-icon.svg",
-      "type": "image/svg+xml",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"short_name": "Fattah Salleh | Full Stack Developer & Software Engineer",
+	"name": "Fattah Salleh's portfolio created using React.js with TypeScript & Tailwind CSS!",
+	"icons": [
+		{
+			"src": "FS-16x.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-32x.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-64x.png",
+			"sizes": "64x64",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-128x.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-192x.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-256x.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "FS-512x.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#2C2C2C"
 }
