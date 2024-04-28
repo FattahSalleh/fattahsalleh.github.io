@@ -1,7 +1,27 @@
+import { useState, useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 export default function Cursor() {
-	return (
+	const [showCursor, setShowCursor] = useState(false);
+
+	useEffect(() => {
+		const handleResize = () => {
+			// Check if the window width is greater than or equal to 768px (non-mobile), True/False
+			setShowCursor(window.innerWidth >= 768);
+		};
+
+		// Call handleResize once to set initial state
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []); // Empty dependency array ensures the effect runs only once
+
+	// Render the AnimatedCursor component only if showCursor is true
+	return showCursor ? (
 		<AnimatedCursor
 			innerSize={8}
 			outerSize={35}
@@ -16,5 +36,5 @@ export default function Cursor() {
 				border: "1px solid #2E4B35",
 			}}
 		/>
-	);
+	) : null;
 }
