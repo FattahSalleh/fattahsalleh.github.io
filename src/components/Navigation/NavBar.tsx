@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import fsIcon from "../../assets/images/fsicon/FS-32x.png";
+import fsIcon from "../../assets/images/fsicon/FS-512x.png";
 import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
