@@ -45,8 +45,7 @@ function App() {
 					className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
 				>
 					<Cursor />
-					<ScrollToTop />
-					<ContactOverlay />
+
 					<NavBar
 						isOverlayOpen={isOverlayOpen}
 						setIsOverlayOpen={setIsOverlayOpen}
@@ -69,6 +68,8 @@ function PortfolioContent() {
 
 	return (
 		<div className={`${isOverlayOpen ? "blur" : ""}`}>
+			<ScrollToTop />
+			<ContactOverlay />
 			<Intro />
 			<ExpertiseSection />
 			<ProjectSection />
