@@ -14,6 +14,7 @@ module.exports = {
 			greenTurquoise: "#00FBB0",
 			lightBlue: "#149ECA",
 			lightGray: "#d3d3d3",
+			errorRed: "#EF4444",
 		},
 		extend: {},
 	},
