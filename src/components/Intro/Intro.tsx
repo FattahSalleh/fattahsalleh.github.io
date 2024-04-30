@@ -35,7 +35,7 @@ function Intro() {
 					{introDetails.position}
 				</div>
 				<div className="field">
-					<a href="#expertiseSection" onClick={handleSmoothScroll}>
+					<a href="#expertiseSection" onClick={handleSmoothScroll} aria-label="Scroll to expertise section">
 						<div className="mouseArrow"></div>
 					</a>
 				</div>
