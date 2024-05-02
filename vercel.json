@@ -1,0 +1,14 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "client/*",
+			"use": "@vercel/static-build",
+			"config": { "zeroConfig": true }
+		},
+		{
+			"src": "server/*",
+			"use": "@vercel/node"
+		}
+	]
+}
