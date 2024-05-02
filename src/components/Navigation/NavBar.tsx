@@ -76,16 +76,18 @@ export default function NavBar({
 				id="navBar"
 			>
 				<div>
-					<img
-						src={fsIcon}
-						alt="FS Icon"
-						width={32}
-						height={32}
-						className={`transition-all duration-500 ${
-							isScrolled ? "opacity-0" : "opacity-100"
-						}`}
-						loading="lazy"
-					/>
+					<a href="/">
+						<img
+							src={fsIcon}
+							alt="FS Icon"
+							width={32}
+							height={32}
+							className={`transition-all duration-500 ${
+								isScrolled ? "opacity-0" : "opacity-100"
+							}`}
+							loading="lazy"
+						/>
+					</a>
 				</div>
 				<div className="flex flex-row justify-between font-semibold items-center">
 					{navBarButtons.map((button, index) => (
