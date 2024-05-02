@@ -1,6 +1,6 @@
 <div align="center">
     <img src="client/public/fs-icon.svg?raw=true" alt="FS Icon" title="FS-ICON" width="100" height="100">
-    <h1>fattahsalleh.vercel.app</h1>
+    <h1>fattahsalleh.dev</h1>
     <h3>My personal portfolio built with React.js, TypeScript and Tailwind CSS, hosted with Vercel!</h3>
 </div>
 
