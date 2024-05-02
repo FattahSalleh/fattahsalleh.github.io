@@ -12,13 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run:
 
-### Start server:
-`cd server` to go to Client file directory
-`npm install` to install the necessary dependencies
-[To add more soon]
-
 ### Start Web server:
-`cd client` to go to Client file directory
 `npm install` to install the necessary dependencies
 `npm start` to start the local server for development
 `npm run build` to start building for production
