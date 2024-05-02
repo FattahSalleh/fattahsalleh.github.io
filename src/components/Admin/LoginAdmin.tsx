@@ -45,8 +45,11 @@ export default function LoginAdmin() {
 	};
 
 	return (
-		<div className="flex justify-center items-center w-[100vh] h-[100vh]">
-			<form onSubmit={handleSubmit} className="flex flex-col gap-4 border border-lightGray p-24 rounded">
+		<div className="flex justify-center items-center w-[80vh] h-[100vh]">
+			<form
+				onSubmit={handleSubmit}
+				className="flex flex-col gap-4 border border-lightGray p-24 rounded w-full"
+			>
 				<label htmlFor="email" className="text-lg">
 					Email Address:
 				</label>
@@ -55,7 +58,7 @@ export default function LoginAdmin() {
 					id="email"
 					value={email}
 					onChange={(e) => setEmail(e.target.value)}
-					className="p-2 border rounded"
+					className="p-2 border rounded text-darkText"
 					required
 				/>
 				<label htmlFor="password" className="text-lg">
@@ -66,13 +69,13 @@ export default function LoginAdmin() {
 					id="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
-					className="p-2 border rounded"
+					className="p-2 border rounded text-darkText"
 					required
 				/>
 				{error && <p className="text-errorRed">{error}</p>}
 				<button
 					type="submit"
-					className="bg-secondary text-white px-4 py-2 rounded hover:bg-greenTurquoise"
+					className="bg-secondary text-white px-4 py-2 rounded hover:bg-greenTurquoise mt-8"
 				>
 					Login
 				</button>
