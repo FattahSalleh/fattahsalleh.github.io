@@ -5,6 +5,7 @@ import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
 import { navBarButtons } from "../../data/navBarData";
 import { NavBarProps } from "../../common/types";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function NavBar({
 	isOverlayOpen,
@@ -12,12 +13,25 @@ export default function NavBar({
 }: NavBarProps) {
 	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 	const overlayRef = useRef<HTMLDivElement>(null);
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	const scrollToSection = (id: string) => {
 		const section = document.getElementById(id);
 		if (section) {
 			section.scrollIntoView({ behavior: "smooth" });
 			isOverlayOpen && closeOverlay();
+		}
+	};
+
+	const handleButtonClick = (id: string) => {
+		if (location.pathname !== "/") {
+			navigate("/");
+			setTimeout(() => {
+				scrollToSection(id);
+			}, 0);
+		} else {
+			scrollToSection(id);
 		}
 	};
 
@@ -94,7 +108,7 @@ export default function NavBar({
 						<button
 							className="mx-4 hover:scale-110 transition-all duration-300"
 							key={index}
-							onClick={() => scrollToSection(button.sectionId)}
+							onClick={() => handleButtonClick(button.sectionId)}
 						>
 							{button.label}
 						</button>
@@ -134,7 +148,7 @@ export default function NavBar({
 							className="my-4"
 							key={index}
 							onClick={() => {
-								scrollToSection(button.sectionId);
+								handleButtonClick(button.sectionId);
 							}}
 						>
 							{button.label}
