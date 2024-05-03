@@ -14,7 +14,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Start Web server:
 `npm install` to install the necessary dependencies
+
 `npm start` to start the local server for development
+
 `npm run build` to start building for production
 
 ## What I used:
@@ -36,4 +38,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 -   https://brittanychiang.com/
 -   https://tamalsen.dev/
     <br />
+    
     If you would like to react out to me, feel free to check out my contact information in the portfolio!
