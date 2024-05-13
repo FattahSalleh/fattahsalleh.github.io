@@ -12,6 +12,7 @@ import ExperienceSection from "../Experience/ExperienceSection";
 import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
 import Login from "../Auth/Login";
+import PageNotFound from "../PageNotFound/PageNotFound";
 
 interface OverlayContextProps {
 	isOverlayOpen: boolean;
@@ -54,6 +55,7 @@ function App() {
 						<Routes>
 							<Route path="/login" element={<Login />} />
 							<Route path="/" element={<PortfolioContent />} />
+							<Route path="*" element={<PageNotFound />} />
 						</Routes>
 					</div>
 					<SpeedInsights />
