@@ -11,7 +11,7 @@ import ProjectSection from "../Project/ProjectSection";
 import ExperienceSection from "../Experience/ExperienceSection";
 import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
-import LoginAdmin from "../Admin/LoginAdmin";
+import Login from "../Auth/Login";
 
 interface OverlayContextProps {
 	isOverlayOpen: boolean;
@@ -52,7 +52,7 @@ function App() {
 					/>
 					<div className={`${isOverlayOpen ? "blur" : ""}`}>
 						<Routes>
-							<Route path="/admin" element={<LoginAdmin />} />
+							<Route path="/login" element={<Login />} />
 							<Route path="/" element={<PortfolioContent />} />
 						</Routes>
 					</div>
