@@ -11,7 +11,7 @@ import ProjectSection from "../Project/ProjectSection";
 import ExperienceSection from "../Experience/ExperienceSection";
 import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
-import Login from "../Auth/Login";
+import Login from "../Auth/Login/Login";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
 interface OverlayContextProps {
