@@ -23,7 +23,4 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
-onAuthStateChanged(auth, user => {
-	console.log("You are logged in as: " + user);
-})
-
+export { app, auth };
