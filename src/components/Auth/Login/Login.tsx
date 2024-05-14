@@ -24,26 +24,9 @@ export default function Login() {
 			return;
 		}
 
-		// Dummy login logic (replace with actual login API call)
 		try {
 			const sanitizedEmail = DOMPurify.sanitize(email); // Sanitize email input
 			const sanitizedPassword = DOMPurify.sanitize(password); // Sanitize password input
-
-			// const response = await fetch("your_login_api_endpoint", {
-			// 	method: "POST",
-			// 	headers: {
-			// 		"Content-Type": "application/json",
-			// 	},
-			// 	body: JSON.stringify({
-			// 		email: sanitizedEmail,
-			// 		password: sanitizedPassword,
-			// 	}), // Use sanitized input in the request
-			// });
-
-			// if (!response.ok) {
-			// 	setError("Invalid email or password. Please try again.");
-			// 	return;
-			// }
 
 			if (!isSigningIn) {
 				setIsSigningIn(true);
@@ -53,8 +36,6 @@ export default function Login() {
 				);
 			}
 
-			// Successful login logic (redirect user or set authentication token)
-			console.log("Login successful!");
 		} catch (error) {
 			console.error("Error during login:", error);
 			setIsSigningIn(false);
@@ -111,7 +92,7 @@ export default function Login() {
 					disabled={isSigningIn}
 					className="bg-secondary text-white px-4 py-2 rounded hover:bg-greenTurquoise mt-8"
 				>
-					Login
+					{isSigningIn ? "Logging In...":"LOGIN"}
 				</button>
 
 				<hr />
