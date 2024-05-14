@@ -7,10 +7,32 @@ import {
 	signInWithPopup,
 	updatePassword,
 } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth, db } from "./firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 export const doCreateUserWithEmailAndPassword = async (email, password) => {
-	return createUserWithEmailAndPassword(auth, email, password);
+	try {
+		const userCredential = await createUserWithEmailAndPassword(
+			auth,
+			email,
+			password
+		);
+
+		// Extract user information
+		const user = userCredential.user;
+
+		// Store user data in Firestore
+		await setDoc(doc(db, "users", user.uid), {
+			email: user.email,
+			password: user.email,
+			role: 2,
+			createdAt: new Date(),
+		});
+
+		return userCredential;
+	} catch (error) {
+		throw error;
+	}
 };
 
 export const doSignInWithEmailAndPassword = async (email, password) => {
@@ -18,11 +40,26 @@ export const doSignInWithEmailAndPassword = async (email, password) => {
 };
 
 export const doSignInWithGoogle = async () => {
-	const provider = new GoogleAuthProvider();
-	const result = await signInWithPopup(auth, provider);
-	// TODO: store the user info inside Firestore
-	// return.user
-	return result;
+	try {
+		const provider = new GoogleAuthProvider();
+		const result = await signInWithPopup(auth, provider);
+		// Extract user information
+		const user = result.user;
+
+		// Store user data in Firestore
+		await setDoc(doc(db, "users", user.uid), {
+			email: user.email,
+			displayName: user.displayName,
+			role: 2,
+			createdAt: new Date(),
+		});
+
+		console.log(user);
+
+		return result;
+	} catch (error) {
+		throw error;
+	}
 };
 
 export const doSignout = () => {
@@ -38,7 +75,7 @@ export const doPasswordChange = (password) => {
 };
 
 export const doSendEmailVerification = () => {
-    return sendEmailVerification(auth.currentUser, {
-        url: `${window.location.origin}/`
-    })
+	return sendEmailVerification(auth.currentUser, {
+		url: `${window.location.origin}/home`,
+	});
 };
