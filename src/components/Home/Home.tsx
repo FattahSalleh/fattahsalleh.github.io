@@ -7,6 +7,19 @@ export function Home() {
 
 	const [isSigningOut, setIsSigningOut] = useState(false);
 
+	const handleLogout = async () => {
+		if (isSigningOut) return;
+
+		try {
+			setIsSigningOut(true);
+			await doSignout();
+		} catch (error) {
+			console.error("Error during logout: ", error);
+		} finally {
+			setIsSigningOut(false);
+		}
+	};
+
 	return (
 		<>
 			<div className="text-2xl font-bold pt-14">
@@ -21,18 +34,11 @@ export function Home() {
 						</div>
 						<div>
 							<button
-								onClick={(
-									e: React.MouseEvent<
-										HTMLButtonElement,
-										MouseEvent
-									>
-								) => {
-									doSignout();
-								}}
+								onClick={handleLogout}
 								disabled={isSigningOut}
-								className="bg-secondary text-white px-4 py-2 rounded hover:bg-greenTurquoise mt-8"
+								className="bg-errorRed text-white px-4 py-2 rounded hover:bg-errorRed opacity-90 mt-8"
 							>
-								LOGOUT
+								{isSigningOut ? "Logging Out..." : "LOGOUT"}
 							</button>{" "}
 						</div>
 					</>

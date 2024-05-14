@@ -13,7 +13,7 @@ import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
 import Login from "../Auth/Login/Login";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import { useAuth, AuthProvider } from "../../contexts/authContext";
+import { AuthProvider } from "../../contexts/authContext";
 import { Home } from "../Home/Home";
 
 interface OverlayContextProps {
