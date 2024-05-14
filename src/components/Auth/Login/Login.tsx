@@ -15,7 +15,7 @@ export default function Login() {
 	const [isSigningIn, setIsSigningIn] = useState(false);
 	const [error, setError] = useState("");
 
-	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+	const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		// Basic form validation
@@ -80,7 +80,7 @@ export default function Login() {
 		<div className="flex justify-center items-center w-[80vh] h-[100vh]">
 			{userLoggedIn && <Navigate to={"/home"} replace={true} />}
 			<form
-				onSubmit={handleSubmit}
+				onSubmit={handleLogin}
 				className="flex flex-col gap-4 border border-lightGray p-24 rounded w-full"
 			>
 				<label htmlFor="email" className="text-lg">
