@@ -13,6 +13,7 @@ import Cursor from "../Cursor/Cursor";
 import ScrollToTop from "../Navigation/ScrollToTop";
 import Login from "../Auth/Login/Login";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import { useAuth, AuthProvider } from "../../contexts/authContext";
 
 interface OverlayContextProps {
 	isOverlayOpen: boolean;
@@ -40,36 +41,49 @@ function App() {
 	const [isOverlayOpen, setIsOverlayOpen] = useState<boolean>(false);
 
 	return (
-		<OverlayProvider>
-			<BrowserRouter>
-				<div
-					className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
-				>
-					<Cursor />
+		<AuthProvider>
+			<OverlayProvider>
+				<BrowserRouter>
+					<div
+						className={`App flex min-h-screen flex-col items-center justify-between bg-darkBg text-lightText overflow-x-clip`}
+					>
+						<Cursor />
 
-					<NavBar
-						isOverlayOpen={isOverlayOpen}
-						setIsOverlayOpen={setIsOverlayOpen}
-					/>
-					<div className={`${isOverlayOpen ? "blur" : ""}`}>
-						<Routes>
-							<Route path="/login" element={<Login />} />
-							<Route path="/" element={<PortfolioContent />} />
-							<Route path="*" element={<PageNotFound />} />
-						</Routes>
+						<NavBar
+							isOverlayOpen={isOverlayOpen}
+							setIsOverlayOpen={setIsOverlayOpen}
+						/>
+						<div className={`${isOverlayOpen ? "blur" : ""}`}>
+							<Routes>
+								<Route path="/login" element={<Login />} />
+								<Route
+									path="/"
+									element={<PortfolioContent />}
+								/>
+								<Route path="*" element={<PageNotFound />} />
+							</Routes>
+						</div>
+						<SpeedInsights />
 					</div>
-					<SpeedInsights />
-				</div>
-			</BrowserRouter>
-		</OverlayProvider>
+				</BrowserRouter>
+			</OverlayProvider>
+		</AuthProvider>
 	);
 }
 
 function PortfolioContent() {
 	const { isOverlayOpen } = useContext(OverlayContext);
+	const { currentUser } = useAuth();
 
 	return (
 		<div className={`${isOverlayOpen ? "blur" : ""}`}>
+			<div className="text-2xl font-bold pt-14">
+				Hello{" "}
+				{/* {currentUser!.displayName
+					? currentUser!.displayName
+					: currentUser!.email} */}
+				{currentUser?.email}, you are now logged in.
+			</div>
 			<ScrollToTop />
 			<ContactOverlay />
 			<Intro />
