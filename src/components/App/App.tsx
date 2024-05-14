@@ -14,6 +14,7 @@ import ScrollToTop from "../Navigation/ScrollToTop";
 import Login from "../Auth/Login/Login";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import { useAuth, AuthProvider } from "../../contexts/authContext";
+import { Home } from "../Home/Home";
 
 interface OverlayContextProps {
 	isOverlayOpen: boolean;
@@ -56,6 +57,7 @@ function App() {
 						<div className={`${isOverlayOpen ? "blur" : ""}`}>
 							<Routes>
 								<Route path="/login" element={<Login />} />
+								<Route path="/home" element={<Home />} />
 								<Route
 									path="/"
 									element={<PortfolioContent />}
@@ -73,17 +75,9 @@ function App() {
 
 function PortfolioContent() {
 	const { isOverlayOpen } = useContext(OverlayContext);
-	const { currentUser } = useAuth();
 
 	return (
 		<div className={`${isOverlayOpen ? "blur" : ""}`}>
-			<div className="text-2xl font-bold pt-14">
-				Hello{" "}
-				{/* {currentUser!.displayName
-					? currentUser!.displayName
-					: currentUser!.email} */}
-				{currentUser?.email}, you are now logged in.
-			</div>
 			<ScrollToTop />
 			<ContactOverlay />
 			<Intro />
