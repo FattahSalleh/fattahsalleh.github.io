@@ -57,6 +57,7 @@ export default function Login() {
 			console.log("Login successful!");
 		} catch (error) {
 			console.error("Error during login:", error);
+			setIsSigningIn(false);
 			setError(
 				"Invalid email address or password. Please make sure you've entered the correct credentials."
 			);
@@ -77,7 +78,7 @@ export default function Login() {
 
 	return (
 		<div className="flex justify-center items-center w-[80vh] h-[100vh]">
-			{userLoggedIn && <Navigate to={"/"} replace={true} />}
+			{userLoggedIn && <Navigate to={"/home"} replace={true} />}
 			<form
 				onSubmit={handleSubmit}
 				className="flex flex-col gap-4 border border-lightGray p-24 rounded w-full"
