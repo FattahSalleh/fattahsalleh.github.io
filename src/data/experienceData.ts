@@ -3,12 +3,34 @@ import trinergyLogo from "../assets/images/experience/trinergy-wbg.png";
 // import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
 import katsanaLogo from "../assets/images/experience/katsana.svg";
 import tmalLogo from "../assets/images/experience/TMAlphaLab.svg";
+import accentureLogo from "../assets/images/experience/accenture.png";
 
 export const experience: Experience[] = [
 	{
+		position: "Software Developer",
+		company: "Accenture",
+		timeRange: "June 2024 - Current",
+		responsibility: [
+			"Point 1",
+			"Point 2",
+			"Point 3"
+		],
+		techStack: [
+			"React.js",
+			"Next.js",
+			"ShadCN",
+			"TanStack Query",
+			"Tailwind CSS",
+		],
+		url: "https://www.accenture.com/my-en",
+		location: "Kuala Lumpur, Malaysia",
+		src: accentureLogo,
+		alt: "Accenture Logo",
+	},
+	{
 		position: "Web Developer",
 		company: "Katsana Fleet Services",
-		timeRange: "Nov 2023 - Current",
+		timeRange: "Nov 2023 - June 2024",
 		responsibility: [
 			"Designed cohesive websites, tablet, and mobile mock-ups using Figma, while also presenting design concepts and proposals to management for approval and implementation.",
 			"Led UI/UX enhancements for both existing and new products, guiding the process from conceptualization to high-fidelity web designs and prototypes.",

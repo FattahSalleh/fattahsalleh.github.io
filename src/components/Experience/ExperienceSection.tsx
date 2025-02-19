@@ -2,7 +2,7 @@ import ExperienceList from "../Experience/ExperienceList";
 import { experience } from "../../data/experienceData";
 import { useState } from "react";
 
-export default function ExperiseSection() {
+export default function ExpertiseSection() {
 	const [openIndex, setOpenIndex] = useState<number | null>(null);
 
 	const toggleAccordion = (index: number) => {
