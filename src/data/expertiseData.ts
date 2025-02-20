@@ -7,7 +7,7 @@ export const expertiseFE: Expertise = {
 	alt: "Frontend Icon",
 	title: "Frontend",
 	titleColor: "#149ECA",
-	desc: "With over 4 years of development experience, I have always loved bringing designs to life.",
+	desc: "With over 5 years of development experience, I have always loved bringing designs to life.",
 	subItems: [
 		{
 			title: "Languages",
@@ -19,7 +19,7 @@ export const expertiseFE: Expertise = {
 		},
 		{
 			title: "Libraries",
-			list: ["React.js, Vue.js", "jQuery, Pug"],
+			list: ["React.js, Next.js", "Vue.js, jQuery"],
 		},
 		{
 			title: "Tools",
