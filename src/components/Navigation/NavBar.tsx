@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import fsIcon from "../../assets/images/fsicon/FS-512x.png";
 import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
-import resume from "../../assets/pdf/Resume_FattahSalleh_2024.pdf";
+import resume from "../../assets/pdf/Resume_FattahSalleh_2025.pdf";
 import { navBarButtons } from "../../data/navBarData";
 import { NavBarProps } from "../../common/types";
 import { useLocation, useNavigate } from "react-router-dom";
