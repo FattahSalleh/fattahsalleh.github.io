@@ -15,15 +15,15 @@ export const expertiseFE: Expertise = {
 		},
 		{
 			title: "Frameworks",
-			list: ["Tailwind CSS, Bootstrap"],
+			list: ["Next.js, Jest", "Tailwind CSS, Bootstrap"],
 		},
 		{
 			title: "Libraries",
-			list: ["React.js, Next.js", "Vue.js, jQuery"],
+			list: ["React.js, Vue.js", "TanStack, jQuery"],
 		},
 		{
 			title: "Tools",
-			list: ["VS Code, Android Studio", "Figma, Framer, OpenText"],
+			list: ["Cypress, ESLint, Mermaid.js", "Figma, Framer, OpenText"],
 		},
 	],
 };
@@ -37,11 +37,11 @@ export const expertiseBE: Expertise = {
 	subItems: [
 		{
 			title: "Languages",
-			list: ["JavaScript (Node.js)", "Java, Kotlin, PHP, Python", "SQL"],
+			list: ["JavaScript (Node.js)", "Java, Kotlin",  "PHP, Python", "SQL"],
 		},
 		{
 			title: "Frameworks",
-			list: ["Express.js, Laravel, Flask"],
+			list: ["Express.js, Flask"],
 		},
 		{
 			title: "Libraries",
@@ -49,7 +49,7 @@ export const expertiseBE: Expertise = {
 		},
 		{
 			title: "Tools",
-			list: ["Postman API", "Jira, Git"],
+			list: ["Postman API, PM2", "Jira, Git"],
 		},
 	],
 };
