@@ -12,7 +12,7 @@ export const experience: Experience[] = [
 		timeRange: "June 2024 - Current",
 		responsibility: [
 			"Spearheaded the Next.js-based frontend development of a RM30 million financial banking web application, aimed at enhancing customer engagement, with projected improvements including a 51% increase in engagement rate and an impressive 4000% growth in customer interactions across several countries.",
-			"Entrusted with the responsibility of serving as the technical lead backup, contributing significantly to the project’s success over the course of six months.",
+			"Entrusted with the responsibility of serving as the technical lead backup, contributing significantly to the project's success over the past nine months, with ongoing involvement.",
 			"Led the creation of comprehensive documentation and provided training to new team members, ensuring smooth onboarding and knowledge transfer across the development team.",
 		],
 		techStack: [
