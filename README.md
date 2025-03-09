@@ -39,4 +39,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 -   https://tamalsen.dev/
     <br />
     
-    If you would like to react out to me, feel free to check out my contact information in the portfolio!
+    If you would like to reach out to me, feel free to check out my contact information in the portfolio!
