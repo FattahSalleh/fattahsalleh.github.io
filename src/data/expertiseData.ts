@@ -19,7 +19,7 @@ export const expertiseFE: Expertise = {
 		},
 		{
 			title: "Libraries",
-			list: ["React.js, Vue.js", "TanStack, jQuery"],
+			list: ["React.js, Vue.js", "TanStack Query, jQuery"],
 		},
 		{
 			title: "Tools",
@@ -33,11 +33,11 @@ export const expertiseBE: Expertise = {
 	alt: "Backend Icon",
 	title: "Backend",
 	titleColor: "#50C878",
-	desc: "As the architect behind the scenes, I engineer efficient solutions for seamless functionality.",
+	desc: "Although my main focus is frontend development, I also dabble in backend development.",
 	subItems: [
 		{
 			title: "Languages",
-			list: ["JavaScript (Node.js)", "Java, Kotlin",  "PHP, Python", "SQL"],
+			list: ["JavaScript (Node.js)", "Kotlin",  "Python", "SQL"],
 		},
 		{
 			title: "Frameworks",
@@ -45,7 +45,7 @@ export const expertiseBE: Expertise = {
 		},
 		{
 			title: "Libraries",
-			list: ["Axios, Moment.js"],
+			list: ["Axios"],
 		},
 		{
 			title: "Tools",
