@@ -4,7 +4,7 @@ import burgerMenu from "../../assets/images/general/burger-menu.svg";
 import closeIcon from "../../assets/images/general/close.svg";
 import resume from "../../assets/pdf/Resume_FattahSalleh_2025.pdf";
 import { navBarButtons } from "../../data/navBarData";
-import { NavBarProps } from "../../common/types";
+import { NavBarProps } from "../../types/types";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function NavBar({

@@ -1,4 +1,4 @@
-import { Expertise } from "../../common/types";
+import { Expertise } from "../../types/types";
 import "./Expertise.css";
 
 function ExpertiseTable({ expertise }: { expertise: Expertise }) {

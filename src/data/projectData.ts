@@ -1,4 +1,4 @@
-import { Projects } from "../common/types";
+import { Projects } from "../types/types";
 import allianceBizsmart from "../assets/images/project/alliance_bizsmart.png";
 import ocbcDuitNowQR from "../assets/images/project/ocbcduitnowqr-all-lg.png";
 import tmGlobal from "../assets/images/project/tmglobal-logo.png";

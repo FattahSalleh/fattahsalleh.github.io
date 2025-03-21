@@ -15,6 +15,8 @@ import Login from "../Auth/Login/Login";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import { AuthProvider } from "../../contexts/authContext";
 import { Home } from "../Home/Home";
+import { PATH } from "../../constants/path.constant";
+import { Practice } from "../Practice/Practice";
 
 interface OverlayContextProps {
 	isOverlayOpen: boolean;
@@ -23,7 +25,7 @@ interface OverlayContextProps {
 
 export const OverlayContext = createContext<OverlayContextProps>({
 	isOverlayOpen: false,
-	setIsOverlayOpen: () => {},
+	setIsOverlayOpen: () => { },
 });
 
 export const OverlayProvider: React.FC<{ children: ReactNode }> = ({
@@ -56,12 +58,13 @@ function App() {
 						/>
 						<div className={`${isOverlayOpen ? "blur" : ""}`}>
 							<Routes>
-								<Route path="/login" element={<Login />} />
-								<Route path="/home" element={<Home />} />
 								<Route
-									path="/"
+									path={PATH.MAIN}
 									element={<PortfolioContent />}
 								/>
+								<Route path={PATH.LOGIN} element={<Login />} />
+								<Route path={PATH.HOME} element={<Home />} />
+								<Route path={PATH.PRACTICE} element={<Practice />} />
 								<Route path="*" element={<PageNotFound />} />
 							</Routes>
 						</div>

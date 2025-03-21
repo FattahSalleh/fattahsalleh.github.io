@@ -1,4 +1,4 @@
-import { Disclaimer } from "../common/types";
+import { Disclaimer } from "../types/types";
 import figma from "../assets/images/disclaimer/figma.svg";
 import vscode from "../assets/images/disclaimer/vscode.svg";
 import react from "../assets/images/disclaimer/react.svg";

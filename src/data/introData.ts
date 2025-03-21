@@ -1,4 +1,4 @@
-import { MyDetails } from "../common/types";
+import { MyDetails } from "../types/types";
 
 export const introDetails: MyDetails = {
 	name: "Fattah Salleh",

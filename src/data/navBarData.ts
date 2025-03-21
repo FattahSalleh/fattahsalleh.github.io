@@ -1,4 +1,4 @@
-import { NavBarButtons } from "../common/types";
+import { NavBarButtons } from "../types/types";
 
 export const navBarButtons: NavBarButtons[] = [
 	{ label: "hello world!", sectionId: "introSection" },

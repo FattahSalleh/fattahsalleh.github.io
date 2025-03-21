@@ -1,4 +1,4 @@
-import { Contact } from "../../common/types";
+import { Contact } from "../../types/types";
 
 export default function ContactOption({ contact }: { contact: Contact }) {
 	// Check if the contact given is an email, returns True

@@ -1,4 +1,4 @@
-import { Expertise } from "../common/types";
+import { Expertise } from "../types/types";
 import frontendIcon from "../assets/images/expertise/frontend-icon.svg";
 import backendIcon from "../assets/images/expertise/backend-icon.svg";
 

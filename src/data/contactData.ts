@@ -1,4 +1,4 @@
-import { Contact } from "../common/types";
+import { Contact } from "../types/types";
 import github from "../assets/images/contact/github.svg";
 import linkedin from "../assets/images/contact/linkedin.svg";
 import email from "../assets/images/contact/email.svg";

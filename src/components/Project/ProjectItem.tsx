@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Projects } from "../../common/types";
+import { Projects } from "../../types/types";
 import newtabLine from "../../assets/images/general/newtab-line.svg";
 import newtabLineGreen from "../../assets/images/general/newtab-line_green.svg";
 

@@ -1,4 +1,4 @@
-import { Experience } from "../common/types";
+import { Experience } from "../types/types";
 import trinergyLogo from "../assets/images/experience/trinergy-wbg.png";
 // import fujifilmLogo from "../assets/images/experience/fujifilm.svg";
 import katsanaLogo from "../assets/images/experience/katsana.svg";

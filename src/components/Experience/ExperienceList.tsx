@@ -1,4 +1,4 @@
-import { Experience } from "../../common/types";
+import { Experience } from "../../types/types";
 import locationIcon from "../../assets/images/experience/location.svg";
 import time from "../../assets/images/experience/time.svg";
 import plusIcon from "../../assets/images/general/plus.svg";
