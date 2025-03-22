@@ -1,17 +1,15 @@
-import { Rating } from "./Rating";
+import { Sidebar } from "../Navigation/Sidebar";
+import { RatingStar } from "./RatingStar/RatingStar";
 
 export function Practice() {
 
-    const SAMPLE_TITLE: string[] = ["Title 1", "Title 2", "Title 3"];
-
     return <>
+        <Sidebar />
         <section
             className="w-full h-[calc(100dvh)] lg:min-h-screen flex flex-col items-center justify-center text-center"
             id="introSection"
         >
-            <header className="mb-8 font-bold">STAR RATING</header>
-            {SAMPLE_TITLE.map((title, index) => { return <h1 key={index}>{title}<Rating /></h1> })
-            }
+            <RatingStar />
         </section>
     </>
 }
