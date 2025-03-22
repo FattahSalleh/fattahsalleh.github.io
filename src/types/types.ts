@@ -61,3 +61,7 @@ export interface NavBarProps {
 	isOverlayOpen: boolean;
 	setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export interface PracticeComponentMapProps {
+	[key: string]: React.FC;
+}
