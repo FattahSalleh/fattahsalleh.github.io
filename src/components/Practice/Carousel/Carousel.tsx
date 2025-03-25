@@ -1,3 +1,3 @@
 export function Carousel() {
-    return <div>Carousel</div>;
+  return <div>Carousel</div>;
 }

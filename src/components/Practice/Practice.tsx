@@ -1,8 +1,9 @@
-import { Sidebar } from "../Navigation/Sidebar";
+import { Sidebar } from '../Navigation/Sidebar';
 
 export function Practice() {
-
-    return <>
-        <Sidebar />
+  return (
+    <>
+      <Sidebar />
     </>
+  );
 }

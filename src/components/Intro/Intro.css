@@ -1,99 +1,99 @@
 /* Animation for Text */
 #introName {
-	animation: typing 1s steps(50) forwards;
+  animation: typing 1s steps(50) forwards;
 }
 
 #introSubTitle {
-	animation: fadeIn 1s ease forwards;
-	animation-delay: 1s;
-	opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 @keyframes typing {
-	from {
-		width: 0;
-	}
+  from {
+    width: 0;
+  }
 
-	to {
-		width: 100%;
-	}
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+  from {
+    opacity: 0;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animation for Icon */
 .field {
-	position: absolute;
-	bottom: 10%;
-	left: 50%;
-	transform: translateX(-50%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mouseArrow {
-	width: 35px;
-	height: 60px;
-	border: 1.5px solid #fefefe;
-	border-radius: 60px;
-	position: relative;
-	animation: down 3s infinite;
+  width: 35px;
+  height: 60px;
+  border: 1.5px solid #fefefe;
+  border-radius: 60px;
+  position: relative;
+  animation: down 3s infinite;
 }
 
 .mouseArrow::before {
-	content: "";
-	position: absolute;
-	top: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	border-top: 10px solid #50c878;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	opacity: 1;
-	animation: wheel 3s infinite;
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: 10px solid #50c878;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  opacity: 1;
+  animation: wheel 3s infinite;
 }
 
 @keyframes wheel {
-	0% {
-		opacity: 0;
-		top: 15px;
-		/* Starting position */
-	}
+  0% {
+    opacity: 0;
+    top: 15px;
+    /* Starting position */
+  }
 
-	50% {
-		opacity: 1;
-		/* Fade in */
-	}
+  50% {
+    opacity: 1;
+    /* Fade in */
+  }
 
-	100% {
-		opacity: 0;
-		/* Fade out */
-		top: 40px;
-		/* Ending position */
-	}
+  100% {
+    opacity: 0;
+    /* Fade out */
+    top: 40px;
+    /* Ending position */
+  }
 }
 
 @keyframes down {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
+  0%,
+  100% {
+    transform: translateY(0);
+  }
 
-	60% {
-		box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
-	}
+  60% {
+    box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
+  }
 
-	50% {
-		transform: translateY(15px);
-		box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
-	}
+  50% {
+    transform: translateY(15px);
+    box-shadow: 0 0px 30px 5px rgba(80, 200, 120, 1);
+  }
 }

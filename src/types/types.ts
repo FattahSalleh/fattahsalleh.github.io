@@ -1,67 +1,67 @@
 export interface NavBarButtons {
-	label: string;
-	sectionId: string;
+  label: string;
+  sectionId: string;
 }
 
 export interface MyDetails {
-	name: string;
-	position: string;
+  name: string;
+  position: string;
 }
 
 interface SubItems {
-	title: string;
-	list: string[];
+  title: string;
+  list: string[];
 }
 
 export interface Expertise {
-	src: string;
-	alt: string;
-	title: string;
-	titleColor: string;
-	desc: string;
-	subItems: SubItems[];
+  src: string;
+  alt: string;
+  title: string;
+  titleColor: string;
+  desc: string;
+  subItems: SubItems[];
 }
 
 export interface Projects {
-	src: string;
-	alt: string;
-	title: string;
-	desc: string;
-	techStack: string[];
-	url: string;
+  src: string;
+  alt: string;
+  title: string;
+  desc: string;
+  techStack: string[];
+  url: string;
 }
 
 export interface Experience {
-	position: string;
-	company: string;
-	location: string;
-	timeRange: string;
-	responsibility: string[];
-	techStack: string[];
-	url: string;
-	src?: string;
-	alt?: string;
+  position: string;
+  company: string;
+  location: string;
+  timeRange: string;
+  responsibility: string[];
+  techStack: string[];
+  url: string;
+  src?: string;
+  alt?: string;
 }
 
 export interface Contact {
-	name: string;
-	url: string;
-	src: string;
-	alt: string;
+  name: string;
+  url: string;
+  src: string;
+  alt: string;
 }
 
 export interface Disclaimer {
-	name: string;
-	url: string;
-	src: string;
-	alt: string;
+  name: string;
+  url: string;
+  src: string;
+  alt: string;
 }
 
 export interface NavBarProps {
-	isOverlayOpen: boolean;
-	setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isOverlayOpen: boolean;
+  setIsOverlayOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface PracticeComponentMapProps {
-	[key: string]: () => JSX.Element;
+  [key: string]: () => JSX.Element;
 }
