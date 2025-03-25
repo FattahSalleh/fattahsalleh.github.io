@@ -9,9 +9,10 @@ export const PATH: Record<string, string> = {
   PRACTICE: '/practice',
 };
 
-export const PRACTICE_NAME: string[] = ['Rating Star', 'Carousel'];
-
-export const PRACTICE_COMPONENT_MAP: PracticeComponentMapProps = {
-  'Rating Star': RatingStar,
-  Carousel: Carousel,
+export const PRACTICE = {
+  names: ['Rating Star', 'Carousel'] as const,
+  components: {
+    'Rating Star': RatingStar,
+    Carousel: Carousel,
+  } satisfies PracticeComponentMapProps,
 };

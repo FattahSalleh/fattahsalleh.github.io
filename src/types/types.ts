@@ -63,5 +63,5 @@ export interface NavBarProps {
 }
 
 export interface PracticeComponentMapProps {
-  [key: string]: () => JSX.Element;
+  [key: string]: React.FC;
 }
