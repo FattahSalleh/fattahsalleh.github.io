@@ -2,6 +2,6 @@ export function Star({ index, star, onClick }: { index: number, star: boolean, o
 
 
     return (
-        <span className="cursor-pointer" onClick={() => onClick(index)}>{star ? <span>⭐</span> : <span>★</span>}</span>
+        <span className="cursor-pointer" onClick={() => onClick(index)}>{star ? <span>⭐</span> : <span>☆</span>}</span>
     )
 }
