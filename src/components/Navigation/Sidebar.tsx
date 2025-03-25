@@ -4,26 +4,26 @@ import { COMPONENT_NOT_FOUND } from '../../constants/practice.constants';
 
 export function Sidebar() {
   const [selectedComponent, setSelectedComponent] = useState<React.FC>(
-    () => PRACTICE.components['Rating Star'], // Lazy initialization
+    () => PRACTICE[0].component, // Lazy initialization
   );
 
   const handleComponentClick = (component: React.FC): void => {
-    setSelectedComponent((prev: FC<{}>) => (prev === component ? prev : component));
+    setSelectedComponent((prev: FC) => (prev === component ? prev : component));
   };
 
   return (
     <>
       <div className="absolute left-0 top-1/2">
-        {PRACTICE.names.map((name, index) => {
-          const isActive = PRACTICE.components[name] === selectedComponent;
+        {PRACTICE.map((item, index) => {
+          const isActive = selectedComponent === item.component;
 
           return (
             <div
               key={index}
-              onClick={() => handleComponentClick(PRACTICE.components[name])}
+              onClick={() => handleComponentClick(item.component)}
               className={`cursor-pointer ${isActive ? 'font-bold' : ''}`}
             >
-              {name}
+              {item.name}
             </div>
           );
         })}
