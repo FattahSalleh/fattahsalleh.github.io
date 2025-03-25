@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PATH, PRACTICE } from '../../constants/path.constant';
 import { COMPONENT_NOT_FOUND } from '../../constants/practice.constants';
 import { useNavigate, useParams } from 'react-router-dom';
 import { convertStringDashToSpace, convertStringSpaceToDash } from '../../utils/utils';
+import React from 'react';
 
 export function Sidebar() {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ export function Sidebar() {
         className="w-full h-[calc(100dvh)] lg:min-h-screen flex flex-col items-center justify-center text-center"
         id="introSection"
       >
-        {selectedComponent ? selectedComponent({}) : <p>{COMPONENT_NOT_FOUND}</p>}
+        {selectedComponent ? React.createElement(selectedComponent) : <p>{COMPONENT_NOT_FOUND}</p>}
       </section>
     </>
   );
