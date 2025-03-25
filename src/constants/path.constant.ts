@@ -11,7 +11,7 @@ export const PATH: Record<string, string> = {
   PRACTICE: '/practice',
 };
 
-export const PRACTICE = [
+export const PRACTICE: readonly PracticeComponentMapProps[] = [
   { name: 'Rating Star', component: RatingStar },
   { name: 'Carousel', component: Carousel },
   { name: 'Button Timer', component: ButtonTimer },
