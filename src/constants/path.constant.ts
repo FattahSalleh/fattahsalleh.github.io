@@ -9,6 +9,10 @@ export const PATH: Record<string, string> = {
   LOGIN: '/login',
   HOME: '/home',
   PRACTICE: '/practice',
+  PRACTICE_NOT_FOUND: '/practice/*',
+  PRACTICE_PROJECT: '/practice/:componentName?',
+  PRACTICE_RATING_STAR: '/practice/rating-star',
+  NOT_FOUND: '*',
 };
 
 export const PRACTICE: readonly PracticeComponentMapProps[] = [

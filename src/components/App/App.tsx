@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Intro from '../Intro/Intro';
 import NavBar from '../Navigation/NavBar';
 import ContactOverlay from '../Contact/ContactOverlay';
@@ -55,7 +55,12 @@ function App() {
                 <Route path={PATH.LOGIN} element={<Login />} />
                 <Route path={PATH.HOME} element={<Home />} />
                 <Route path={PATH.PRACTICE} element={<Practice />} />
-                <Route path="*" element={<PageNotFound />} />
+                <Route
+                  path={PATH.PRACTICE_NOT_FOUND}
+                  element={<Navigate to={PATH.PRACTICE_RATING_STAR} replace />}
+                />
+                <Route path={PATH.PRACTICE_PROJECT} element={<Practice />} />
+                <Route path={PATH.NOT_FOUND} element={<PageNotFound />} />
               </Routes>
             </div>
             <SpeedInsights />
