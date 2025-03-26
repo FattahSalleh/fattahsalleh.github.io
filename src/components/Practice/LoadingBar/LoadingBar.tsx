@@ -5,8 +5,8 @@ export function LoadingBar() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress(prev => Math.min(prev + 25, 100));
-    }, 1000);
+      setProgress(prevProgress => (prevProgress >= 100 ? prevProgress : prevProgress + 25));
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
