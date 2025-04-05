@@ -2,6 +2,7 @@ import { ButtonCounter } from '../components/Practice/ButtonCounter/ButtonCounte
 import { ButtonTimer } from '../components/Practice/ButtonTimer/ButtonTimer';
 import { Carousel } from '../components/Practice/Carousel/Carousel';
 import { LoadingBar } from '../components/Practice/LoadingBar/LoadingBar';
+import { Memoization } from '../components/Practice/Memoization/Memoization';
 import { RatingStar } from '../components/Practice/RatingStar/RatingStar';
 import { PracticeComponentMapProps } from '../types/types';
 
@@ -22,4 +23,5 @@ export const PRACTICE: readonly PracticeComponentMapProps[] = [
   { name: 'Button Timer', component: ButtonTimer },
   { name: 'Loading Bar', component: LoadingBar },
   { name: 'Button Counter', component: ButtonCounter },
+  { name: 'Memoization', component: Memoization },
 ] as const;
