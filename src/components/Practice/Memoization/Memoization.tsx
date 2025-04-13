@@ -8,9 +8,10 @@ export function Memoization() {
 
   const generateArray = useCallback((): number[] => {
     const startTime = performance.now();
+    const ARRAY_SIZE = 10000000; // Size of the array
 
     // Generate the array
-    const newArray = Array(10000000)
+    const newArray = Array(ARRAY_SIZE)
       .fill(0)
       .map(() => Math.floor(Math.random() * 1000));
 
