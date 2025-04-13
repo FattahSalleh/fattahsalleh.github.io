@@ -4,6 +4,7 @@ export function ButtonTimer() {
   const [count, setCount] = useState<number>(0);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const TIMER_LIMIT = 2;
+  const TIMER_INTERVAL = 1000; // 1 second
 
   const onClick = () => {
     setIsDisabled(true);
@@ -22,7 +23,7 @@ export function ButtonTimer() {
 
           return newCount;
         });
-      }, 1000);
+      }, TIMER_INTERVAL);
 
       return () => clearInterval(interval);
     }
