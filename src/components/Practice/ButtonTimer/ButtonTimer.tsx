@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function ButtonTimer() {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
   const [isDisabled, setIsDisabled] = useState<boolean>(false);
-  const TIMER_LIMIT = 2;
-  const TIMER_INTERVAL = 1000; // 1 second
+  const TIMER_LIMIT = 3; // 3 seconds
+  const TIMER_INTERVAL = 1000; // 1000ms / 1 second
 
-  const onClick = () => {
+  const handleClick = () => {
     setIsDisabled(true);
   };
 
@@ -15,12 +15,10 @@ export function ButtonTimer() {
       const interval = setInterval(() => {
         setCount(prevCount => {
           const newCount = prevCount + 1;
-
           if (newCount >= TIMER_LIMIT) {
             setIsDisabled(false);
-            return 0;
+            return 1;
           }
-
           return newCount;
         });
       }, TIMER_INTERVAL);
@@ -30,14 +28,10 @@ export function ButtonTimer() {
   }, [isDisabled]);
 
   return (
-    <button
-      onClick={onClick}
-      className="border-2 p-2 rounded disabled:border-errorRed "
-      disabled={isDisabled}
-    >
-      {isDisabled ? <span>LOADING...</span> : <span>CLICK HERE</span>}
-      <br />
-      Counter: {count}
-    </button>
+    <div>
+      <button disabled={isDisabled} onClick={handleClick}>
+        {isDisabled ? <span>Loading {count}</span> : <span>ButtonTimer</span>}
+      </button>
+    </div>
   );
 }
